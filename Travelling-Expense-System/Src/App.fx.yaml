@@ -1,0 +1,64 @@
+App As appinfo:
+    BackEnabled: =true
+    OnStart: |+
+        =ClearCollect(AdData,Filter('New tables','Status (cr316_status)'="Approved By Finance"));
+        
+        
+        
+        ClearCollect(
+            AirlineData,
+            {
+                AirlineName: "Airline A",
+                AirportName: "Airport X",
+                Price: 200,
+                From: "Airport X",
+                To: "Airport Y"
+            },
+            {
+                AirlineName: "Airline B",
+                AirportName: "Airport Y",
+                Price: 300,
+                From: "Airport Y",
+                To: "Airport Z"
+            },
+            {
+                AirlineName: "Airline C",
+                AirportName: "Airport Z",
+                Price: 250,
+                From: "Airport Z",
+                To: "Airport X"
+            }
+        );
+        
+        /*ClearCollect(mytabs,{
+            id:1,
+            ScreenReference:
+        })*/
+        
+        ClearCollect(
+         colUser1,
+         LookUp(
+         EmployeeData,
+         Email = "shahmeer.baig@systemsltd.com"
+         
+        ));
+        Set(isAdmin,If( LookUp(
+         EmployeeData,
+         Email = User().Email
+         
+        ).'User Role'="Admin",true,false));
+        
+        Set(ContainerVisible, false);
+        Set(SelectedItem, Blank());
+        
+        
+        
+    Theme: =PowerAppsTheme
+
+    Host As hostControl.DefaultHostControlVariant:
+        OnCancel: =false
+        OnEdit: =false
+        OnNew: =false
+        OnSave: =false
+        OnView: =false
+

@@ -1,0 +1,112 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "cr316_newtables",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "cr316_newtable",
+    "MaxGetRowsCount": 500,
+    "Name": "New tables",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "cr316_amount": "Amount",
+      "cr316_class": "Class",
+      "cr316_departuredate": "Departure Date",
+      "cr316_employeeid": "Employee ID",
+      "cr316_employeename": "Employee Name",
+      "cr316_employeepassportnumber": "Employee Passport Number",
+      "cr316_from": "From",
+      "cr316_newtable_AsyncOperations": "System Jobs",
+      "cr316_newtable_BulkDeleteFailures": "Bulk Delete Failures",
+      "cr316_newtable_DuplicateBaseRecord": "Duplicate Records (cr316_newtable_DuplicateBaseRecord)",
+      "cr316_newtable_DuplicateMatchingRecord": "Duplicate Records (cr316_newtable_DuplicateMatchingRecord)",
+      "cr316_newtable_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "cr316_newtable_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "cr316_newtable_ProcessSession": "Process Sessions",
+      "cr316_newtable_SyncErrors": "Sync Errors",
+      "cr316_newtableid": "New table",
+      "cr316_projectid": "Project ID",
+      "cr316_projectname": "Project Name",
+      "cr316_reqid": "ReqID",
+      "cr316_returndate": "Return Date",
+      "cr316_status": "Status (cr316_status)",
+      "cr316_to": "To",
+      "cr316_traveltype": "Travel type",
+      "cr316_useremail": "UserEmail",
+      "cra95_allowanceamount": "Allowance Amount",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status (statecode)",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "New tables",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "New tables (Views)",
+    "Name": "_cr316_newtable_views",
+    "RelatedEntityName": "New tables",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "19a9ce24-fc19-456b-94a0-d5ec26e2af5e": "BookingTable Lookup View",
+      "33158734-75cb-4ff3-8c42-f073790693c0": "Inactive BookingTables",
+      "544ab90b-d664-407a-8f46-aa1238911841": "BookingTable Advanced Find View",
+      "ba2a1035-c4e3-4ae7-9a5d-032f429f1ddc": "Active BookingTables",
+      "d2ad142f-6fbf-4006-a4ee-21f11869ace1": "BookingTable Associated View"
+    }
+  },
+  {
+    "DisplayName": "Status (New tables)",
+    "Name": "cr316_newtable_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "New tables"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "New tables",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (New tables)",
+    "Name": "cr316_newtable_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "New tables"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "New tables",
+    "Type": "OptionSetInfo"
+  }
+]

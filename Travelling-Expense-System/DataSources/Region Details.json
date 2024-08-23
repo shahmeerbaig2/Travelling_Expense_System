@@ -1,0 +1,99 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "cra95_regions",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "cra95_region",
+    "MaxGetRowsCount": 500,
+    "Name": "Region Details",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "cra95_email": "Email",
+      "cra95_name": "Regional Manager Name",
+      "cra95_region_AsyncOperations": "System Jobs",
+      "cra95_region_BulkDeleteFailures": "Bulk Delete Failures",
+      "cra95_region_DuplicateBaseRecord": "Duplicate Records (cra95_region_DuplicateBaseRecord)",
+      "cra95_region_DuplicateMatchingRecord": "Duplicate Records (cra95_region_DuplicateMatchingRecord)",
+      "cra95_region_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "cra95_region_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "cra95_region_ProcessSession": "Process Sessions",
+      "cra95_region_SyncErrors": "Sync Errors",
+      "cra95_regionid": "Region",
+      "cra95_regionname": "Region Name",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "Region Details",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "Region Details (Views)",
+    "Name": "_cra95_region_views",
+    "RelatedEntityName": "Region Details",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "13287b23-9a99-4515-9b70-74b02715f0a9": "Region Advanced Find View",
+      "51e4349d-de84-4b2a-96b4-499fc0c8589c": "Inactive Regions",
+      "52ba8b0a-d58a-4927-b2a8-181411da1f64": "Region Associated View",
+      "c51d3bab-7b1e-4fc9-939d-e472d8df0eb9": "Region Lookup View",
+      "fcd640c9-5003-444c-bebd-cdc663f5d3e3": "Active Regions"
+    }
+  },
+  {
+    "DisplayName": "Status (Region Details)",
+    "Name": "cra95_region_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "Region Details"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "Region Details",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (Region Details)",
+    "Name": "cra95_region_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "Region Details"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "Region Details",
+    "Type": "OptionSetInfo"
+  }
+]

@@ -1,0 +1,298 @@
+{
+  "2a091eb2-2cfe-4dcc-93c9-1ad06e5836fa": {
+    "appActions": [
+      "Run"
+    ],
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "Logic flows",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1697/1.0.1697.3784/logicflows/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
+      "parameterHints": {
+        "3db2ab9d-915b-4469-b1c0-5377cd0cf04c": {
+          "value": "shared_approvals"
+        },
+        "7f6d94c4-7e46-440d-a68d-7d3a6944fcc1": {
+          "value": "shared_office365"
+        },
+        "9a96cdc2-b305-4683-9b2c-e8ee3dddf053": {
+          "value": "shared_onedriveforbusiness"
+        },
+        "e4a3e498-3f33-4306-a3c3-be2b3b7c9497": {
+          "value": "shared_commondataserviceforapps"
+        },
+        "workflowDisplayName": {
+          "value": "PowerAppV2 -> Create an approval,Get a row by ID"
+        },
+        "workflowEntityId": {
+          "value": "e5efa107-c432-ef11-8409-000d3a2bffb7"
+        },
+        "workflowName": {
+          "value": "333e53cf-1ab6-5e80-4f51-9e95af69a4f4"
+        }
+      },
+      "parameterHintsV2": {
+        "shared_approvals": {
+          "value": "3db2ab9d-915b-4469-b1c0-5377cd0cf04c"
+        },
+        "shared_commondataserviceforapps": {
+          "value": "e4a3e498-3f33-4306-a3c3-be2b3b7c9497"
+        },
+        "shared_office365": {
+          "value": "7f6d94c4-7e46-440d-a68d-7d3a6944fcc1"
+        },
+        "shared_onedriveforbusiness": {
+          "value": "9a96cdc2-b305-4683-9b2c-e8ee3dddf053"
+        },
+        "workflowDisplayName": {
+          "value": "PowerAppV2 -> Create an approval,Get a row by ID"
+        },
+        "workflowEntityId": {
+          "value": "e5efa107-c432-ef11-8409-000d3a2bffb7"
+        },
+        "workflowName": {
+          "value": "333e53cf-1ab6-5e80-4f51-9e95af69a4f4"
+        }
+      }
+    },
+    "datasets": {},
+    "dataSources": [
+      "PowerAppV2->Createanapproval,GetarowbyID"
+    ],
+    "dependencies": {
+      "shared_approvals": "3db2ab9d-915b-4469-b1c0-5377cd0cf04c",
+      "shared_commondataserviceforapps": "e4a3e498-3f33-4306-a3c3-be2b3b7c9497",
+      "shared_office365": "7f6d94c4-7e46-440d-a68d-7d3a6944fcc1",
+      "shared_onedriveforbusiness": "9a96cdc2-b305-4683-9b2c-e8ee3dddf053"
+    },
+    "dependents": [],
+    "id": "2a091eb2-2cfe-4dcc-93c9-1ad06e5836fa"
+  },
+  "36a4c5f0-2500-4408-a3a2-bb28c59717b0": {
+    "appActions": [],
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "Logic flows",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1697/1.0.1697.3784/logicflows/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
+      "parameterHints": {
+        "workflowDisplayName": {
+          "value": "PowerAppV2 -> Compose,Compose 2,Compose 3,HTTP,Parse JSON,HTTP 2,Pa..."
+        },
+        "workflowEntityId": {
+          "value": "523402e3-6034-ef11-8409-6045bde1a406"
+        },
+        "workflowName": {
+          "value": "6d24bc1f-8a0c-8caa-5c50-27e1fab221a4"
+        }
+      },
+      "parameterHintsV2": {
+        "workflowDisplayName": {
+          "value": "PowerAppV2 -> Compose,Compose 2,Compose 3,HTTP,Parse JSON,HTTP 2,Pa..."
+        },
+        "workflowEntityId": {
+          "value": "523402e3-6034-ef11-8409-6045bde1a406"
+        },
+        "workflowName": {
+          "value": "6d24bc1f-8a0c-8caa-5c50-27e1fab221a4"
+        }
+      }
+    },
+    "datasets": {},
+    "dataSources": [
+      "PowerAppV2->Compose,Compose2,Compose3,HTTP,ParseJSON,HTTP2,Pa..."
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "36a4c5f0-2500-4408-a3a2-bb28c59717b0"
+  },
+  "3db2ab9d-915b-4469-b1c0-5377cd0cf04c": {
+    "appActions": [],
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "Approvals",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1682/1.0.1682.3671/approvals/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_approvals",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {},
+    "dataSources": [],
+    "dependencies": {},
+    "dependents": [
+      "2a091eb2-2cfe-4dcc-93c9-1ad06e5836fa"
+    ],
+    "id": "3db2ab9d-915b-4469-b1c0-5377cd0cf04c"
+  },
+  "51f140fa-ad8b-467f-8d23-7f5f8ede134c": {
+    "appActions": [
+      "Run"
+    ],
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "Logic flows",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1697/1.0.1697.3784/logicflows/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
+      "parameterHints": {
+        "workflowDisplayName": {
+          "value": "OneWayFlow"
+        },
+        "workflowEntityId": {
+          "value": "9b59f2e4-2048-ef11-bfe3-000d3ab4b1e3"
+        },
+        "workflowName": {
+          "value": "a691691c-1dc9-0558-eb97-ce3993bfa2bf"
+        }
+      },
+      "parameterHintsV2": {
+        "workflowDisplayName": {
+          "value": "OneWayFlow"
+        },
+        "workflowEntityId": {
+          "value": "9b59f2e4-2048-ef11-bfe3-000d3ab4b1e3"
+        },
+        "workflowName": {
+          "value": "a691691c-1dc9-0558-eb97-ce3993bfa2bf"
+        }
+      }
+    },
+    "datasets": {},
+    "dataSources": [
+      "OneWayFlow"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "51f140fa-ad8b-467f-8d23-7f5f8ede134c"
+  },
+  "6d265e8a-f9fa-4185-9943-e258df0ac1ff": {
+    "appActions": [
+      "Run"
+    ],
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "Logic flows",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1697/1.0.1697.3784/logicflows/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
+      "parameterHints": {
+        "workflowDisplayName": {
+          "value": "HttpFlow"
+        },
+        "workflowEntityId": {
+          "value": "f3a5e873-8837-ef11-8409-6045bde1a406"
+        },
+        "workflowName": {
+          "value": "8647084e-e44c-26e0-3c48-a90e29fb94a4"
+        }
+      },
+      "parameterHintsV2": {
+        "workflowDisplayName": {
+          "value": "HttpFlow"
+        },
+        "workflowEntityId": {
+          "value": "f3a5e873-8837-ef11-8409-6045bde1a406"
+        },
+        "workflowName": {
+          "value": "8647084e-e44c-26e0-3c48-a90e29fb94a4"
+        }
+      }
+    },
+    "datasets": {},
+    "dataSources": [
+      "HttpFlow"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "6d265e8a-f9fa-4185-9943-e258df0ac1ff"
+  },
+  "7f6d94c4-7e46-440d-a68d-7d3a6944fcc1": {
+    "appActions": [],
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "Office 365 Outlook",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1686/1.0.1686.3706/office365/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_office365",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {},
+    "dataSources": [],
+    "dependencies": {},
+    "dependents": [
+      "2a091eb2-2cfe-4dcc-93c9-1ad06e5836fa"
+    ],
+    "id": "7f6d94c4-7e46-440d-a68d-7d3a6944fcc1"
+  },
+  "9a96cdc2-b305-4683-9b2c-e8ee3dddf053": {
+    "appActions": [],
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "OneDrive for Business",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1689/1.0.1689.3722/onedriveforbusiness/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_onedriveforbusiness",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {},
+    "dataSources": [],
+    "dependencies": {},
+    "dependents": [
+      "2a091eb2-2cfe-4dcc-93c9-1ad06e5836fa"
+    ],
+    "id": "9a96cdc2-b305-4683-9b2c-e8ee3dddf053"
+  },
+  "e4a3e498-3f33-4306-a3c3-be2b3b7c9497": {
+    "appActions": [],
+    "connectionRef": {
+      "apiTier": "Premium",
+      "bypassConsent": true,
+      "displayName": "Microsoft Dataverse",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1705/1.0.1705.3833/commondataserviceforapps/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_commondataserviceforapps",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {},
+    "dataSources": [],
+    "dependencies": {},
+    "dependents": [
+      "2a091eb2-2cfe-4dcc-93c9-1ad06e5836fa"
+    ],
+    "id": "e4a3e498-3f33-4306-a3c3-be2b3b7c9497"
+  },
+  "fdfbaf1f-5ce4-43ca-a365-db3707dfd07c": {
+    "connectionRef": {
+      "displayName": "Logic flows",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1697/1.0.1697.3784/logicflows/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
+      "parameterHints": {
+        "workflowDisplayName": {
+          "value": "HotelSearch"
+        },
+        "workflowEntityId": {
+          "value": "09e178c0-3848-ef11-bfe3-000d3ab4b1e3"
+        },
+        "workflowName": {
+          "value": "e3301eec-9432-4b46-8fa5-d8919f1ec9e8"
+        }
+      },
+      "parameterHintsV2": {
+        "workflowDisplayName": {
+          "value": "HotelSearch"
+        },
+        "workflowEntityId": {
+          "value": "09e178c0-3848-ef11-bfe3-000d3ab4b1e3"
+        },
+        "workflowName": {
+          "value": "e3301eec-9432-4b46-8fa5-d8919f1ec9e8"
+        }
+      }
+    },
+    "datasets": {},
+    "dataSources": [
+      "HotelSearch"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "fdfbaf1f-5ce4-43ca-a365-db3707dfd07c"
+  }
+}

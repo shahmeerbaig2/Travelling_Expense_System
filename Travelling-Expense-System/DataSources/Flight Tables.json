@@ -1,0 +1,103 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "cr316_flighttables",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "cr316_flighttable",
+    "MaxGetRowsCount": 500,
+    "Name": "Flight Tables",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "cr316_airline": "Airline",
+      "cr316_departuredate": "Departure Date ddddd",
+      "cr316_departuredateofflight": "Departure Date of flight",
+      "cr316_flighttable_AsyncOperations": "System Jobs",
+      "cr316_flighttable_BulkDeleteFailures": "Bulk Delete Failures",
+      "cr316_flighttable_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "cr316_flighttable_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "cr316_flighttable_ProcessSession": "Process Sessions",
+      "cr316_flighttable_SyncErrors": "Sync Errors",
+      "cr316_flighttableid": "Flight Table",
+      "cr316_from": "From",
+      "cr316_id": "ID",
+      "cr316_price": "Price",
+      "cr316_returndate": "Return date rrrrrrr",
+      "cr316_returndateofflight": "Return Date of flight",
+      "cr316_to": "To",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "Flight Tables",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "Flight Tables (Views)",
+    "Name": "_cr316_flighttable_views",
+    "RelatedEntityName": "Flight Tables",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "0ee78a51-437f-4eef-a592-faa1f2f45945": "Active Flight Tables",
+      "2415c413-14c5-4606-a062-85af8b8cefa6": "Flight Table Associated View",
+      "4345aab3-fdcf-4a68-8240-f83511fd07c5": "Inactive Flight Tables",
+      "c0d1c713-36b2-4844-a274-771fda0fed00": "Flight Table Advanced Find View",
+      "eb5a9dad-f7c5-43d3-b4d4-f6fdbf8379a3": "Flight Table Lookup View"
+    }
+  },
+  {
+    "DisplayName": "Status (Flight Tables)",
+    "Name": "cr316_flighttable_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "Flight Tables"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "Flight Tables",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (Flight Tables)",
+    "Name": "cr316_flighttable_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "Flight Tables"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "Flight Tables",
+    "Type": "OptionSetInfo"
+  }
+]

@@ -1,0 +1,116 @@
+"'Employee Request_2' As CanvasComponent":
+    Fill: =RGBA(255, 255, 255, 1)
+    Height: =80
+    Width: =1284
+    X: =0
+    Y: =0
+    ZIndex: =1
+
+    Container21 As groupContainer.horizontalAutoLayoutContainer:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        DropShadow: =DropShadow.Light
+        Fill: =RGBA(15, 84, 140, 1)
+        Height: =Parent.Height
+        LayoutMode: =LayoutMode.Auto
+        PaddingLeft: =5
+        PaddingRight: =5
+        RadiusBottomLeft: =15
+        RadiusBottomRight: =15
+        RadiusTopLeft: =15
+        RadiusTopRight: =15
+        Width: =Parent.Width
+        ZIndex: =5
+
+        Image1 As image:
+            AccessibleLabel: ="Go Back"
+            BorderColor: =App.Theme.Colors.Darker40
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Height: =80
+            Image: ='icons8-left-arrow-48_2'
+            ImagePosition: =ImagePosition.Center
+            OnSelect: =Back()
+            Width: =50
+            ZIndex: =1
+
+        Image6_17 As image:
+            BorderColor: =App.Theme.Colors.Darker40
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Height: =80
+            Image: ='Systems-Ltd-feature-image-new-logo-2019-removebg-preview'
+            Width: =130
+            ZIndex: =2
+
+        Label40_1 As label:
+            Align: =Align.Center
+            AlignInContainer: =AlignInContainer.Center
+            BorderColor: =Color.Transparent
+            BorderStyle: =BorderStyle.None
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FillPortions: =1
+            Font: =App.Theme.Font
+            FontWeight: =FontWeight.Bold
+            Height: =66
+            PaddingLeft: =0
+            PaddingRight: =0
+            Size: =20
+            Text: ="Travelling Expense System"
+            Width: =430
+            X: =376
+            Y: =7
+            ZIndex: =3
+
+        Container23 As groupContainer.horizontalAutoLayoutContainer:
+            AlignInContainer: =AlignInContainer.Center
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            FillPortions: =0
+            Height: =Parent.Height
+            LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            RadiusBottomLeft: =4
+            RadiusBottomRight: =4
+            RadiusTopLeft: =4
+            RadiusTopRight: =4
+            Width: =200
+            ZIndex: =4
+
+            Label38_4 As label:
+                Align: =Align.Right
+                BorderColor: =Color.Transparent
+                BorderStyle: =BorderStyle.None
+                Color: =RGBA(255, 255, 255, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Font: =App.Theme.Font
+                Height: =Parent.Height
+                LayoutMinWidth: =200
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =13
+                Text: =User().FullName
+                X: =1143
+                Y: =6
+                ZIndex: =1
+
+            Icon6_4 As icon.Person:
+                AlignInContainer: =AlignInContainer.Center
+                BorderColor: =App.Theme.Colors.Darker40
+                Color: =Color.White
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(244, 244, 244, 1)
+                Height: =52
+                Icon: =Icon.Person
+                Width: =52
+                X: =150
+                Y: =14
+                ZIndex: =2
+

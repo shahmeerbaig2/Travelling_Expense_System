@@ -1,0 +1,536 @@
+"BookingInformationScreen As screen.'autoLayout_HeaderFooter_ver1.0'":
+    Fill: =Color.White
+    LoadingSpinnerColor: =App.Theme.Colors.Primary
+
+    ScreenContainer3_1 As groupContainer.verticalAutoLayoutContainer:
+        DropShadow: =DropShadow.Light
+        Fill: =RGBA(245, 245, 245, 1)
+        Height: =Parent.Height
+        LayoutAlignItems: =LayoutAlignItems.Stretch
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutGap: =16
+        LayoutMode: =LayoutMode.Auto
+        PaddingBottom: =16
+        PaddingLeft: =16
+        PaddingRight: =16
+        PaddingTop: =16
+        RadiusBottomLeft: =4
+        RadiusBottomRight: =4
+        RadiusTopLeft: =4
+        RadiusTopRight: =4
+        Width: =Parent.Width
+        ZIndex: =1
+
+        HeaderContainer3_1 As groupContainer.horizontalAutoLayoutContainer:
+            AlignInContainer: =AlignInContainer.SetByContainer
+            DropShadow: =DropShadow.Light
+            Fill: =RGBA(15, 84, 140, 1)
+            FillPortions: =0
+            Height: =75
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            RadiusBottomLeft: =15
+            RadiusBottomRight: =15
+            RadiusTopLeft: =15
+            RadiusTopRight: =15
+            Width: =Parent.Width
+            ZIndex: =1
+
+            Container1_9 As groupContainer.horizontalAutoLayoutContainer:
+                DropShadow: =DropShadow.Light
+                Fill: =RGBA(15, 84, 140, 1)
+                FillPortions: =0
+                Height: =Parent.Height
+                LayoutMinHeight: =50
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                RadiusBottomLeft: =4
+                RadiusBottomRight: =4
+                RadiusTopLeft: =4
+                RadiusTopRight: =4
+                Width: =Parent.Width
+                ZIndex: =1
+
+                Image12 As image:
+                    BorderColor: =App.Theme.Colors.Darker40
+                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                    DisabledFill: =RGBA(244, 244, 244, 1)
+                    Height: =70
+                    Image: ='icons8-left-arrow-48_4'
+                    ImagePosition: =ImagePosition.Center
+                    OnSelect: =Navigate(Screen1)
+                    Width: =50
+                    Y: =20
+                    ZIndex: =1
+
+                Image6_6 As image:
+                    BorderColor: =App.Theme.Colors.Darker40
+                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                    DisabledFill: =RGBA(244, 244, 244, 1)
+                    Height: =80
+                    Image: ='Systems-Ltd-feature-image-new-logo-2019-removebg-preview'
+                    Width: =164
+                    ZIndex: =2
+
+                Label3_9 As label:
+                    Align: =Align.Center
+                    AlignInContainer: =AlignInContainer.Stretch
+                    BorderColor: =App.Theme.Colors.Darker40
+                    Color: =RGBA(255, 255, 255, 1)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    Fill: =RGBA(15, 84, 140, 1)
+                    Font: =App.Theme.Font
+                    FontWeight: =FontWeight.Bold
+                    PaddingRight: =270
+                    Size: =18
+                    Text: ="Flight Details"
+                    Width: =Parent.Width-Image12.Width-Image6_6.Width
+                    ZIndex: =3
+
+        MainContainer3_1 As groupContainer.verticalAutoLayoutContainer:
+            DropShadow: =DropShadow.Light
+            Fill: =RGBA(255, 255, 255, 1)
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            RadiusBottomLeft: =4
+            RadiusBottomRight: =4
+            RadiusTopLeft: =4
+            RadiusTopRight: =4
+            Width: =Parent.Width
+            ZIndex: =3
+
+            Canvas1_1 As fluidGrid.fluidGridWithBlankCard:
+                BorderThickness: =0
+                Height: =Parent.Height - Self.Y
+                LayoutMinHeight: =250
+                LayoutMinWidth: =100
+                Width: =Parent.Width
+                ZIndex: =1
+
+                DataCard10 As dataCard.blankCard:
+                    BorderColor: =RGBA(0, 0, 0, 1)
+                    BorderStyle: =BorderStyle.Solid
+                    DisplayMode: =DisplayMode.Edit
+                    Fill: =RGBA(0, 0, 0, 0)
+                    Height: =100
+                    Width: =HeaderContainer3_1.Width
+                    X: =0
+                    Y: =0
+                    ZIndex: =2
+
+                    Container1_10 As groupContainer.horizontalAutoLayoutContainer:
+                        BorderColor: =RGBA(15, 84, 140, 1)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =1
+                        DropShadow: =DropShadow.Light
+                        Fill: =RGBA(40, 134, 222, 1)
+                        Height: =55
+                        LayoutMode: =LayoutMode.Auto
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        Width: =HeaderContainer3_1.Width
+                        ZIndex: =2
+
+                        Label3_10 As label:
+                            AlignInContainer: =AlignInContainer.Stretch
+                            BorderColor: =App.Theme.Colors.Darker40
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =1
+                            Color: =RGBA(15, 84, 140, 1)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            Fill: =RGBA(255, 255, 255, 1)
+                            Font: =App.Theme.Font
+                            FontWeight: =FontWeight.Bold
+                            PaddingLeft: =25
+                            Size: =18
+                            Text: |-
+                                ="Outbound Details
+                                "
+                            Width: =HeaderContainer3_1.Width
+                            ZIndex: =2
+
+                DataCard11 As dataCard.blankCard:
+                    BorderColor: =RGBA(0, 0, 0, 1)
+                    BorderStyle: =BorderStyle.Solid
+                    DisplayMode: =DisplayMode.Edit
+                    Fill: =RGBA(0, 0, 0, 0)
+                    Height: =317
+                    Width: =1334
+                    X: =0
+                    Y: =1
+                    ZIndex: =3
+
+                    TextCanvas3 As Text:
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =44
+                        Size: =20
+                        Text: |-
+                            ="Departure Date :"
+                        Weight: ='TextCanvas.Weight'.Bold
+                        Width: =171
+                        X: =20
+                        Y: =27
+                        ZIndex: =1
+
+                    TextCanvas3_1 As Text:
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =45
+                        Size: =20
+                        Text: |-
+                            ="Departure From :"
+                        Weight: ='TextCanvas.Weight'.Bold
+                        Width: =171
+                        X: =TextCanvas3.Width+500
+                        Y: =26
+                        ZIndex: =2
+
+                    TextCanvas3_2 As Text:
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =39
+                        Size: =20
+                        Text: |-
+                            ="Destination :"
+                        Weight: ='TextCanvas.Weight'.Bold
+                        Width: =133
+                        X: =TextCanvas3_4.Width+500
+                        Y: =115
+                        ZIndex: =3
+
+                    TextCanvas3_3 As Text:
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =32
+                        Size: =20
+                        Text: |-
+                            ="Arrival Time :"
+                        Weight: ='TextCanvas.Weight'.Bold
+                        Width: =141
+                        X: =20
+                        Y: =212
+                        ZIndex: =4
+
+                    TextCanvas3_4 As Text:
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =43
+                        Size: =20
+                        Text: |-
+                            ="Departure Time :"
+                        Weight: ='TextCanvas.Weight'.Bold
+                        Width: =171
+                        X: =20
+                        Y: =115
+                        ZIndex: =5
+
+                    TextCanvas4 As Text:
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =32
+                        Size: =20
+                        Text: =FlightRecord.DateOfDeparture
+                        Width: =128
+                        X: =TextCanvas3.Width+100
+                        Y: =39
+                        ZIndex: =6
+
+                    TextCanvas4_1 As Text:
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =32
+                        Size: =20
+                        Text: =FlightRecord.From
+                        Width: =96
+                        X: =TextCanvas3_1.Width+700
+                        Y: =30
+                        ZIndex: =7
+
+                    TextCanvas4_2 As Text:
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =32
+                        Size: =20
+                        Text: =FlightRecord.Arrival
+                        Width: =96
+                        X: =271
+                        Y: =212
+                        ZIndex: =8
+
+                    TextCanvas4_3 As Text:
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =32
+                        Size: =20
+                        Text: =FlightRecord.To
+                        Width: =96
+                        X: =871
+                        Y: =115
+                        ZIndex: =9
+
+                    TextCanvas4_5 As Text:
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =39
+                        Size: =20
+                        Text: =FlightRecord.Departure
+                        Width: =96
+                        X: =TextCanvas3_4.Width+100
+                        Y: =115
+                        ZIndex: =11
+
+                    TextCanvas4_6 As Text:
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =32
+                        Text: |-
+                            =//FlightRecord.Arrival
+                            ""
+                        Width: =96
+                        X: =TextCanvas3_3.Width+100
+                        Y: =250
+                        ZIndex: =12
+
+                    TextCanvas3_10 As Text:
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =32
+                        Size: =20
+                        Text: |-
+                            ="Grand Total :"
+                        Weight: ='TextCanvas.Weight'.Bold
+                        Width: =121
+                        X: =671
+                        Y: =212
+                        ZIndex: =13
+
+                    TextCanvas4_12 As Text:
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =32
+                        Size: =20
+                        Text: =Value(Substitute(Substitute(FlightRecord.Price,"PKR", ""),"""",""))+HotelAmount
+                        Width: =176
+                        X: =858
+                        Y: =212
+                        ZIndex: =14
+
+                DataCard14 As dataCard.blankCard:
+                    BorderColor: =RGBA(15, 84, 140, 1)
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =1
+                    DisplayMode: =DisplayMode.Edit
+                    Fill: =RGBA(0, 0, 0, 0)
+                    Height: =55
+                    Width: =HeaderContainer3_1.Width
+                    X: =10
+                    Y: =2
+                    ZIndex: =4
+
+                    Container1_11 As groupContainer.horizontalAutoLayoutContainer:
+                        BorderStyle: =BorderStyle.None
+                        DropShadow: =DropShadow.Light
+                        Fill: =RGBA(40, 134, 222, 1)
+                        Height: =55
+                        LayoutMode: =LayoutMode.Auto
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        Width: =Parent.Width
+                        ZIndex: =2
+
+                        Label3_11 As label:
+                            AlignInContainer: =AlignInContainer.Stretch
+                            BorderColor: =App.Theme.Colors.Darker40
+                            BorderStyle: =BorderStyle.None
+                            Color: =RGBA(15, 84, 140, 1)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            Fill: =RGBA(255, 255, 255, 1)
+                            Font: =App.Theme.Font
+                            FontWeight: =FontWeight.Bold
+                            PaddingLeft: =25
+                            Size: =18
+                            Text: |-
+                                ="Return Details
+                                "
+                            Width: =Parent.Width+50
+                            ZIndex: =2
+
+                DataCard15 As dataCard.blankCard:
+                    BorderColor: =RGBA(0, 0, 0, 1)
+                    BorderStyle: =BorderStyle.Solid
+                    DisplayMode: =DisplayMode.Edit
+                    Fill: =RGBA(0, 0, 0, 0)
+                    Height: =332
+                    Width: =HeaderContainer3_1.Width
+                    X: =0
+                    Y: =3
+                    ZIndex: =5
+
+                    TextCanvas3_5 As Text:
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =44
+                        Size: =20
+                        Text: |-
+                            ="Departure Date :"
+                        Weight: ='TextCanvas.Weight'.Bold
+                        Width: =171
+                        X: =20
+                        Y: =27
+                        ZIndex: =1
+
+                    TextCanvas3_6 As Text:
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =45
+                        Size: =20
+                        Text: |-
+                            ="Departure From :"
+                        Weight: ='TextCanvas.Weight'.Bold
+                        Width: =171
+                        X: =TextCanvas3_5.Width+500
+                        Y: =27
+                        ZIndex: =2
+
+                    TextCanvas3_7 As Text:
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =39
+                        Size: =20
+                        Text: |-
+                            ="Destination :"
+                        Weight: ='TextCanvas.Weight'.Bold
+                        Width: |
+                            =171
+                        X: =TextCanvas3_9.Width+500
+                        Y: =108
+                        ZIndex: =3
+
+                    TextCanvas3_8 As Text:
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =32
+                        Size: =20
+                        Text: |-
+                            ="Arrival Time :"
+                        Weight: ='TextCanvas.Weight'.Bold
+                        Width: =138
+                        X: =20
+                        Y: =223
+                        ZIndex: =4
+
+                    TextCanvas3_9 As Text:
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =43
+                        Size: =20
+                        Text: |-
+                            ="Departure Time :"
+                        Weight: ='TextCanvas.Weight'.Bold
+                        Width: =171
+                        X: =20
+                        Y: =118
+                        ZIndex: =5
+
+                    TextCanvas4_9 As Text:
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =43
+                        Size: =20
+                        Text: =FlightRecord.DateOfReturnDeparture
+                        Width: =131
+                        X: =225
+                        Y: =28
+                        ZIndex: =9
+
+                    Container5 As groupContainer.verticalAutoLayoutContainer:
+                        Height: =50
+                        LayoutAlignItems: =LayoutAlignItems.End
+                        LayoutJustifyContent: =LayoutJustifyContent.End
+                        LayoutMode: =LayoutMode.Auto
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        Width: =DataCard14.Width-15
+                        X: =1
+                        Y: =288
+                        ZIndex: =13
+
+                        ButtonCanvas3 As Button:
+                            Align: =Align.Justify
+                            Appearance: ='ButtonCanvas.Appearance'.Primary
+                            BasePaletteColor: =RGBA(5, 102, 178, 1)
+                            BorderRadiusBottomLeft: =20
+                            BorderRadiusBottomRight: =20
+                            BorderRadiusTopLeft: =20
+                            BorderRadiusTopRight: =20
+                            DisplayMode: =DisplayMode.Edit
+                            FontSize: =15
+                            Height: =45
+                            IconRotation: =0
+                            Layout: ='ButtonCanvas.Layout'.IconBefore
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =96
+                            OnSelect: |-
+                                =Notify("Your booking has been confirmed",NotificationType.Success);
+                                
+                                
+                                
+                                Patch('New tables',LookUp('New tables','Employee ID'=Form2_6.LastSubmit.'Employee ID'),{'Employee Name':DataCardValue8_5.Text,Amount:TextCanvas4_12.Text,'Allowance Amount':Amount,'Project Name':DataCardValue12_5.Text,'Employee Passport Number':DataCardValue9_5.Text,'Employee ID':DataCardValue7_11.Text,'Project ID':DataCardValue11_5.Text,'Status (cr316_status)':"Pending With Department Head",UserEmail:User().Email});
+                                
+                                'PowerAppV2->Createanapproval,GetarowbyID'.Run(Form2_6.LastSubmit.'New table');
+                                
+                                ResetForm(Form1_5);
+                                NewForm(Form2_6);
+                                Navigate(Screen9);
+                                 
+                            PaddingBottom: =0
+                            PaddingRight: =0
+                            Text: ="Confirm Booking"
+                            VerticalAlign: =VerticalAlign.Middle
+                            Width: =150
+                            X: =1000
+                            Y: =288
+                            ZIndex: =1
+
+                    TextCanvas4_10 As Text:
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =43
+                        Size: =20
+                        Text: =FlightRecord.ReturnDeparture
+                        Width: =131
+                        X: =223
+                        Y: =115
+                        ZIndex: =14
+
+                    TextCanvas4_11 As Text:
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =43
+                        Size: =20
+                        Text: =FlightRecord.ReturnArrival
+                        Width: =131
+                        X: =223
+                        Y: =217
+                        ZIndex: =15
+
+                    TextCanvas4_13 As Text:
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =43
+                        Size: =20
+                        Text: =FlightRecord.To
+                        Width: =131
+                        X: =853
+                        Y: =27
+                        ZIndex: =16
+
+                    TextCanvas4_14 As Text:
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =43
+                        Size: =20
+                        Text: =FlightRecord.From
+                        Width: =131
+                        X: =853
+                        Y: =108
+                        ZIndex: =17
+
+                DataCard18 As dataCard.blankCard:
+                    BorderColor: =RGBA(0, 0, 0, 1)
+                    BorderStyle: =BorderStyle.Solid
+                    DisplayMode: =DisplayMode.Edit
+                    Fill: =RGBA(0, 0, 0, 0)
+                    Height: =100
+                    Width: =1334
+                    X: =0
+                    Y: =4
+                    ZIndex: =6
+

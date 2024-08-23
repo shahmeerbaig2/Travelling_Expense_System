@@ -1,0 +1,32 @@
+Component2 As CanvasComponent:
+    Fill: =RGBA(242, 122, 107, 0.9)
+    Height: =130
+    Width: =250
+    X: =0
+    Y: =0
+    ZIndex: =1
+
+    Icon7 As icon.Compose:
+        BorderColor: =App.Theme.Colors.Darker40
+        Color: =App.Theme.Colors.Darker30
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(244, 244, 244, 1)
+        Height: =55
+        Icon: =Icon.Compose
+        Width: =53
+        X: =94
+        Y: =18
+        ZIndex: =1
+
+    Label39 As label:
+        Align: =Align.Center
+        BorderColor: =App.Theme.Colors.Darker40
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Font: =App.Theme.Font
+        Size: =13
+        Text: ="Create Request"
+        X: =45
+        Y: =73
+        ZIndex: =2
+

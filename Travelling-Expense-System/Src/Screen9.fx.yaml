@@ -1,0 +1,566 @@
+"Screen9 As screen.'phoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
+    Fill: =Color.White
+    LoadingSpinnerColor: =App.Theme.Colors.Primary
+    OnVisible: =
+
+    Canvas4 As fluidGrid.fluidGridWithBlankCard:
+        BorderThickness: =0
+        Fill: =RGBA(15, 108, 189, 1)
+        Height: =Parent.Height
+        Width: =Parent.Width
+        Y: =
+        ZIndex: =3
+
+        DataCard4 As dataCard.blankCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(15, 108, 189, 1)
+            Height: =100
+            Width: =1366
+            WidthFit: =true
+            X: =0
+            Y: =0
+            ZIndex: =2
+
+            Container41 As groupContainer.manualLayoutContainer:
+                DropShadow: =DropShadow.Light
+                Height: =300
+                RadiusBottomLeft: =4
+                RadiusBottomRight: =4
+                RadiusTopLeft: =4
+                RadiusTopRight: =4
+                Width: =Parent.Width
+                Y: =81
+                ZIndex: =2
+
+                Image2_1 As image:
+                    BorderColor: =App.Theme.Colors.Darker40
+                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                    DisabledFill: =RGBA(244, 244, 244, 1)
+                    Height: =300
+                    Image: ='360_F_224478632_3zdqmXdfJRtfsttPiMdgsYPHDYybxnMq'
+                    ImagePosition: =ImagePosition.Stretch
+                    Width: =Parent.Width
+                    ZIndex: =1
+
+                Container38_6 As groupContainer.manualLayoutContainer:
+                    DropShadow: =DropShadow.ExtraBold
+                    Fill: =RGBA(15, 108, 189, 1)
+                    Height: =105
+                    RadiusBottomLeft: =10
+                    RadiusBottomRight: =10
+                    RadiusTopLeft: |
+                        =30
+                    RadiusTopRight: =10
+                    Width: =199
+                    X: =12
+                    Y: =16
+                    ZIndex: =4
+
+                    TextCanvas14_6 As Text:
+                        Align: ='TextCanvas.Align'.Center
+                        DisplayMode: =DisplayMode.Edit
+                        FontColor: =RGBA(255, 255, 255, 1)
+                        Height: =32
+                        Size: =20
+                        Text: ="Approved Tickets"
+                        Width: =158
+                        X: =23
+                        Y: =63
+                        ZIndex: =1
+
+                    TextCanvas1_4 As Text:
+                        Align: ='TextCanvas.Align'.Center
+                        DisplayMode: =DisplayMode.Edit
+                        FontColor: =RGBA(255, 255, 255, 1)
+                        Height: =63
+                        Size: =30
+                        Text: =CountRows(Filter('New tables','Status (cr316_status)'="Approved by Finance"))
+                        Weight: ='TextCanvas.Weight'.Bold
+                        Width: =96
+                        X: =54
+                        Y: =0
+                        ZIndex: =2
+
+                Container38_3 As groupContainer.manualLayoutContainer:
+                    DropShadow: =DropShadow.ExtraBold
+                    Fill: =RGBA(106, 122, 127, 1)
+                    Height: =105
+                    RadiusBottomLeft: =10
+                    RadiusBottomRight: =10
+                    RadiusTopLeft: |
+                        =30
+                    RadiusTopRight: =10
+                    Width: =199
+                    X: =226
+                    Y: =16
+                    ZIndex: =5
+
+                    TextCanvas14_3 As Text:
+                        Align: ='TextCanvas.Align'.Center
+                        DisplayMode: =DisplayMode.Edit
+                        FontColor: =RGBA(255, 255, 255, 1)
+                        Height: =32
+                        Size: =20
+                        Text: ="Pending Tickets"
+                        Width: =158
+                        X: =17
+                        Y: =65
+                        ZIndex: =1
+
+                    TextCanvas7_1 As Text:
+                        Align: ='TextCanvas.Align'.Center
+                        DisplayMode: =DisplayMode.Edit
+                        FontColor: =RGBA(255, 255, 255, 1)
+                        Height: =62
+                        Size: =30
+                        Text: =CountRows(Filter('New tables','Status (cr316_status)'="Pending With Department Head"))
+                        Weight: ='TextCanvas.Weight'.Bold
+                        Width: =116
+                        X: =38
+                        Y: =3
+                        ZIndex: =2
+
+                Container38_4 As groupContainer.manualLayoutContainer:
+                    DropShadow: =DropShadow.ExtraBold
+                    Fill: =RGBA(15, 84, 140, 1)
+                    Height: =105
+                    RadiusBottomLeft: =10
+                    RadiusBottomRight: =10
+                    RadiusTopLeft: |
+                        =30
+                    RadiusTopRight: =10
+                    Width: =199
+                    X: =442
+                    Y: =16
+                    ZIndex: =6
+
+                    TextCanvas14_4 As Text:
+                        Align: ='TextCanvas.Align'.Center
+                        DisplayMode: =DisplayMode.Edit
+                        FontColor: =RGBA(255, 255, 255, 1)
+                        Height: =32
+                        Size: =20
+                        Text: ="Open Ticket"
+                        Width: =158
+                        X: =28
+                        Y: =68
+                        ZIndex: =1
+
+                    Icon9_3 As icon.Compose:
+                        BorderColor: =App.Theme.Colors.Darker40
+                        Color: =Color.White
+                        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                        DisabledColor: =RGBA(244, 244, 244, 1)
+                        Height: =49
+                        Icon: =Icon.Compose
+                        OnSelect: |-
+                            =Navigate(Screen11);
+                            ResetForm(Form1_5);
+                            NewForm(Form2_6)
+                        Width: =51
+                        X: =81
+                        Y: =19
+                        ZIndex: =2
+
+                Container38_5 As groupContainer.manualLayoutContainer:
+                    DropShadow: =DropShadow.ExtraBold
+                    Fill: =RGBA(233, 79, 76, 1)
+                    Height: =105
+                    RadiusBottomLeft: =10
+                    RadiusBottomRight: =10
+                    RadiusTopLeft: =30
+                    RadiusTopRight: =10
+                    Width: =199
+                    X: =660
+                    Y: =16
+                    ZIndex: =7
+
+                    Icon10_1 As icon.DetailList:
+                        BorderColor: =App.Theme.Colors.Darker40
+                        Color: =Color.White
+                        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                        DisabledColor: =RGBA(244, 244, 244, 1)
+                        Height: =41
+                        Icon: =Icon.DetailList
+                        OnSelect: =Navigate('Scrollable pending screen')
+                        Width: =51
+                        X: =70
+                        Y: =16
+                        ZIndex: =1
+
+                    TextCanvas14_5 As Text:
+                        Align: ='TextCanvas.Align'.Center
+                        DisplayMode: =DisplayMode.Edit
+                        FontColor: =RGBA(255, 255, 255, 1)
+                        Height: =32
+                        Size: =20
+                        Text: ="View Tickets"
+                        Width: =183
+                        X: =4
+                        Y: =70
+                        ZIndex: =2
+
+                Container38_7 As groupContainer.manualLayoutContainer:
+                    DropShadow: =DropShadow.ExtraBold
+                    Fill: =RGBA(0, 0, 0, 1)
+                    Height: =105
+                    RadiusBottomLeft: =10
+                    RadiusBottomRight: =10
+                    RadiusTopLeft: =30
+                    RadiusTopRight: =10
+                    Visible: =isAdmin
+                    Width: =199
+                    X: =883
+                    Y: =16
+                    ZIndex: =8
+
+                    Icon11 As icon.AddDocument:
+                        BorderColor: =App.Theme.Colors.Darker40
+                        Color: =Color.White
+                        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                        DisabledColor: =RGBA(244, 244, 244, 1)
+                        Height: =46
+                        Icon: =Icon.AddDocument
+                        OnSelect: =Navigate('TADA Setup')
+                        Width: =51
+                        X: =76
+                        Y: =16
+                        ZIndex: =1
+
+                    TextCanvas14_8 As Text:
+                        Align: ='TextCanvas.Align'.Center
+                        DisplayMode: =DisplayMode.Edit
+                        FontColor: =RGBA(255, 255, 255, 1)
+                        Height: =32
+                        Size: =20
+                        Text: ="TA/DA setup"
+                        Width: =183
+                        X: =10
+                        Y: =73
+                        ZIndex: =2
+
+                Container38_14 As groupContainer.manualLayoutContainer:
+                    DropShadow: =DropShadow.ExtraBold
+                    Fill: =RGBA(12, 59, 94, 1)
+                    Height: =105
+                    RadiusBottomLeft: =10
+                    RadiusBottomRight: =10
+                    RadiusTopLeft: =30
+                    RadiusTopRight: =10
+                    Visible: =isAdmin
+                    Width: =199
+                    X: =1107
+                    Y: =16
+                    ZIndex: =9
+
+                    Icon12 As icon.Copy:
+                        BorderColor: =App.Theme.Colors.Darker40
+                        Color: =Color.White
+                        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                        DisabledColor: =RGBA(244, 244, 244, 1)
+                        Height: =49
+                        Icon: =Icon.Copy
+                        OnSelect: =Navigate('Project Setup')
+                        Width: =51
+                        X: =78
+                        Y: =26
+                        ZIndex: =1
+
+                    TextCanvas14_16 As Text:
+                        Align: ='TextCanvas.Align'.Center
+                        DisplayMode: =DisplayMode.Edit
+                        FontColor: =RGBA(255, 255, 255, 1)
+                        Height: =32
+                        Size: =20
+                        Text: ="Project setup"
+                        Width: =183
+                        X: =12
+                        Y: =73
+                        ZIndex: =2
+
+                Container38_15 As groupContainer.manualLayoutContainer:
+                    DropShadow: =DropShadow.ExtraBold
+                    Fill: =RGBA(160, 64, 8, 1)
+                    Height: =105
+                    RadiusBottomLeft: =10
+                    RadiusBottomRight: =10
+                    RadiusTopLeft: =30
+                    RadiusTopRight: =10
+                    Visible: =isAdmin
+                    Width: =199
+                    X: =12
+                    Y: =130
+                    ZIndex: =10
+
+                    TextCanvas14_17 As Text:
+                        Align: ='TextCanvas.Align'.Center
+                        DisplayMode: =DisplayMode.Edit
+                        FontColor: =RGBA(255, 255, 255, 1)
+                        Height: =32
+                        Size: =20
+                        Text: ="Employee setup"
+                        Width: =183
+                        X: =6
+                        Y: =70
+                        ZIndex: =1
+
+                    Icon13 As icon.Bookmark:
+                        BorderColor: =App.Theme.Colors.Darker40
+                        Color: =Color.White
+                        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                        DisabledColor: =RGBA(244, 244, 244, 1)
+                        Height: =46
+                        Icon: =Icon.Bookmark
+                        OnSelect: |-
+                            =Navigate(EmployeeDesignation);
+                            NewForm(Form5_1);
+                        Width: =56
+                        X: =69
+                        Y: =24
+                        ZIndex: =2
+
+                Container38_16 As groupContainer.manualLayoutContainer:
+                    DropShadow: =DropShadow.ExtraBold
+                    Fill: =RGBA(21, 68, 18, 1)
+                    Height: =105
+                    RadiusBottomLeft: =10
+                    RadiusBottomRight: =10
+                    RadiusTopLeft: =30
+                    RadiusTopRight: =10
+                    Visible: =isAdmin
+                    Width: =199
+                    X: =227
+                    Y: =130
+                    ZIndex: =11
+
+                    TextCanvas14_18 As Text:
+                        Align: ='TextCanvas.Align'.Center
+                        DisplayMode: =DisplayMode.Edit
+                        FontColor: =RGBA(255, 255, 255, 1)
+                        Height: =32
+                        Size: =20
+                        Text: ="Regional setup"
+                        Width: =183
+                        X: =8
+                        Y: =66
+                        ZIndex: =1
+
+                    Icon14 As icon.DocumentwithContent:
+                        BorderColor: =App.Theme.Colors.Darker40
+                        Color: =Color.White
+                        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                        DisabledColor: =RGBA(244, 244, 244, 1)
+                        Height: =49
+                        Icon: =Icon.DocumentWithContent
+                        OnSelect: =Navigate('Regional Manager Setup')
+                        Width: =56
+                        X: =71
+                        Y: =17
+                        ZIndex: =2
+
+        DataCard1 As dataCard.blankCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =380
+            Width: =1366
+            X: =0
+            Y: =1
+            ZIndex: =3
+
+            Container1 As groupContainer.manualLayoutContainer:
+                DropShadow: =DropShadow.Light
+                Height: =380
+                RadiusBottomLeft: =4
+                RadiusBottomRight: =4
+                RadiusTopLeft: =4
+                RadiusTopRight: =4
+                Width: =1366
+                ZIndex: =2
+
+                Container39 As groupContainer.verticalAutoLayoutContainer:
+                    DropShadow: =DropShadow.Light
+                    Height: =Parent.Height
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutMode: =LayoutMode.Auto
+                    RadiusBottomLeft: =4
+                    RadiusBottomRight: =4
+                    RadiusTopLeft: =4
+                    RadiusTopRight: =4
+                    Width: =Parent.Width
+                    ZIndex: =1
+
+                    Container19_3 As groupContainer.horizontalAutoLayoutContainer:
+                        FillPortions: =0
+                        Height: =70
+                        LayoutAlignItems: =LayoutAlignItems.Stretch
+                        LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        Width: =Parent.Width
+                        ZIndex: =1
+
+                        Label49 As label:
+                            BorderColor: =App.Theme.Colors.Darker40
+                            Color: =RGBA(255, 255, 255, 1)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            Font: =App.Theme.Font
+                            FontWeight: =FontWeight.Bold
+                            PaddingLeft: =45
+                            Size: =17
+                            Text: ="Recent Tickets"
+                            Width: =Parent.Width
+                            ZIndex: =1
+
+                    Gallery5_1 As gallery.galleryHorizontal:
+                        BorderColor: =App.Theme.Colors.Darker40
+                        DelayItemLoading: =true
+                        Height: =700
+                        Items: ='New tables'
+                        LayoutMinHeight: =287
+                        LayoutMinWidth: =320
+                        LoadingSpinner: =LoadingSpinner.Data
+                        TemplateSize: =If(Self.Layout = Layout.Horizontal, Min(330, Self.Width - 60), Min(320, Self.Height - 60))
+                        Width: =Parent.Width
+                        ZIndex: =3
+
+                        Container18_1 As groupContainer.manualLayoutContainer:
+                            DropShadow: =DropShadow.Light
+                            Fill: =RGBA(187, 211, 237, 1)
+                            Height: =265
+                            RadiusBottomLeft: =10
+                            RadiusBottomRight: =10
+                            RadiusTopLeft: =10
+                            RadiusTopRight: =10
+                            Width: =300
+                            ZIndex: =1
+
+                            Label50 As label:
+                                BorderColor: =App.Theme.Colors.Darker40
+                                Color: =RGBA(0, 0, 0, 1)
+                                DisabledColor: =RGBA(166, 166, 166, 1)
+                                Font: =App.Theme.Font
+                                FontWeight: =FontWeight.Bold
+                                Size: =15
+                                Text: =ThisItem.ReqID
+                                X: =114
+                                Y: =20
+                                ZIndex: =1
+
+                            Image2_2 As image:
+                                BorderColor: =App.Theme.Colors.Darker40
+                                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                                DisabledFill: =RGBA(244, 244, 244, 1)
+                                Height: =35
+                                Image: =dots
+                                OnSelect: |-
+                                    =Set(galid,ThisItem.ReqID);
+                                    Navigate('Comments Screen_2')
+                                Width: =50
+                                X: =242
+                                Y: =20
+                                ZIndex: =2
+
+                            Image8_1 As image:
+                                BorderColor: =App.Theme.Colors.Darker40
+                                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                                DisabledFill: =RGBA(244, 244, 244, 1)
+                                Height: =75
+                                Image: ='images (1)'
+                                RadiusBottomLeft: =200
+                                RadiusBottomRight: =200
+                                RadiusTopLeft: =200
+                                RadiusTopRight: =200
+                                Width: =75
+                                X: =10
+                                Y: =65
+                                ZIndex: =3
+
+                            Label51 As label:
+                                BorderColor: =App.Theme.Colors.Darker40
+                                Color: =RGBA(0, 0, 0, 1)
+                                DisabledColor: =RGBA(166, 166, 166, 1)
+                                Font: =App.Theme.Font
+                                FontWeight: =FontWeight.Bold
+                                Size: =13
+                                Text: =ThisItem.'Employee Name'
+                                X: =100
+                                Y: =75
+                                ZIndex: =4
+
+                            Label52 As label:
+                                BorderColor: =App.Theme.Colors.Darker40
+                                Color: =RGBA(0, 0, 0, 1)
+                                DisabledColor: =RGBA(166, 166, 166, 1)
+                                Font: =App.Theme.Font
+                                FontWeight: =FontWeight.Semibold
+                                Size: =13
+                                Text: ="Submitted On"
+                                X: =12
+                                Y: =145
+                                ZIndex: =5
+
+                            Label53 As label:
+                                BorderColor: =App.Theme.Colors.Darker40
+                                Color: =RGBA(0, 0, 0, 1)
+                                DisabledColor: =RGBA(166, 166, 166, 1)
+                                Font: =App.Theme.Font
+                                FontWeight: =FontWeight.Semibold
+                                Size: =13
+                                Text: ="Status"
+                                X: =20
+                                Y: =196
+                                ZIndex: =6
+
+                            Label54 As label:
+                                Align: =Align.Center
+                                BorderColor: =App.Theme.Colors.Darker40
+                                Color: =RGBA(0, 0, 0, 1)
+                                DisabledColor: =RGBA(166, 166, 166, 1)
+                                Font: =App.Theme.Font
+                                Size: =13
+                                Text: =ThisItem.'Created On'
+                                Width: =120
+                                X: =178
+                                Y: =140
+                                ZIndex: =7
+
+                            Label55 As label:
+                                Align: =Align.Center
+                                BorderColor: =App.Theme.Colors.Darker40
+                                Color: =RGBA(0, 0, 0, 1)
+                                DisabledColor: =RGBA(166, 166, 166, 1)
+                                Font: =App.Theme.Font
+                                Height: =62
+                                Size: =13
+                                Text: =ThisItem.'Status (cr316_status)'
+                                Width: =147
+                                X: =147
+                                Y: =185
+                                ZIndex: =8
+
+                            Label1 As label:
+                                BorderColor: =App.Theme.Colors.Darker40
+                                Color: =RGBA(0, 0, 0, 1)
+                                DisabledColor: =RGBA(166, 166, 166, 1)
+                                Font: =App.Theme.Font
+                                OnSelect: =
+                                Size: =13
+                                Text: |-
+                                    ="Request ID :"
+                                X: =12
+                                Y: =20
+                                ZIndex: =9
+
+    "'Employee Request_5' As 'Employee Request_4'":
+        Width: =Parent.Width
+        ZIndex: =6
+

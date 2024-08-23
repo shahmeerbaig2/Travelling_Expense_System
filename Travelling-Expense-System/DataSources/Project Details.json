@@ -1,0 +1,98 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "cra95_projectdetailses",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "cra95_projectdetails",
+    "MaxGetRowsCount": 500,
+    "Name": "Project Details",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "cra95_name": "Project Name",
+      "cra95_projectcode": "Project Code",
+      "cra95_projectdetails_AsyncOperations": "System Jobs",
+      "cra95_projectdetails_BulkDeleteFailures": "Bulk Delete Failures",
+      "cra95_projectdetails_DuplicateBaseRecord": "Duplicate Records (cra95_projectdetails_DuplicateBaseRecord)",
+      "cra95_projectdetails_DuplicateMatchingRecord": "Duplicate Records (cra95_projectdetails_DuplicateMatchingRecord)",
+      "cra95_projectdetails_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "cra95_projectdetails_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "cra95_projectdetails_ProcessSession": "Process Sessions",
+      "cra95_projectdetails_SyncErrors": "Sync Errors",
+      "cra95_projectdetailsid": "Project Details",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "Project Details",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "Project Details (Views)",
+    "Name": "_cra95_projectdetails_views",
+    "RelatedEntityName": "Project Details",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "1833b7c2-047a-4a5f-ae83-2f40afcfa698": "Project Details Lookup View",
+      "341b574d-2183-416f-b9ba-fbce53b470bf": "Project Details Associated View",
+      "9f4cd726-afc7-495f-859b-f0be3496acfe": "Active Project Details",
+      "a55c9d37-1ab0-4fc6-b57f-4bc771feb25f": "Inactive Project Details",
+      "bafaa19e-cbad-490d-8059-ba8790dacd5d": "Project Details Advanced Find View"
+    }
+  },
+  {
+    "DisplayName": "Status (Project Details)",
+    "Name": "cra95_projectdetails_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "Project Details"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "Project Details",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (Project Details)",
+    "Name": "cra95_projectdetails_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "Project Details"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "Project Details",
+    "Type": "OptionSetInfo"
+  }
+]

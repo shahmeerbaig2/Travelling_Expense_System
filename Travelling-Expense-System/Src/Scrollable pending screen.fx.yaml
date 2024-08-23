@@ -1,0 +1,743 @@
+"'Scrollable pending screen' As screen.'phoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
+    Fill: =Color.White
+    LoadingSpinnerColor: =App.Theme.Colors.Primary
+
+    Canvas8 As fluidGrid.fluidGridWithBlankCard:
+        BorderThickness: =0
+        Height: =Parent.Height - Self.Y
+        Width: =Parent.Width
+        Y: =
+        ZIndex: =3
+
+        DataCard32 As dataCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            BorderThickness: =0
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =Parent.Height - 100
+            Width: =Parent.Width
+            X: =0
+            Y: =0
+            ZIndex: =1
+
+            ScreenContainer1_4 As groupContainer.verticalAutoLayoutContainer:
+                DropShadow: =DropShadow.Light
+                Fill: =RGBA(255, 255, 255, 1)
+                Height: =668
+                LayoutAlignItems: =LayoutAlignItems.Stretch
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutGap: =16
+                LayoutMode: =LayoutMode.Auto
+                PaddingBottom: =16
+                PaddingLeft: =16
+                PaddingRight: =16
+                PaddingTop: =16
+                RadiusBottomLeft: =4
+                RadiusBottomRight: =4
+                RadiusTopLeft: =4
+                RadiusTopRight: =4
+                Width: =Parent.Width
+                ZIndex: =1
+
+                "'Employee Request_3' As 'Employee Request_2'":
+                    LayoutMinHeight: =640
+                    LayoutMinWidth: =640
+
+                Container1_30 As groupContainer.horizontalAutoLayoutContainer:
+                    Fill: =RGBA(255, 255, 255, 1)
+                    Height: =Parent.Height -MainContainer1_4.Height*0.
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutMinHeight: =200
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    RadiusBottomLeft: =4
+                    RadiusBottomRight: =4
+                    RadiusTopLeft: =4
+                    RadiusTopRight: =4
+                    ZIndex: =2
+
+                    Gallery7_1 As gallery.galleryHorizontal:
+                        BorderColor: =App.Theme.Colors.Darker40
+                        DelayItemLoading: =true
+                        Fill: =Color.White
+                        Height: =Parent.Height
+                        Items: |-
+                            =Table(
+                                {
+                                    ID: 1,
+                                    Count: CountIf(
+                                        'New tables',
+                                        'Status (cr316_status)' = "Approved by Finance"
+                                    ),
+                                    Title: "Approved by Finance"
+                                },
+                                {
+                                    ID: 2,
+                                    Count: CountIf(
+                                        'New tables',
+                                        'Status (cr316_status)' = "Pending With Department Head"
+                                    ),
+                                    Title: "Pending with HOD"
+                                },
+                                {
+                                    ID: 3,
+                                    Count: CountIf(
+                                        'New tables',
+                                        'Status (cr316_status)' = "Pending with GM"
+                                    ),
+                                    Title: "Pending with GM"
+                                }
+                            )
+                        LayoutMinHeight: =200
+                        LayoutMinWidth: =320
+                        LoadingSpinner: =LoadingSpinner.Data
+                        TemplateSize: =210
+                        Width: =Parent.Width
+                        ZIndex: =1
+
+                        ButtonCanvas2_1 As Button:
+                            BasePaletteColor: =RGBA(15, 84, 140, 1)
+                            BorderRadiusBottomLeft: =0
+                            BorderRadiusBottomRight: =0
+                            BorderRadiusTopLeft: =35
+                            BorderRadiusTopRight: =10
+                            DisplayMode: =DisplayMode.Edit
+                            Height: =Parent.Height
+                            OnSelect: =Select(Parent)
+                            PaddingBottom: =5
+                            PaddingLeft: =5
+                            PaddingRight: =5
+                            PaddingTop: =5
+                            Text: =
+                            Width: =200
+                            X: =5
+                            Y: =0
+                            ZIndex: =1
+
+                        Label3_2 As label:
+                            Align: =Align.Center
+                            BorderColor: =App.Theme.Colors.Darker40
+                            Color: =RGBA(255, 255, 255, 1)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            Font: =App.Theme.Font
+                            FontWeight: =FontWeight.Semibold
+                            Height: =58
+                            OnSelect: =Select(Parent)
+                            Size: =45
+                            Text: =ThisItem.Count
+                            Width: =66
+                            X: =117
+                            Y: =47
+                            ZIndex: =2
+
+                        Label41_1 As label:
+                            Align: =Align.Center
+                            AutoHeight: =true
+                            BorderColor: =App.Theme.Colors.Darker40
+                            Color: =RGBA(255, 255, 255, 1)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            Font: =App.Theme.Font
+                            Height: =75
+                            OnSelect: =Select(Parent)
+                            Text: =ThisItem.Title
+                            Width: =200
+                            X: =5
+                            Y: =142
+                            ZIndex: =4
+
+                        Image10_1 As image:
+                            BorderColor: =App.Theme.Colors.Darker40
+                            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                            DisabledFill: =RGBA(244, 244, 244, 1)
+                            Height: =58
+                            Image: ='wall-clock'
+                            OnSelect: =Select(Parent)
+                            Width: =76
+                            X: =21
+                            Y: =47
+                            ZIndex: =5
+
+                MainContainer1_4 As groupContainer.verticalAutoLayoutContainer:
+                    DropShadow: =DropShadow.Light
+                    Fill: =RGBA(255, 255, 255, 1)
+                    FillPortions: =0
+                    Height: =Parent.Height*0.58
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    RadiusBottomLeft: =4
+                    RadiusBottomRight: =4
+                    RadiusTopLeft: =4
+                    RadiusTopRight: =4
+                    Y: =320
+                    ZIndex: =3
+
+                    Container2_12 As groupContainer.verticalAutoLayoutContainer:
+                        DropShadow: =DropShadow.Light
+                        FillPortions: =0
+                        Height: =110
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        Y: =320
+                        ZIndex: =1
+
+                        Form3_1 As form.PowerApps_CoreControls_Form:
+                            AlignInContainer: =AlignInContainer.SetByContainer
+                            BorderColor: =App.Theme.Colors.Darker40
+                            DataSource: =EmployeeData
+                            DefaultMode: =FormMode.New
+                            Height: =Parent.Height
+                            LayoutMinHeight: =250
+                            LayoutMinWidth: =0
+                            NumberOfColumns: =12
+                            UseFluentV9Cards: =true
+                            Width: =Parent.Width
+                            ZIndex: =1
+
+                            DataCard13_1 As typedDataCard.blankCard:
+                                BorderColor: =App.Theme.Colors.Darker40
+                                BorderStyle: =BorderStyle.Solid
+                                DisplayMode: =DisplayMode.Edit
+                                Fill: =RGBA(0, 0, 0, 0)
+                                Height: =99
+                                Width: =333
+                                WidthFit: =true
+                                X: =0
+                                Y: =0
+                                ZIndex: =1
+
+                                ComboboxCanvas1_1 As Combobox.pcfdataset:
+                                    Appearance: ='ComboboxCanvas.Appearance'.Outline
+                                    BorderColor: =RGBA(12, 59, 94, 1)
+                                    BorderRadius: =10
+                                    DisplayMode: =DisplayMode.Edit
+                                    Height: =46
+                                    InputTextPlaceholder: ="Select Status"
+                                    Items: =["Pending with GM","Pending with Finance","Approved By Finance","Pending With Department Head"]
+                                    Width: =284
+                                    X: =21
+                                    Y: =27
+                                    ZIndex: =1
+
+                                "TextInputCanvas2_1 As 'Text input'":
+                                    Appearance: ='TextInputCanvas.Appearance'.Outline
+                                    BorderThickness: =0
+                                    DisplayMode: =DisplayMode.Edit
+                                    FontColor: =RGBA(40, 134, 222, 1)
+                                    Height: =32
+                                    Mode: ='TextInputCanvas.Mode'.SingleLine
+                                    Value: ="Select Status"
+                                    Visible: =false
+                                    Width: =284
+                                    X: =40
+                                    Y: =8
+                                    ZIndex: =2
+
+                            DataCard16_1 As typedDataCard.blankCard:
+                                BorderColor: =App.Theme.Colors.Darker40
+                                BorderStyle: =BorderStyle.Solid
+                                DisplayMode: =DisplayMode.Edit
+                                Fill: =RGBA(0, 0, 0, 0)
+                                Height: =94
+                                Width: =333
+                                WidthFit: =true
+                                X: =3
+                                Y: =0
+                                ZIndex: =1
+
+                                ComboboxCanvas2_1 As Combobox.pcfdataset:
+                                    Appearance: ='ComboboxCanvas.Appearance'.Outline
+                                    BorderColor: =RGBA(12, 59, 94, 1)
+                                    BorderRadius: =10
+                                    DisplayMode: =DisplayMode.Edit
+                                    Height: =48
+                                    InputTextPlaceholder: ="Select Type"
+                                    Items: =["Foreign","Local"]
+                                    Width: =293
+                                    X: =9
+                                    Y: =27
+                                    ZIndex: =1
+
+                                TextCanvas13_1 As Text:
+                                    DisplayMode: =DisplayMode.Edit
+                                    FontColor: =RGBA(240, 98, 15, 1)
+                                    Height: =32
+                                    Text: ="Search by Type"
+                                    Visible: =false
+                                    Width: =279.5
+                                    X: =54
+                                    Y: =8
+                                    ZIndex: =2
+
+                            DataCard17_1 As typedDataCard.blankCard:
+                                BorderColor: =App.Theme.Colors.Darker40
+                                BorderStyle: =BorderStyle.Solid
+                                DisplayMode: =DisplayMode.Edit
+                                Fill: =RGBA(0, 0, 0, 0)
+                                Height: =94
+                                Width: =333
+                                WidthFit: =true
+                                X: =6
+                                Y: =0
+                                ZIndex: =1
+
+                                "DatePickerCanvas3_1 As 'Date picker'":
+                                    Appearance: ='DatePickerCanvas.Appearance'.Outline
+                                    BorderColor: =RGBA(12, 59, 94, 1)
+                                    BorderRadius: =10
+                                    DisplayMode: =DisplayMode.Edit
+                                    Height: =50
+                                    Width: =303.5
+                                    X: =3
+                                    Y: =27
+                                    ZIndex: =1
+
+                                TextCanvas15_1 As Text:
+                                    DisplayMode: =DisplayMode.Edit
+                                    FontColor: =RGBA(240, 98, 15, 1)
+                                    Height: =27
+                                    Text: ="Select Date"
+                                    Visible: =false
+                                    Width: =320
+                                    X: =30
+                                    Y: =13
+                                    ZIndex: =2
+
+                            DataCard19_1 As typedDataCard.blankCard:
+                                BorderColor: =App.Theme.Colors.Darker40
+                                BorderStyle: =BorderStyle.Solid
+                                DisplayMode: =DisplayMode.Edit
+                                Fill: =RGBA(0, 0, 0, 0)
+                                Height: =103
+                                Width: =333
+                                WidthFit: =true
+                                X: =9
+                                Y: =0
+                                ZIndex: =1
+
+                                Container20_4 As groupContainer.verticalAutoLayoutContainer:
+                                    Height: =70
+                                    LayoutAlignItems: =LayoutAlignItems.Center
+                                    LayoutJustifyContent: =LayoutJustifyContent.End
+                                    LayoutMode: =LayoutMode.Auto
+                                    RadiusBottomLeft: =4
+                                    RadiusBottomRight: =4
+                                    RadiusTopLeft: =4
+                                    RadiusTopRight: =4
+                                    Width: =Parent.Width - 80
+                                    X: =40
+                                    Y: =20
+                                    ZIndex: =1
+
+                                    Icon16_1 As icon.Reload:
+                                        BorderColor: =App.Theme.Colors.Darker40
+                                        Color: =RGBA(12, 59, 94, 1)
+                                        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                                        DisabledColor: =RGBA(244, 244, 244, 1)
+                                        Height: =55
+                                        Icon: =Icon.Reload
+                                        OnSelect: =ResetForm(Form3_1)
+                                        Width: =70
+                                        ZIndex: =1
+
+                    Container3_1 As groupContainer.verticalAutoLayoutContainer:
+                        DropShadow: =DropShadow.Light
+                        Fill: =RGBA(255, 255, 255, 1)
+                        FillPortions: =0
+                        Height: =60
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        RadiusBottomLeft: =15
+                        RadiusBottomRight: =15
+                        RadiusTopLeft: =15
+                        RadiusTopRight: =15
+                        ZIndex: =2
+
+                        Container6_2 As groupContainer.horizontalAutoLayoutContainer:
+                            DropShadow: =DropShadow.Light
+                            Fill: =RGBA(255, 255, 255, 1)
+                            FillPortions: =0
+                            Height: =Parent.Height
+                            LayoutMinHeight: =100
+                            LayoutMinWidth: =250
+                            LayoutMode: =LayoutMode.Auto
+                            RadiusBottomLeft: =4
+                            RadiusBottomRight: =4
+                            RadiusTopLeft: =4
+                            RadiusTopRight: =4
+                            Width: =Parent.Width
+                            ZIndex: =1
+
+                            Label4_2 As label:
+                                Align: =Align.Center
+                                AlignInContainer: =AlignInContainer.Stretch
+                                BorderColor: =App.Theme.Colors.Darker40
+                                Color: =RGBA(255, 255, 255, 1)
+                                DisabledColor: =RGBA(166, 166, 166, 1)
+                                Fill: =RGBA(15, 84, 140, 1)
+                                FillPortions: =1
+                                Font: =App.Theme.Font
+                                LayoutMinWidth: =75
+                                Size: =15
+                                Text: ="Emp Code"
+                                Width: =100
+                                ZIndex: =1
+
+                            Label5_2 As label:
+                                Align: =Align.Center
+                                AlignInContainer: =AlignInContainer.Stretch
+                                BorderColor: =App.Theme.Colors.Darker40
+                                Color: =RGBA(255, 255, 255, 1)
+                                DisabledColor: =RGBA(166, 166, 166, 1)
+                                Fill: =RGBA(15, 84, 140, 1)
+                                FillPortions: =1
+                                Font: =App.Theme.Font
+                                LayoutMinWidth: =75
+                                Size: =15
+                                Text: ="Emp Name"
+                                ZIndex: =2
+
+                            Label6_2 As label:
+                                Align: =Align.Center
+                                AlignInContainer: =AlignInContainer.Stretch
+                                BorderColor: =App.Theme.Colors.Darker40
+                                Color: =RGBA(255, 255, 255, 1)
+                                DisabledColor: =RGBA(166, 166, 166, 1)
+                                Fill: =RGBA(15, 84, 140, 1)
+                                FillPortions: =1
+                                Font: =App.Theme.Font
+                                LayoutMinWidth: =75
+                                Size: =15
+                                Text: ="From"
+                                ZIndex: =3
+
+                            Label7_2 As label:
+                                Align: =Align.Center
+                                AlignInContainer: =AlignInContainer.Stretch
+                                BorderColor: =App.Theme.Colors.Darker40
+                                Color: =RGBA(255, 255, 255, 1)
+                                DisabledColor: =RGBA(166, 166, 166, 1)
+                                Fill: =RGBA(15, 84, 140, 1)
+                                FillPortions: =1
+                                Font: =App.Theme.Font
+                                LayoutMinWidth: =75
+                                Size: =15
+                                Text: ="To"
+                                ZIndex: =4
+
+                            Label8_1 As label:
+                                Align: =Align.Center
+                                AlignInContainer: =AlignInContainer.Stretch
+                                BorderColor: =App.Theme.Colors.Darker40
+                                Color: =RGBA(255, 255, 255, 1)
+                                DisabledColor: =RGBA(166, 166, 166, 1)
+                                Fill: =RGBA(15, 84, 140, 1)
+                                FillPortions: =1
+                                Font: =App.Theme.Font
+                                LayoutMinWidth: =75
+                                Size: =15
+                                Text: ="Departure Date"
+                                ZIndex: =5
+
+                            Label10_2 As label:
+                                Align: =Align.Center
+                                AlignInContainer: =AlignInContainer.Stretch
+                                BorderColor: =App.Theme.Colors.Darker40
+                                Color: =RGBA(255, 255, 255, 1)
+                                DisabledColor: =RGBA(166, 166, 166, 1)
+                                Fill: =RGBA(15, 84, 140, 1)
+                                FillPortions: =1
+                                Font: =App.Theme.Font
+                                LayoutMinWidth: =75
+                                Size: =15
+                                Text: ="Type"
+                                ZIndex: =6
+
+                            Label9_1 As label:
+                                Align: =Align.Center
+                                AlignInContainer: =AlignInContainer.Stretch
+                                BorderColor: =App.Theme.Colors.Darker40
+                                Color: =RGBA(255, 255, 255, 1)
+                                DisabledColor: =RGBA(166, 166, 166, 1)
+                                Fill: =RGBA(15, 84, 140, 1)
+                                FillPortions: =1
+                                Font: =App.Theme.Font
+                                LayoutMinWidth: =75
+                                Size: =15
+                                Text: ="Return Date"
+                                ZIndex: =7
+
+                            Label11_1 As label:
+                                Align: =Align.Center
+                                AlignInContainer: =AlignInContainer.Stretch
+                                BorderColor: =App.Theme.Colors.Darker40
+                                Color: =RGBA(255, 255, 255, 1)
+                                DisabledColor: =RGBA(166, 166, 166, 1)
+                                Fill: =RGBA(15, 84, 140, 1)
+                                FillPortions: =1
+                                Font: =App.Theme.Font
+                                LayoutMinWidth: =75
+                                Size: =15
+                                Text: ="Status"
+                                ZIndex: =8
+
+                            Label13_3 As label:
+                                Align: =Align.Center
+                                AlignInContainer: =AlignInContainer.Stretch
+                                BorderColor: =App.Theme.Colors.Darker40
+                                Color: =RGBA(255, 255, 255, 1)
+                                DisabledColor: =RGBA(166, 166, 166, 1)
+                                Fill: =RGBA(15, 84, 140, 1)
+                                FillPortions: =1
+                                Font: =App.Theme.Font
+                                LayoutMinWidth: =75
+                                Size: =13
+                                Text: ="Request Details"
+                                Width: =200
+                                ZIndex: =9
+
+                    Container4_4 As groupContainer.verticalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        DropShadow: =DropShadow.Light
+                        Fill: =RGBA(255, 255, 255, 1)
+                        Height: =Parent.Height
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        Width: =Parent.Width
+                        ZIndex: =3
+
+                        Gallery1_6 As gallery.galleryVertical:
+                            AlignInContainer: =AlignInContainer.SetByContainer
+                            BorderColor: =App.Theme.Colors.Darker40
+                            DelayItemLoading: =true
+                            Fill: =RGBA(255, 255, 255, 1)
+                            Height: =Parent.Height
+                            Items: |-
+                                =Filter('New tables',('Status (cr316_status)'=ComboboxCanvas1_1.Selected.Value|| IsBlank(ComboboxCanvas2_1.Selected.Value))&&('Travel type'=ComboboxCanvas2_1.Selected.Value||
+                                IsBlank( ComboboxCanvas2_1.Selected.Value))&& ('Departure Date'=DatePickerCanvas3_1.SelectedDate || IsBlank(DatePickerCanvas3_1.SelectedDate)))
+                            Layout: =Layout.Vertical
+                            LayoutMinHeight: =300
+                            LayoutMinWidth: =320
+                            LoadingSpinner: =LoadingSpinner.Data
+                            ShowScrollbar: =false
+                            TemplateSize: =70
+                            Width: =Parent.Width
+                            ZIndex: =1
+
+                            Rectangle1_2 As rectangle:
+                                BorderColor: =App.Theme.Colors.Darker40
+                                Fill: =RGBA(12, 59, 94, 1)
+                                Height: =2
+                                OnSelect: =Select(Parent)
+                                Width: =Parent.Width
+                                Y: =68
+                                ZIndex: =9
+
+                            Container27 As groupContainer.horizontalAutoLayoutContainer:
+                                Height: =70
+                                LayoutAlignItems: =LayoutAlignItems.Center
+                                LayoutMode: =LayoutMode.Auto
+                                RadiusBottomLeft: =4
+                                RadiusBottomRight: =4
+                                RadiusTopLeft: =4
+                                RadiusTopRight: =4
+                                Width: =Parent.TemplateWidth
+                                ZIndex: =11
+
+                                Label2_11 As label:
+                                    Align: =Align.Center
+                                    BorderColor: =App.Theme.Colors.Darker40
+                                    Color: =RGBA(0, 0, 0, 1)
+                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                    FillPortions: =1
+                                    Font: =App.Theme.Font
+                                    Height: =Parent.Height
+                                    LayoutMinWidth: =75
+                                    OnSelect: =
+                                    Size: =13
+                                    Text: =ThisItem.'Employee ID'
+                                    Width: =Label4_2.Width
+                                    X: =Label4_2.X
+                                    ZIndex: =1
+
+                                Label2_15 As label:
+                                    Align: =Align.Center
+                                    BorderColor: =App.Theme.Colors.Darker40
+                                    Color: =RGBA(0, 0, 0, 1)
+                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                    FillPortions: =1
+                                    Font: =App.Theme.Font
+                                    Height: =Parent.Height
+                                    LayoutMinWidth: =75
+                                    OnSelect: =
+                                    Size: =13
+                                    Text: =ThisItem.'Employee Name'
+                                    Width: =Label5_2.Width
+                                    X: =Label5_2.X
+                                    ZIndex: =2
+
+                                Label2_18 As label:
+                                    Align: =Align.Center
+                                    BorderColor: =App.Theme.Colors.Darker40
+                                    Color: =RGBA(0, 0, 0, 1)
+                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                    FillPortions: =1
+                                    Font: =App.Theme.Font
+                                    Height: =Parent.Height
+                                    LayoutMinWidth: =75
+                                    OnSelect: =
+                                    Size: =13
+                                    Text: =ThisItem.From
+                                    Width: =Label6_2.Width
+                                    X: =Label6_2.X
+                                    ZIndex: =3
+
+                                Label2_19 As label:
+                                    Align: =Align.Center
+                                    BorderColor: =App.Theme.Colors.Darker40
+                                    Color: =RGBA(0, 0, 0, 1)
+                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                    FillPortions: =1
+                                    Font: =App.Theme.Font
+                                    Height: =Parent.Height
+                                    LayoutMinWidth: =75
+                                    OnSelect: =
+                                    Size: =13
+                                    Text: =ThisItem.To
+                                    Width: =Label7_2.Width
+                                    X: =Label7_2.X
+                                    ZIndex: =4
+
+                                Label2_20 As label:
+                                    Align: =Align.Center
+                                    BorderColor: =App.Theme.Colors.Darker40
+                                    Color: =RGBA(0, 0, 0, 1)
+                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                    FillPortions: =1
+                                    Font: =App.Theme.Font
+                                    Height: =Parent.Height
+                                    LayoutMinWidth: =75
+                                    OnSelect: =
+                                    Size: =13
+                                    Text: =Text(ThisItem.'Departure Date', "[$-en-US]dd/mm/yyyy")
+                                    Width: =Label8_1.Width
+                                    X: =Label8_1.X
+                                    ZIndex: =5
+
+                                Label2_21 As label:
+                                    Align: =Align.Center
+                                    BorderColor: =App.Theme.Colors.Darker40
+                                    Color: =RGBA(0, 0, 0, 1)
+                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                    FillPortions: =1
+                                    Font: =App.Theme.Font
+                                    Height: =Parent.Height
+                                    LayoutMinWidth: =75
+                                    OnSelect: =
+                                    Size: =13
+                                    Text: =ThisItem.'Travel type'
+                                    Width: =Label9_1.Width
+                                    X: =Label9_1.X
+                                    ZIndex: =6
+
+                                Label2_22 As label:
+                                    Align: =Align.Center
+                                    BorderColor: =App.Theme.Colors.Darker40
+                                    Color: =RGBA(0, 0, 0, 1)
+                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                    FillPortions: =1
+                                    Font: =App.Theme.Font
+                                    Height: =Parent.Height
+                                    LayoutMinWidth: =75
+                                    OnSelect: =
+                                    Size: =13
+                                    Text: =Text(ThisItem.'Return Date', "[$-en-US]dd/mm/yyyy")
+                                    Width: =Label10_2.Width
+                                    X: =Label10_2.X
+                                    ZIndex: =7
+
+                                Label12_2 As label:
+                                    Align: =Align.Center
+                                    BorderColor: =App.Theme.Colors.Darker40
+                                    Color: =RGBA(184, 0, 0, 1)
+                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                    FillPortions: =1
+                                    Font: =App.Theme.Font
+                                    Height: =Parent.Height
+                                    LayoutMinWidth: =75
+                                    OnSelect: =
+                                    Size: =13
+                                    Text: =ThisItem.'Status (cr316_status)'
+                                    Width: =Label11_1.Width
+                                    X: =Label11_1.X
+                                    ZIndex: =8
+
+                                Icon3_2 As icon.View:
+                                    BorderColor: =App.Theme.Colors.Darker40
+                                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                                    DisabledColor: =RGBA(244, 244, 244, 1)
+                                    FillPortions: =1
+                                    Height: =45
+                                    Icon: =Icon.View
+                                    LayoutMinWidth: =60
+                                    OnSelect: |-
+                                        =Set(galid,ThisItem.ReqID);
+                                        Refresh('Comments Tables');
+                                        
+                                        Navigate('Comments Screen_2');
+                                    PaddingBottom: =10
+                                    PaddingLeft: =10
+                                    PaddingRight: =10
+                                    PaddingTop: =10
+                                    Width: =150
+                                    X: =1223
+                                    Y: =12
+                                    ZIndex: =9
+
+                        Label36_1 As label:
+                            BorderColor: =App.Theme.Colors.Darker40
+                            Color: =RGBA(0, 0, 0, 1)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            Font: =App.Theme.Font
+                            Size: =13
+                            Text: =
+                            ZIndex: =2
+
+                        TextCanvas2_1 As Text:
+                            DisplayMode: =DisplayMode.Edit
+                            Height: =32
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =96
+                            Text: =CountRows(Filter('New tables','Status (cr316_status)'="Pending With Department Head"))
+                            Width: =96
+                            X: =0
+                            Y: =0
+                            ZIndex: =3
+
+        DataCard33 As dataCard.blankCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =100
+            Width: =1366
+            X: =0
+            Y: =1
+            ZIndex: =2
+

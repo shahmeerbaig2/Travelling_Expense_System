@@ -1,0 +1,79 @@
+{
+  "QualifiedValues": [
+    {
+      "Kind": "default.cds_cr316_employeedata_forms",
+      "Namespace": "EmployeeData (Forms)",
+      "Values": {
+        "Information": "718540c6-01ef-4b46-8de7-fa16c31238fd"
+      }
+    },
+    {
+      "Kind": "default.cds_cr316_newtable_forms",
+      "Namespace": "New tables (Forms)",
+      "Values": {
+        "Information": "621c8896-183e-427a-91fc-c137f700290a"
+      }
+    },
+    {
+      "Kind": "default.cds_cr316_commentstable_forms",
+      "Namespace": "Comments Tables (Forms)",
+      "Values": {
+        "Information": "a15aa0e6-2f10-4f3c-b752-e20428236d57"
+      }
+    },
+    {
+      "Kind": "default.cds_cr316_flighttable_forms",
+      "Namespace": "Flight Tables (Forms)",
+      "Values": {
+        "Information": "4def6b28-a6c5-4dae-8437-e2c8214643f6"
+      }
+    },
+    {
+      "Kind": "default.cds_cr316_citycodes_forms",
+      "Namespace": "City Codes (Forms)",
+      "Values": {
+        "Information": "b2db7e05-871b-4bd6-969f-f73d1203cca7"
+      }
+    },
+    {
+      "Kind": "default.cds_cra95_codes_forms",
+      "Namespace": "Codes (Forms)",
+      "Values": {
+        "Information": "9999efa8-a143-484b-893a-a9ed27ba382d"
+      }
+    },
+    {
+      "Kind": "default.cds_cra95_tada_forms",
+      "Namespace": "TADAS (Forms)",
+      "Values": {
+        "Information": "c3e8ae28-7d8c-4660-bbc5-ccf298155aee"
+      }
+    },
+    {
+      "Kind": "default.cds_cra95_projectdetails_forms",
+      "Namespace": "Project Details (Forms)",
+      "Values": {
+        "Information": "3df9e573-411e-4d57-8561-880b0c1a46cf"
+      }
+    },
+    {
+      "Kind": "default.cds_cra95_region_forms",
+      "Namespace": "Region Details (Forms)",
+      "Values": {
+        "Information": "b92672da-1678-42e1-9d58-bea9e1d54499"
+      }
+    },
+    {
+      "Kind": "default.cds_duplicaterecord_forms",
+      "Namespace": "Duplicate Records (Forms)",
+      "Values": {}
+    },
+    {
+      "Kind": "default.cds_cra95_table1_forms",
+      "Namespace": "Tables (Forms)",
+      "Values": {
+        "Information": "acea4126-bf76-4756-83a5-cb1d23fcfa24"
+      }
+    }
+  ]
+}

@@ -1,0 +1,1217 @@
+"'Regional Manager Setup' As screen.'phoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
+    Fill: =Color.White
+    LoadingSpinnerColor: =App.Theme.Colors.Primary
+
+    RectQuickActionBar3_3 As rectangle:
+        BorderColor: =App.Theme.Colors.Darker40
+        Fill: =Color.White
+        Height: =88
+        Width: =Parent.Width
+        ZIndex: =1
+
+    LblAppName2_3 As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 255, 255, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Font: =App.Theme.Font
+        Height: =88
+        Size: =18
+        Text: ="[Title]"
+        Width: =Parent.Width
+        ZIndex: =2
+
+    Canvas7_3 As fluidGrid.fluidGridWithBlankCard:
+        BorderThickness: =0
+        Height: =Parent.Height - Self.Y
+        Width: =Parent.Width
+        Y: =RectQuickActionBar3_3.Y + RectQuickActionBar3_3.Height
+        ZIndex: =3
+
+        DataCard31_3 As dataCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =0
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =Parent.Height
+            Width: =Parent.Width
+            X: =0
+            Y: =0
+            ZIndex: =1
+
+            Container7_7 As groupContainer.verticalAutoLayoutContainer:
+                DropShadow: =DropShadow.Light
+                Fill: =RGBA(255, 255, 255, 1)
+                Height: =Parent.Height
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMode: =LayoutMode.Auto
+                PaddingBottom: =15
+                PaddingLeft: =15
+                PaddingRight: =15
+                PaddingTop: =15
+                RadiusBottomLeft: =4
+                RadiusBottomRight: =4
+                RadiusTopLeft: =4
+                RadiusTopRight: =4
+                Width: =Parent.Width
+                Y: =40
+                ZIndex: =1
+
+                Container8_12 As groupContainer.verticalAutoLayoutContainer:
+                    Fill: =RGBA(255, 255, 255, 1)
+                    FillPortions: =0
+                    Height: =Parent.Height*0.3
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    RadiusTopLeft: =4
+                    RadiusTopRight: =4
+                    ZIndex: =1
+
+                    Form5_3 As form.PowerApps_CoreControls_Form:
+                        BorderColor: =App.Theme.Colors.Darker40
+                        DataSource: ='Region Details'
+                        DefaultMode: =FormMode.New
+                        FillPortions: =0
+                        Height: =Parent.Height*0.6
+                        Item: =SelectedRegionRecord 
+                        LayoutMinHeight: =250
+                        LayoutMinWidth: =400
+                        OnSuccess: |-
+                            =Set(viewTADA,false);
+                            ResetForm(Form5_3)
+                        UseFluentV9Cards: =true
+                        X: =40
+                        Y: =40
+                        ZIndex: =1
+
+                        "'Regional Manager Name_DataCard1' As typedDataCard.fluentV9TextualEditCard":
+                            BorderColor: =App.Theme.Colors.Darker40
+                            BorderStyle: =BorderStyle.Solid
+                            DataField: ="cra95_name"
+                            Default: =ThisItem.'Regional Manager Name'
+                            DisplayMode: =Parent.DisplayMode
+                            DisplayName: =DataSourceInfo([@'Region Details'],DataSourceInfo.DisplayName,cra95_name)
+                            Fill: =RGBA(0, 0, 0, 0)
+                            Height: =70
+                            MaxLength: =DataSourceInfo([@'Region Details'], DataSourceInfo.MaxLength, cra95_name)
+                            Required: =true
+                            Update: =DataCardValue13.Value
+                            Width: =445
+                            X: =0
+                            Y: =0
+                            ZIndex: =2
+
+                            DataCardKey24 As Text:
+                                DisplayMode: =DisplayMode.Edit
+                                Height: =22
+                                Text: =Parent.DisplayName
+                                Weight: ='TextCanvas.Weight'.Semibold
+                                Width: =Parent.Width - 48
+                                Wrap: =false
+                                X: =24
+                                Y: =10
+                                ZIndex: =1
+
+                            "DataCardValue13 As 'Text input'":
+                                AccessibleLabel: =Parent.DisplayName
+                                Appearance: ='TextInputCanvas.Appearance'.Outline
+                                BorderColor: =RGBA(15, 84, 140, 1)
+                                BorderRadius: =10
+                                DisplayMode: =Parent.DisplayMode
+                                Height: =32
+                                Mode: ="'TextInputCanvas.Mode'.TextInputModeSingleLine"
+                                Required: =Parent.Required
+                                ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
+                                Value: =If(viewRegData,SelectedRegionRecord.'Regional Manager Name')
+                                Width: =Parent.Width - 48
+                                X: =24
+                                Y: =DataCardKey24.Y + DataCardKey24.Height + 4
+                                ZIndex: =2
+
+                            ErrorMessage24 As Text:
+                                DisplayMode: =DisplayMode.Edit
+                                FontColor: =RGBA(215, 58, 60, 1)
+                                Height: =30
+                                Text: =Parent.Error
+                                Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
+                                Width: =Parent.Width - 48
+                                Wrap: =true
+                                X: =24
+                                Y: =DataCardValue13.Y + DataCardValue13.Height
+                                ZIndex: =3
+
+                            StarVisible24 As Text:
+                                Align: ='TextCanvas.Align'.Center
+                                DisplayMode: =DisplayMode.Edit
+                                Height: =30
+                                Text: ="*"
+                                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                                Width: =30
+                                X: =0
+                                Y: =DataCardKey24.Y
+                                ZIndex: =4
+
+                        Email_DataCard1 As typedDataCard.fluentV9TextualEditCard:
+                            BorderColor: =App.Theme.Colors.Darker40
+                            BorderStyle: =BorderStyle.Solid
+                            DataField: ="cra95_email"
+                            Default: =ThisItem.Email
+                            DisplayMode: =Parent.DisplayMode
+                            DisplayName: =DataSourceInfo([@'Region Details'],DataSourceInfo.DisplayName,cra95_email)
+                            Fill: =RGBA(0, 0, 0, 0)
+                            Height: =70
+                            MaxLength: =DataSourceInfo([@'Region Details'], DataSourceInfo.MaxLength, cra95_email)
+                            Required: =true
+                            Update: =DataCardValue10.Value
+                            Width: =445
+                            X: =1
+                            Y: =0
+                            ZIndex: =2
+
+                            DataCardKey23 As Text:
+                                DisplayMode: =DisplayMode.Edit
+                                Height: =22
+                                Text: =Parent.DisplayName
+                                Weight: ='TextCanvas.Weight'.Semibold
+                                Width: =Parent.Width - 48
+                                Wrap: =false
+                                X: =24
+                                Y: =10
+                                ZIndex: =1
+
+                            "DataCardValue10 As 'Text input'":
+                                AccessibleLabel: =Parent.DisplayName
+                                Appearance: ='TextInputCanvas.Appearance'.Outline
+                                BorderColor: =RGBA(15, 84, 140, 1)
+                                BorderRadius: =10
+                                DisplayMode: =Parent.DisplayMode
+                                Height: =32
+                                Mode: ="'TextInputCanvas.Mode'.TextInputModeSingleLine"
+                                Required: =Parent.Required
+                                ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
+                                Value: =If(viewRegData,SelectedRegionRecord.Email)
+                                Width: =Parent.Width - 48
+                                X: =24
+                                Y: =DataCardKey23.Y + DataCardKey23.Height + 4
+                                ZIndex: =2
+
+                            ErrorMessage23 As Text:
+                                DisplayMode: =DisplayMode.Edit
+                                FontColor: =RGBA(215, 58, 60, 1)
+                                Height: =30
+                                Text: =Parent.Error
+                                Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
+                                Width: =Parent.Width - 48
+                                Wrap: =true
+                                X: =24
+                                Y: =DataCardValue10.Y + DataCardValue10.Height
+                                ZIndex: =3
+
+                            StarVisible23 As Text:
+                                Align: ='TextCanvas.Align'.Center
+                                DisplayMode: =DisplayMode.Edit
+                                Height: =30
+                                Text: ="*"
+                                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                                Width: =30
+                                X: =0
+                                Y: =DataCardKey23.Y
+                                ZIndex: =4
+
+                        "'Region Name_DataCard1' As typedDataCard.fluentV9TextualEditCard":
+                            BorderColor: =App.Theme.Colors.Darker40
+                            BorderStyle: =BorderStyle.Solid
+                            DataField: ="cra95_regionname"
+                            Default: =ThisItem.'Region Name'
+                            DisplayMode: =Parent.DisplayMode
+                            DisplayName: =DataSourceInfo([@'Region Details'],DataSourceInfo.DisplayName,cra95_regionname)
+                            Fill: =RGBA(0, 0, 0, 0)
+                            Height: =70
+                            MaxLength: =DataSourceInfo([@'Region Details'], DataSourceInfo.MaxLength, cra95_regionname)
+                            Required: =true
+                            Update: =DataCardValue14.Value
+                            Width: =445
+                            X: =2
+                            Y: =0
+                            ZIndex: =2
+
+                            DataCardKey25 As Text:
+                                DisplayMode: =DisplayMode.Edit
+                                Height: =22
+                                Text: =Parent.DisplayName
+                                Weight: ='TextCanvas.Weight'.Semibold
+                                Width: =Parent.Width - 48
+                                Wrap: =false
+                                X: =24
+                                Y: =10
+                                ZIndex: =1
+
+                            "DataCardValue14 As 'Text input'":
+                                AccessibleLabel: =Parent.DisplayName
+                                Appearance: ='TextInputCanvas.Appearance'.Outline
+                                BorderColor: =RGBA(15, 84, 140, 1)
+                                BorderRadius: =10
+                                DisplayMode: =Parent.DisplayMode
+                                Height: =32
+                                Mode: ="'TextInputCanvas.Mode'.TextInputModeSingleLine"
+                                Required: =Parent.Required
+                                ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
+                                Value: =If(viewRegData,SelectedRegionRecord.'Region Name')
+                                Width: =Parent.Width - 48
+                                X: =24
+                                Y: =DataCardKey25.Y + DataCardKey25.Height + 4
+                                ZIndex: =2
+
+                            ErrorMessage25 As Text:
+                                DisplayMode: =DisplayMode.Edit
+                                FontColor: =RGBA(215, 58, 60, 1)
+                                Height: =30
+                                Text: =Parent.Error
+                                Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
+                                Width: =Parent.Width - 48
+                                Wrap: =true
+                                X: =24
+                                Y: =DataCardValue14.Y + DataCardValue14.Height
+                                ZIndex: =3
+
+                            StarVisible25 As Text:
+                                Align: ='TextCanvas.Align'.Center
+                                DisplayMode: =DisplayMode.Edit
+                                Height: =30
+                                Text: ="*"
+                                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                                Width: =30
+                                X: =0
+                                Y: =DataCardKey25.Y
+                                ZIndex: =4
+
+                    Container8_13 As groupContainer.verticalAutoLayoutContainer:
+                        Fill: =RGBA(255, 255, 255, 1)
+                        FillPortions: =0
+                        Height: =Parent.Height*0.3
+                        LayoutAlignItems: =LayoutAlignItems.End
+                        LayoutGap: =20
+                        LayoutJustifyContent: =LayoutJustifyContent.End
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        PaddingRight: =20
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        ZIndex: =2
+
+                        Button1_7 As button:
+                            AlignInContainer: =AlignInContainer.Center
+                            BorderColor: =Color.Red
+                            DisabledBorderColor: =RGBA(244, 244, 244, 1)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            DisabledFill: =RGBA(244, 244, 244, 1)
+                            Fill: =Color.Red
+                            Font: =App.Theme.Font
+                            Height: =35
+                            HoverBorderColor: =App.Theme.Colors.Darker10
+                            HoverColor: =RGBA(255, 255, 255, 1)
+                            HoverFill: =App.Theme.Colors.Darker10
+                            OnSelect: =
+                            PressedBorderColor: =App.Theme.Colors.Darker40
+                            PressedColor: =Self.Color
+                            PressedFill: =App.Theme.Colors.Darker40
+                            RadiusBottomLeft: =50
+                            RadiusBottomRight: =50
+                            RadiusTopLeft: =50
+                            RadiusTopRight: =50
+                            Size: =12
+                            Text: ="Reset"
+                            Visible: =
+                            ZIndex: =1
+
+                        Button1_8 As button:
+                            AlignInContainer: =AlignInContainer.Center
+                            BorderColor: =RGBA(12, 59, 94, 1)
+                            DisabledBorderColor: =RGBA(244, 244, 244, 1)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            DisabledFill: =RGBA(244, 244, 244, 1)
+                            Fill: =RGBA(15, 84, 140, 1)
+                            Font: =App.Theme.Font
+                            Height: =35
+                            HoverBorderColor: =App.Theme.Colors.Darker10
+                            HoverColor: =RGBA(255, 255, 255, 1)
+                            HoverFill: =App.Theme.Colors.Darker10
+                            OnSelect: |
+                                =
+                                If(DataCardValue10.Value = Blank() || DataCardValue13.Value = Blank() || DataCardValue14.Value = Blank(), Notify("Please enter the required fields.",NotificationType.Error), Notify("Form is submitted succesfully!",NotificationType.Success));
+                                SubmitForm(Form5_3);
+                                ResetForm(Form5_3)
+                            PressedBorderColor: =App.Theme.Colors.Darker40
+                            PressedColor: =Self.Color
+                            PressedFill: =App.Theme.Colors.Darker40
+                            RadiusBottomLeft: =50
+                            RadiusBottomRight: =50
+                            RadiusTopLeft: =50
+                            RadiusTopRight: =50
+                            Size: =12
+                            Text: ="Submit"
+                            ZIndex: =2
+
+                Container8_14 As groupContainer.verticalAutoLayoutContainer:
+                    Fill: =RGBA(255, 255, 255, 1)
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingLeft: =15
+                    PaddingRight: =15
+                    RadiusBottomLeft: =4
+                    RadiusBottomRight: =4
+                    ZIndex: =2
+
+                    Container1_27 As groupContainer.verticalAutoLayoutContainer:
+                        FillPortions: =0
+                        Height: =50
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutJustifyContent: =LayoutJustifyContent.Center
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        PaddingLeft: =10
+                        PaddingRight: =10
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        ZIndex: =1
+
+                        TextCanvas4_15 As Text:
+                            BorderStyle: =""
+                            DisplayMode: =DisplayMode.Edit
+                            Fill: =
+                            FontColor: =
+                            Height: =32
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =96
+                            Size: =20
+                            Text: ="Regional Manager Information"
+                            Weight: ="Bold"
+                            Width: =400
+                            X: =0
+                            Y: =0
+                            ZIndex: =1
+
+                    Container1_28 As groupContainer.verticalAutoLayoutContainer:
+                        Fill: =RGBA(15, 84, 140, 1)
+                        FillPortions: =0
+                        Height: =50
+                        LayoutGap: =10
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        PaddingLeft: =10
+                        PaddingRight: =10
+                        RadiusTopLeft: =20
+                        RadiusTopRight: =20
+                        ZIndex: =2
+
+                        TextCanvas5_14 As Text:
+                            Align: ='TextCanvas.Align'.Start
+                            AlignInContainer: =AlignInContainer.Center
+                            BorderStyle: =""
+                            DisplayMode: =DisplayMode.Edit
+                            Fill: =
+                            FillPortions: =1
+                            FontColor: =Color.White
+                            Height: =32
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =96
+                            Size: =18
+                            Text: ="Regional Manager Name"
+                            Width: =Parent.Width/4
+                            X: =0
+                            Y: =0
+                            ZIndex: =1
+
+                        TextCanvas5_15 As Text:
+                            Align: ='TextCanvas.Align'.Center
+                            AlignInContainer: =AlignInContainer.Center
+                            BorderStyle: =""
+                            DisplayMode: =DisplayMode.Edit
+                            Fill: =
+                            FillPortions: =1
+                            FontColor: =Color.White
+                            Height: =32
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =96
+                            Size: =18
+                            Text: ="Email"
+                            Width: =Parent.Width/4
+                            X: =0
+                            Y: =0
+                            ZIndex: =2
+
+                        TextCanvas5_16 As Text:
+                            Align: ='TextCanvas.Align'.Start
+                            AlignInContainer: =AlignInContainer.Center
+                            BorderStyle: =""
+                            DisplayMode: =DisplayMode.Edit
+                            Fill: =
+                            FillPortions: =1
+                            FontColor: =Color.White
+                            Height: =32
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =96
+                            Size: =18
+                            Text: ="Region Name"
+                            Width: =Parent.Width/4
+                            X: =0
+                            Y: =0
+                            ZIndex: =3
+
+                        TextCanvas5_17 As Text:
+                            Align: ='TextCanvas.Align'.Start
+                            AlignInContainer: =AlignInContainer.Center
+                            BorderStyle: =""
+                            DisplayMode: =DisplayMode.Edit
+                            Fill: =
+                            FillPortions: =1
+                            FontColor: =Color.White
+                            Height: =32
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =96
+                            Size: =18
+                            Text: =
+                            Width: =Parent.Width/4
+                            X: =0
+                            Y: =0
+                            ZIndex: =4
+
+                        TextCanvas7_2 As Text:
+                            AlignInContainer: =AlignInContainer.Center
+                            DisplayMode: =DisplayMode.Edit
+                            FillPortions: =1
+                            Height: =32
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =96
+                            Text: =
+                            Width: =Parent.Width/4
+                            X: =0
+                            Y: =0
+                            ZIndex: =5
+
+    Container40_4 As groupContainer.verticalAutoLayoutContainer:
+        Height: =105
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutMode: =LayoutMode.Auto
+        PaddingLeft: =16
+        PaddingRight: =16
+        PaddingTop: =16
+        RadiusBottomLeft: =4
+        RadiusBottomRight: =4
+        RadiusTopLeft: =4
+        RadiusTopRight: =4
+        Width: =Parent.Width
+        ZIndex: =4
+
+        HeaderContainer1_11 As groupContainer.horizontalAutoLayoutContainer:
+            DropShadow: =DropShadow.Light
+            Fill: =RGBA(15, 84, 140, 1)
+            FillPortions: =0
+            Height: =75
+            LayoutAlignItems: =LayoutAlignItems.Stretch
+            LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            RadiusBottomLeft: =15
+            RadiusBottomRight: =15
+            RadiusTopLeft: =15
+            RadiusTopRight: =15
+            Width: =Parent.Width
+            Y: =12
+            ZIndex: =1
+
+            Container1_26 As groupContainer.horizontalAutoLayoutContainer:
+                AlignInContainer: =AlignInContainer.SetByContainer
+                DropShadow: =DropShadow.Light
+                Fill: =RGBA(15, 84, 140, 1)
+                Height: =Parent.Height
+                LayoutAlignItems: =LayoutAlignItems.Center
+                LayoutJustifyContent: =LayoutJustifyContent.Center
+                LayoutMinHeight: =50
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                RadiusBottomLeft: =4
+                RadiusBottomRight: =4
+                RadiusTopLeft: =4
+                RadiusTopRight: =4
+                Width: =Parent.Width
+                ZIndex: =1
+
+                Image8_8 As image:
+                    BorderColor: =App.Theme.Colors.Darker40
+                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                    DisabledFill: =RGBA(244, 244, 244, 1)
+                    Height: =70
+                    Image: ='icons8-left-arrow-48_1'
+                    ImagePosition: =ImagePosition.Center
+                    OnSelect: =Navigate(Screen9,ScreenTransition.Fade)
+                    Width: =70
+                    ZIndex: =1
+
+                Image6_15 As image:
+                    BorderColor: =App.Theme.Colors.Darker40
+                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                    DisabledFill: =RGBA(244, 244, 244, 1)
+                    Height: =80
+                    Image: ='Systems-Ltd-feature-image-new-logo-2019-removebg-preview'
+                    Width: =164
+                    ZIndex: =2
+
+                Label3_21 As label:
+                    Align: =Align.Center
+                    BorderColor: =App.Theme.Colors.Darker40
+                    Color: =RGBA(255, 255, 255, 1)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    Fill: =RGBA(15, 84, 140, 1)
+                    Font: =App.Theme.Font
+                    FontWeight: =FontWeight.Bold
+                    PaddingLeft: =10
+                    PaddingRight: =150
+                    Size: =20
+                    Text: ="Regional Manager Setup "
+                    Width: =Parent.Width-Image8_8.Width-Image6_15.Width
+                    ZIndex: =3
+
+    Canvas7_4 As fluidGrid.fluidGridWithBlankCard:
+        BorderThickness: =0
+        Height: =Parent.Height - Self.Y
+        Width: =Parent.Width
+        Y: =RectQuickActionBar3_3.Y + RectQuickActionBar3_3.Height
+        ZIndex: =5
+
+        DataCard31_4 As dataCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =0
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =Parent.Height
+            Width: =Parent.Width
+            WidthFit: =true
+            X: =0
+            Y: =0
+            ZIndex: =1
+
+            Container7_8 As groupContainer.verticalAutoLayoutContainer:
+                DropShadow: =DropShadow.Light
+                Fill: =RGBA(255, 255, 255, 1)
+                Height: =Parent.Height
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMode: =LayoutMode.Auto
+                PaddingBottom: =15
+                PaddingLeft: =15
+                PaddingRight: =15
+                PaddingTop: =15
+                RadiusBottomLeft: =4
+                RadiusBottomRight: =4
+                RadiusTopLeft: =4
+                RadiusTopRight: =4
+                Width: =Parent.Width
+                Y: =40
+                ZIndex: =1
+
+                Container8_15 As groupContainer.verticalAutoLayoutContainer:
+                    Fill: =RGBA(255, 255, 255, 1)
+                    FillPortions: =0
+                    Height: =300
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    RadiusTopLeft: =4
+                    RadiusTopRight: =4
+                    ZIndex: =1
+
+                    Form5_4 As form.PowerApps_CoreControls_Form:
+                        BorderColor: =App.Theme.Colors.Darker40
+                        DataSource: ='Region Details'
+                        DefaultMode: =FormMode.New
+                        Height: =180
+                        Item: =SelectedRegionRecord 
+                        LayoutMinHeight: =250
+                        LayoutMinWidth: =400
+                        OnSuccess: |-
+                            =Set(viewTADA,false);
+                            ResetForm(Form5_4)
+                        UseFluentV9Cards: =true
+                        X: =40
+                        Y: =40
+                        ZIndex: =1
+
+                        "'Regional Manager Name_DataCard1_1' As typedDataCard.fluentV9TextualEditCard":
+                            BorderColor: =App.Theme.Colors.Darker40
+                            BorderStyle: =BorderStyle.Solid
+                            DataField: ="cra95_name"
+                            Default: =ThisItem.'Regional Manager Name'
+                            DisplayMode: =Parent.DisplayMode
+                            DisplayName: =DataSourceInfo([@'Region Details'],DataSourceInfo.DisplayName,cra95_name)
+                            Fill: =RGBA(0, 0, 0, 0)
+                            Height: =150
+                            MaxLength: =DataSourceInfo([@'Region Details'], DataSourceInfo.MaxLength, cra95_name)
+                            Required: =true
+                            Update: =DataCardValue13_2.Value
+                            Width: =445
+                            WidthFit: =true
+                            X: =0
+                            Y: =0
+                            ZIndex: =2
+
+                            DataCardKey24_1 As Text:
+                                DisplayMode: =DisplayMode.Edit
+                                Height: =22
+                                Text: =Parent.DisplayName
+                                Weight: ='TextCanvas.Weight'.Semibold
+                                Width: =Parent.Width - 48
+                                Wrap: =false
+                                X: =24
+                                Y: =10
+                                ZIndex: =1
+
+                            "DataCardValue13_2 As 'Text input'":
+                                AccessibleLabel: =Parent.DisplayName
+                                Appearance: ='TextInputCanvas.Appearance'.Outline
+                                BorderColor: =RGBA(15, 84, 140, 1)
+                                BorderRadius: =10
+                                DisplayMode: =Parent.DisplayMode
+                                Height: =36
+                                Mode: ="'TextInputCanvas.Mode'.TextInputModeSingleLine"
+                                Required: =Parent.Required
+                                ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
+                                Value: =If(viewRegData,SelectedRegionRecord.'Regional Manager Name')
+                                Width: =383
+                                X: =24
+                                Y: =45
+                                ZIndex: =2
+
+                            ErrorMessage24_1 As Text:
+                                DisplayMode: =DisplayMode.Edit
+                                FontColor: =RGBA(215, 58, 60, 1)
+                                Height: =30
+                                Text: =Parent.Error
+                                Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
+                                Width: =Parent.Width - 48
+                                Wrap: =true
+                                X: =24
+                                Y: =DataCardValue13_2.Y + DataCardValue13_2.Height
+                                ZIndex: =3
+
+                            StarVisible24_1 As Text:
+                                Align: ='TextCanvas.Align'.Center
+                                DisplayMode: =DisplayMode.Edit
+                                Height: =30
+                                Text: ="*"
+                                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                                Width: =30
+                                X: =0
+                                Y: =DataCardKey24_1.Y
+                                ZIndex: =4
+
+                        Email_DataCard1_1 As typedDataCard.fluentV9TextualEditCard:
+                            BorderColor: =App.Theme.Colors.Darker40
+                            BorderStyle: =BorderStyle.Solid
+                            DataField: ="cra95_email"
+                            Default: =ThisItem.Email
+                            DisplayMode: =Parent.DisplayMode
+                            DisplayName: =DataSourceInfo([@'Region Details'],DataSourceInfo.DisplayName,cra95_email)
+                            Fill: =RGBA(0, 0, 0, 0)
+                            Height: =100
+                            MaxLength: =DataSourceInfo([@'Region Details'], DataSourceInfo.MaxLength, cra95_email)
+                            Required: =true
+                            Update: =DataCardValue10_1.Value
+                            Width: =445
+                            WidthFit: =true
+                            X: =1
+                            Y: =0
+                            ZIndex: =2
+
+                            DataCardKey23_1 As Text:
+                                DisplayMode: =DisplayMode.Edit
+                                Height: =22
+                                Text: =Parent.DisplayName
+                                Weight: ='TextCanvas.Weight'.Semibold
+                                Width: =Parent.Width - 48
+                                Wrap: =false
+                                X: =24
+                                Y: =10
+                                ZIndex: =1
+
+                            "DataCardValue10_1 As 'Text input'":
+                                AccessibleLabel: =Parent.DisplayName
+                                Appearance: ='TextInputCanvas.Appearance'.Outline
+                                BorderColor: =RGBA(15, 84, 140, 1)
+                                BorderRadius: =10
+                                DisplayMode: =Parent.DisplayMode
+                                Height: =36
+                                Mode: ="'TextInputCanvas.Mode'.TextInputModeSingleLine"
+                                Required: =Parent.Required
+                                ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
+                                Value: =If(viewRegData,SelectedRegionRecord.Email)
+                                Width: =383
+                                X: =24
+                                Y: =45
+                                ZIndex: =2
+
+                            ErrorMessage23_1 As Text:
+                                DisplayMode: =DisplayMode.Edit
+                                FontColor: =RGBA(215, 58, 60, 1)
+                                Height: =30
+                                Text: =Parent.Error
+                                Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
+                                Width: =Parent.Width - 48
+                                Wrap: =true
+                                X: =24
+                                Y: =DataCardValue10_1.Y + DataCardValue10_1.Height
+                                ZIndex: =3
+
+                            StarVisible23_1 As Text:
+                                Align: ='TextCanvas.Align'.Center
+                                DisplayMode: =DisplayMode.Edit
+                                Height: =30
+                                Text: ="*"
+                                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                                Width: =30
+                                X: =0
+                                Y: =DataCardKey23_1.Y
+                                ZIndex: =4
+
+                        "'Region Name_DataCard1_1' As typedDataCard.fluentV9TextualEditCard":
+                            BorderColor: =App.Theme.Colors.Darker40
+                            BorderStyle: =BorderStyle.Solid
+                            DataField: ="cra95_regionname"
+                            Default: =ThisItem.'Region Name'
+                            DisplayMode: =Parent.DisplayMode
+                            DisplayName: =DataSourceInfo([@'Region Details'],DataSourceInfo.DisplayName,cra95_regionname)
+                            Fill: =RGBA(0, 0, 0, 0)
+                            Height: =100
+                            MaxLength: =DataSourceInfo([@'Region Details'], DataSourceInfo.MaxLength, cra95_regionname)
+                            Required: =true
+                            Update: =DataCardValue14_1.Value
+                            Width: =445
+                            WidthFit: =true
+                            X: =2
+                            Y: =0
+                            ZIndex: =2
+
+                            DataCardKey25_1 As Text:
+                                DisplayMode: =DisplayMode.Edit
+                                Height: =22
+                                Text: =Parent.DisplayName
+                                Weight: ='TextCanvas.Weight'.Semibold
+                                Width: =Parent.Width - 48
+                                Wrap: =false
+                                X: =24
+                                Y: =10
+                                ZIndex: =1
+
+                            "DataCardValue14_1 As 'Text input'":
+                                AccessibleLabel: =Parent.DisplayName
+                                Appearance: ='TextInputCanvas.Appearance'.Outline
+                                BorderColor: =RGBA(15, 84, 140, 1)
+                                BorderRadius: =10
+                                DisplayMode: =Parent.DisplayMode
+                                Height: =36
+                                Mode: ="'TextInputCanvas.Mode'.TextInputModeSingleLine"
+                                Required: =Parent.Required
+                                ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
+                                Value: =If(viewRegData,SelectedRegionRecord.'Region Name')
+                                Width: =383
+                                X: =24
+                                Y: =45
+                                ZIndex: =2
+
+                            ErrorMessage25_1 As Text:
+                                DisplayMode: =DisplayMode.Edit
+                                FontColor: =RGBA(215, 58, 60, 1)
+                                Height: =30
+                                Text: =Parent.Error
+                                Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
+                                Width: =Parent.Width - 48
+                                Wrap: =true
+                                X: =24
+                                Y: =DataCardValue14_1.Y + DataCardValue14_1.Height
+                                ZIndex: =3
+
+                            StarVisible25_1 As Text:
+                                Align: ='TextCanvas.Align'.Center
+                                DisplayMode: =DisplayMode.Edit
+                                Height: =30
+                                Text: ="*"
+                                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                                Width: =30
+                                X: =0
+                                Y: =DataCardKey25_1.Y
+                                ZIndex: =4
+
+                    Container8_16 As groupContainer.verticalAutoLayoutContainer:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        Fill: =RGBA(255, 255, 255, 1)
+                        Height: =100
+                        LayoutAlignItems: =LayoutAlignItems.End
+                        LayoutGap: =20
+                        LayoutJustifyContent: =LayoutJustifyContent.End
+                        LayoutMinHeight: =40
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        PaddingRight: =20
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        ZIndex: =2
+
+                        Button1_10 As button:
+                            AlignInContainer: =AlignInContainer.Center
+                            BorderColor: =Color.Red
+                            DisabledBorderColor: =RGBA(244, 244, 244, 1)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            DisabledFill: =RGBA(244, 244, 244, 1)
+                            Fill: =Color.Red
+                            Font: =App.Theme.Font
+                            Height: =35
+                            HoverBorderColor: =App.Theme.Colors.Darker10
+                            HoverColor: =RGBA(255, 255, 255, 1)
+                            HoverFill: =App.Theme.Colors.Darker10
+                            OnSelect: =
+                            PressedBorderColor: =App.Theme.Colors.Darker40
+                            PressedColor: =Self.Color
+                            PressedFill: =App.Theme.Colors.Darker40
+                            RadiusBottomLeft: =50
+                            RadiusBottomRight: =50
+                            RadiusTopLeft: =50
+                            RadiusTopRight: =50
+                            Size: =12
+                            Text: ="Reset"
+                            Visible: =
+                            ZIndex: =1
+
+                        Button1_11 As button:
+                            AlignInContainer: =AlignInContainer.Center
+                            BorderColor: =RGBA(12, 59, 94, 1)
+                            DisabledBorderColor: =RGBA(244, 244, 244, 1)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            DisabledFill: =RGBA(244, 244, 244, 1)
+                            Fill: =RGBA(15, 84, 140, 1)
+                            Font: =App.Theme.Font
+                            Height: =35
+                            HoverBorderColor: =App.Theme.Colors.Darker10
+                            HoverColor: =RGBA(255, 255, 255, 1)
+                            HoverFill: =App.Theme.Colors.Darker10
+                            OnSelect: |
+                                =
+                                If(DataCardValue10_1.Value = Blank() || DataCardValue13_2.Value = Blank() || DataCardValue14_1.Value = Blank(), Notify("Please enter the required fields.",NotificationType.Error), Notify("Form is submitted succesfully!",NotificationType.Success));
+                                SubmitForm(Form5_4);
+                                ResetForm(Form5_4)
+                            PressedBorderColor: =App.Theme.Colors.Darker40
+                            PressedColor: =Self.Color
+                            PressedFill: =App.Theme.Colors.Darker40
+                            RadiusBottomLeft: =50
+                            RadiusBottomRight: =50
+                            RadiusTopLeft: =50
+                            RadiusTopRight: =50
+                            Size: =12
+                            Text: ="Submit"
+                            ZIndex: =2
+
+                Container8_17 As groupContainer.verticalAutoLayoutContainer:
+                    Fill: =RGBA(255, 255, 255, 1)
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingLeft: =15
+                    PaddingRight: =15
+                    RadiusBottomLeft: =4
+                    RadiusBottomRight: =4
+                    ZIndex: =2
+
+                    Container1_31 As groupContainer.verticalAutoLayoutContainer:
+                        FillPortions: =0
+                        Height: =50
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutJustifyContent: =LayoutJustifyContent.Center
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        PaddingLeft: =10
+                        PaddingRight: =10
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        ZIndex: =1
+
+                        TextCanvas4_16 As Text:
+                            BorderStyle: =""
+                            DisplayMode: =DisplayMode.Edit
+                            Fill: =
+                            FontColor: =
+                            Height: =32
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =96
+                            Size: =20
+                            Text: ="Regional Manager Information"
+                            Weight: ="Bold"
+                            Width: =400
+                            X: =0
+                            Y: =0
+                            ZIndex: =1
+
+                    Container1_32 As groupContainer.verticalAutoLayoutContainer:
+                        Fill: =RGBA(15, 84, 140, 1)
+                        FillPortions: =0
+                        Height: =50
+                        LayoutGap: =10
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        PaddingLeft: =10
+                        PaddingRight: =10
+                        RadiusTopLeft: =20
+                        RadiusTopRight: =20
+                        ZIndex: =2
+
+                        TextCanvas5_19 As Text:
+                            Align: ='TextCanvas.Align'.Start
+                            AlignInContainer: =AlignInContainer.Center
+                            BorderStyle: =""
+                            DisplayMode: =DisplayMode.Edit
+                            Fill: =
+                            FillPortions: =1
+                            FontColor: =Color.White
+                            Height: =32
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =96
+                            Size: =18
+                            Text: ="Regional Manager Name"
+                            Width: =Parent.Width/4
+                            X: =0
+                            Y: =0
+                            ZIndex: =1
+
+                        TextCanvas5_20 As Text:
+                            Align: ='TextCanvas.Align'.Start
+                            AlignInContainer: =AlignInContainer.Center
+                            BorderStyle: =""
+                            DisplayMode: =DisplayMode.Edit
+                            Fill: =
+                            FillPortions: =1
+                            FontColor: =Color.White
+                            Height: =32
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =96
+                            PaddingLeft: =
+                            Size: =18
+                            Text: ="Email"
+                            Width: =Parent.Width/4
+                            X: =0
+                            Y: =0
+                            ZIndex: =2
+
+                        TextCanvas5_21 As Text:
+                            Align: ='TextCanvas.Align'.Start
+                            AlignInContainer: =AlignInContainer.Center
+                            BorderStyle: =""
+                            DisplayMode: =DisplayMode.Edit
+                            Fill: =
+                            FillPortions: =1
+                            FontColor: =Color.White
+                            Height: =32
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =96
+                            Size: =18
+                            Text: ="Region Name"
+                            Width: =Parent.Width/4
+                            X: =0
+                            Y: =0
+                            ZIndex: =3
+
+                        TextCanvas5_22 As Text:
+                            Align: ='TextCanvas.Align'.Start
+                            AlignInContainer: =AlignInContainer.Center
+                            BorderStyle: =""
+                            DisplayMode: =DisplayMode.Edit
+                            Fill: =
+                            FillPortions: =1
+                            FontColor: =Color.White
+                            Height: =32
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =96
+                            Size: =18
+                            Text: =
+                            Width: =Parent.Width/4
+                            X: =0
+                            Y: =0
+                            ZIndex: =4
+
+                        TextCanvas7_4 As Text:
+                            AlignInContainer: =AlignInContainer.Center
+                            DisplayMode: =DisplayMode.Edit
+                            FillPortions: =1
+                            Height: =32
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =96
+                            Text: =
+                            Width: =Parent.Width/4
+                            X: =0
+                            Y: =0
+                            ZIndex: =5
+
+                    Container2_11 As groupContainer.verticalAutoLayoutContainer:
+                        DropShadow: =DropShadow.Light
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        ZIndex: =3
+
+                        "Gallery1_5 As gallery.'BrowseLayout_Vertical_OneTextVariant_ver5.0'":
+                            AlignInContainer: =AlignInContainer.Start
+                            BorderColor: =App.Theme.Colors.Darker40
+                            DelayItemLoading: =true
+                            Items: ='Region Details'
+                            Layout: =Layout.Vertical
+                            LayoutMinHeight: =287
+                            LayoutMinWidth: =320
+                            LoadingSpinner: =LoadingSpinner.Data
+                            TemplatePadding: =0
+                            TemplateSize: =45
+                            Width: =Parent.Width
+                            ZIndex: =1
+
+                            Container9_6 As groupContainer.horizontalAutoLayoutContainer:
+                                DropShadow: =DropShadow.Light
+                                Height: =45
+                                LayoutAlignItems: =LayoutAlignItems.Center
+                                LayoutMode: =LayoutMode.Auto
+                                Width: =Parent.TemplateWidth
+                                ZIndex: =8
+
+                                Title2_10 As label:
+                                    Color: =RGBA(50, 49, 48, 1)
+                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                    Font: =App.Theme.Font
+                                    FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                                    Height: =Self.Size * 1.8
+                                    OnSelect: =
+                                    PaddingBottom: =0
+                                    PaddingLeft: =10
+                                    PaddingRight: =0
+                                    PaddingTop: =0
+                                    Size: =12
+                                    Text: |
+                                        =//ThisItem.'Regional Manager Name'
+                                    VerticalAlign: =VerticalAlign.Top
+                                    Width: =Parent.Width/5
+                                    Y: =7
+                                    ZIndex: =1
+
+                                Title2_11 As label:
+                                    Color: =RGBA(50, 49, 48, 1)
+                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                    Font: =App.Theme.Font
+                                    FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                                    Height: =Self.Size * 1.8
+                                    OnSelect: =
+                                    PaddingBottom: =0
+                                    PaddingLeft: =0
+                                    PaddingRight: =50
+                                    PaddingTop: =0
+                                    Size: =12
+                                    Text: =ThisItem.Email
+                                    VerticalAlign: =VerticalAlign.Top
+                                    Width: =Parent.Width/5
+                                    X: =272
+                                    Y: =7
+                                    ZIndex: =2
+
+                                Title2_12 As label:
+                                    Color: =RGBA(50, 49, 48, 1)
+                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                    Font: =App.Theme.Font
+                                    FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                                    Height: =Self.Size * 1.8
+                                    OnSelect: =
+                                    PaddingBottom: =0
+                                    PaddingLeft: =15
+                                    PaddingRight: =0
+                                    PaddingTop: =0
+                                    Size: =12
+                                    Text: =ThisItem. 'Region Name'
+                                    VerticalAlign: =VerticalAlign.Top
+                                    Width: =Parent.Width/5
+                                    X: =272
+                                    Y: =7
+                                    ZIndex: =3
+
+                                Title2_13 As label:
+                                    Color: =RGBA(50, 49, 48, 1)
+                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                    Font: =App.Theme.Font
+                                    FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                                    Height: =Self.Size * 1.8
+                                    OnSelect: =
+                                    PaddingBottom: =0
+                                    PaddingLeft: =10
+                                    PaddingRight: =0
+                                    PaddingTop: =0
+                                    Size: |
+                                        =12
+                                    Text: =
+                                    VerticalAlign: =VerticalAlign.Top
+                                    Width: =400
+                                    X: =547
+                                    Y: =7
+                                    ZIndex: =4
+
+                                Icon2_8 As icon.Trash:
+                                    BorderColor: =App.Theme.Colors.Darker40
+                                    Color: =App.Theme.Colors.Darker30
+                                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                                    DisabledColor: =RGBA(244, 244, 244, 1)
+                                    DisplayMode: =
+                                    Height: =24
+                                    Icon: =Icon.Trash
+                                    OnSelect: |-
+                                        =Remove('Region Details',ThisItem);
+                                        Set(SelectedRegionRecord,Blank())
+                                    Width: =40
+                                    X: =987
+                                    Y: =4
+                                    ZIndex: =5
+
+                                Icon2_9 As icon.Trash:
+                                    AlignInContainer: =AlignInContainer.Center
+                                    BorderColor: =App.Theme.Colors.Darker40
+                                    Color: =App.Theme.Colors.Darker30
+                                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                                    DisabledColor: =RGBA(244, 244, 244, 1)
+                                    DisplayMode: =
+                                    Height: =24
+                                    Icon: =Icon.Edit
+                                    OnSelect: |+
+                                        =
+                                        Set(SelectedRegionRecord, ThisItem);
+                                        NewForm(Form5_4);
+                                        Set(viewRegData, true);
+                                        
+                                    Width: =40
+                                    X: =40
+                                    Y: =4
+                                    ZIndex: =6
+

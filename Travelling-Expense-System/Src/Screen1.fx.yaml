@@ -1,0 +1,849 @@
+Screen1 As screen:
+    Fill: =Color.White
+    LoadingSpinnerColor: =App.Theme.Colors.Primary
+
+    Container20_3 As groupContainer.verticalAutoLayoutContainer:
+        DropShadow: =DropShadow.Light
+        Height: =768
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutMode: =LayoutMode.Auto
+        RadiusBottomLeft: =4
+        RadiusBottomRight: =4
+        RadiusTopLeft: =4
+        RadiusTopRight: =4
+        Width: =Parent.Width
+        ZIndex: =1
+
+        HeaderContainer3_5 As groupContainer.horizontalAutoLayoutContainer:
+            AlignInContainer: =AlignInContainer.SetByContainer
+            DropShadow: =DropShadow.Light
+            Fill: =RGBA(15, 84, 140, 1)
+            FillPortions: =0
+            Height: =75
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            RadiusBottomLeft: =4
+            RadiusBottomRight: =4
+            RadiusTopLeft: =4
+            RadiusTopRight: =4
+            Width: =Parent.Width
+            ZIndex: =1
+
+            Container1_16 As groupContainer.horizontalAutoLayoutContainer:
+                DropShadow: =DropShadow.Light
+                Fill: =RGBA(15, 108, 189, 1)
+                Height: =Parent.Height
+                LayoutMinHeight: =50
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                RadiusBottomLeft: =4
+                RadiusBottomRight: =4
+                RadiusTopLeft: =4
+                RadiusTopRight: =4
+                Width: =Parent.Width
+                ZIndex: =1
+
+                Icon1_7 As icon.ArrowLeft:
+                    AlignInContainer: =AlignInContainer.Center
+                    BorderColor: =App.Theme.Colors.Darker40
+                    Color: =RGBA(255, 255, 255, 1)
+                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                    DisabledColor: =RGBA(244, 244, 244, 1)
+                    Height: =54
+                    Icon: =Icon.ArrowLeft
+                    OnSelect: =Navigate(Screen11)
+                    PaddingBottom: =5
+                    PaddingLeft: =5
+                    PaddingRight: =5
+                    PaddingTop: =15
+                    ZIndex: =1
+
+                Image6_11 As image:
+                    BorderColor: =App.Theme.Colors.Darker40
+                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                    DisabledFill: =RGBA(244, 244, 244, 1)
+                    Height: =80
+                    Image: ='Systems-Ltd-feature-image-new-logo-2019-removebg-preview'
+                    Width: =164
+                    X: =6
+                    ZIndex: =2
+
+                Label3_16 As label:
+                    Align: =Align.Center
+                    AlignInContainer: =AlignInContainer.Stretch
+                    BorderColor: =App.Theme.Colors.Darker40
+                    Color: =RGBA(255, 255, 255, 1)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    Fill: =RGBA(15, 108, 189, 1)
+                    Font: =App.Theme.Font
+                    FontWeight: =FontWeight.Bold
+                    Size: =16
+                    Text: ="Ticket Reservation Details"
+                    Width: =Parent.Width-Icon1_7.Width-300
+                    ZIndex: =3
+
+        Container28_1 As groupContainer.verticalAutoLayoutContainer:
+            DropShadow: =DropShadow.Light
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            RadiusBottomLeft: =4
+            RadiusBottomRight: =4
+            RadiusTopLeft: =4
+            RadiusTopRight: =4
+            ZIndex: =2
+
+            Container1_17 As groupContainer.verticalAutoLayoutContainer:
+                DropShadow: =DropShadow.Light
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                PaddingTop: =10
+                RadiusBottomLeft: =4
+                RadiusBottomRight: =4
+                RadiusTopLeft: =4
+                RadiusTopRight: =4
+                ZIndex: =1
+
+                "Gallery2_3 As gallery.'BrowseLayout_Flexible_SocialFeed_ver5.0'":
+                    BorderColor: =App.Theme.Colors.Darker40
+                    DelayItemLoading: =true
+                    Items: =FirstDepartureArray1
+                    Layout: =Layout.Vertical
+                    LayoutMinHeight: =287
+                    LayoutMinWidth: =320
+                    LoadingSpinner: =LoadingSpinner.Data
+                    TemplatePadding: =4
+                    TemplateSize: =Min(870, Self.Height - 60)
+                    ZIndex: =1
+
+                    Label1_3 As label:
+                        Align: =Align.Center
+                        BorderColor: =App.Theme.Colors.Darker40
+                        Color: =RGBA(0, 0, 0, 1)
+                        DisabledColor: =RGBA(166, 166, 166, 1)
+                        Font: =App.Theme.Font
+                        FontWeight: =FontWeight.Semibold
+                        Height: =45
+                        OnSelect: =Select(Parent)
+                        Size: =13
+                        Text: =LookUp(Codes,'IATA Code'=ThisItem.DepartureAirline).Airline
+                        Width: =237
+                        X: =17
+                        Y: =71
+                        ZIndex: =1
+
+                    Label3_17 As label:
+                        Align: =Align.Center
+                        BorderColor: =App.Theme.Colors.Darker40
+                        Color: =RGBA(0, 0, 0, 1)
+                        DisabledColor: =RGBA(166, 166, 166, 1)
+                        Font: =App.Theme.Font
+                        FontWeight: =FontWeight.Bold
+                        OnSelect: =Select(Parent)
+                        Size: =13
+                        Text: ="Departure"
+                        Width: =175
+                        X: =393
+                        Y: =32
+                        ZIndex: =2
+
+                    Label4_3 As label:
+                        Align: =Align.Center
+                        BorderColor: =App.Theme.Colors.Darker40
+                        Color: =RGBA(0, 0, 0, 1)
+                        DisabledColor: =RGBA(166, 166, 166, 1)
+                        Font: =App.Theme.Font
+                        FontWeight: =FontWeight.Semibold
+                        Height: =27
+                        OnSelect: =Select(Parent)
+                        Size: =13
+                        Text: =ThisItem.Departure
+                        Width: =196
+                        X: =388
+                        Y: =72
+                        ZIndex: =3
+
+                    Label7_4 As label:
+                        Align: =Align.Center
+                        BorderColor: =App.Theme.Colors.Darker40
+                        Color: =RGBA(0, 0, 0, 1)
+                        DisabledColor: =RGBA(166, 166, 166, 1)
+                        Font: =App.Theme.Font
+                        FontWeight: =FontWeight.Bold
+                        OnSelect: =Select(Parent)
+                        Size: =13
+                        Text: ="Arrival"
+                        X: =724
+                        Y: =34
+                        ZIndex: =4
+
+                    Label8_2 As label:
+                        Align: =Align.Center
+                        BorderColor: =App.Theme.Colors.Darker40
+                        Color: =RGBA(0, 0, 0, 1)
+                        DisabledColor: =RGBA(166, 166, 166, 1)
+                        Font: =App.Theme.Font
+                        FontWeight: =FontWeight.Semibold
+                        Height: =28
+                        OnSelect: =Select(Parent)
+                        Size: =13
+                        Text: =ThisItem.Arrival
+                        Width: =180
+                        X: =709
+                        Y: =71
+                        ZIndex: =5
+
+                    Rectangle2_3 As rectangle:
+                        BorderColor: =App.Theme.Colors.Darker40
+                        Fill: =RGBA(202, 202, 202, 1)
+                        OnSelect: =Select(Parent)
+                        Width: =2
+                        X: =984
+                        Y: =16
+                        ZIndex: =6
+
+                    Label9_2 As label:
+                        Align: =Align.Center
+                        BorderColor: =App.Theme.Colors.Darker40
+                        Color: =RGBA(240, 98, 15, 1)
+                        DisabledColor: =RGBA(166, 166, 166, 1)
+                        Font: =App.Theme.Font
+                        OnSelect: =Select(Icon2_6)
+                        Size: =13
+                        Text: |-
+                            =If
+                            (
+                            ThisItem
+                            .ID in
+                            colToggleValues
+                            .ID,
+                            "Expand Details"
+                            ,
+                            "Collapse Details"
+                            )
+                        Width: =140
+                        X: =1070
+                        Y: =86
+                        ZIndex: =7
+
+                    Label10_4 As label:
+                        Align: =Align.Center
+                        BorderColor: =App.Theme.Colors.Darker40
+                        Color: =RGBA(0, 0, 0, 1)
+                        DisabledColor: =RGBA(166, 166, 166, 1)
+                        Font: =App.Theme.Font
+                        FontWeight: =FontWeight.Bold
+                        Height: =35
+                        OnSelect: =Select(Parent)
+                        Size: =17
+                        Text: =ThisItem.Price
+                        Width: =217
+                        X: =1056
+                        Y: =16
+                        ZIndex: =8
+
+                    Icon2_6 As icon.ChevronDown:
+                        BorderColor: =App.Theme.Colors.Darker40
+                        Color: =RGBA(240, 98, 15, 1)
+                        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                        DisabledColor: =RGBA(244, 244, 244, 1)
+                        Height: =32
+                        Icon: |-
+                            =If
+                            (
+                            ThisItem.ID in
+                            colToggleValues.ID,
+                            Icon
+                            .ChevronUp,
+                            Icon
+                            .ChevronDown)
+                        OnSelect: |-
+                            =If(
+                                ThisItem.ID in colToggleValues.ID,
+                                RemoveIf(
+                                    colToggleValues,
+                                    ID = ThisItem.ID
+                                ),
+                                Collect(
+                                    colToggleValues,
+                                    {ID: ThisItem.ID}
+                                );
+                               
+                            )
+                        Width: =27
+                        X: =1210
+                        Y: =90
+                        ZIndex: =9
+
+                    Container2_8 As groupContainer.verticalAutoLayoutContainer:
+                        DropShadow: =DropShadow.Light
+                        Fill: =RGBA(237, 237, 237, 1)
+                        Height: =420
+                        LayoutAlignItems: =LayoutAlignItems.Stretch
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMode: =LayoutMode.Auto
+                        RadiusBottomLeft: =30
+                        RadiusBottomRight: =30
+                        RadiusTopLeft: =30
+                        RadiusTopRight: =30
+                        Visible: |-
+                            =If
+                            (
+                            ThisItem
+                            .ID in
+                            colToggleValues
+                            .ID, true, false)
+                        Width: =1291
+                        X: =28
+                        Y: =140
+                        ZIndex: =10
+
+                        Container2_9 As groupContainer.verticalAutoLayoutContainer:
+                            DropShadow: =DropShadow.Light
+                            Fill: =RGBA(237, 237, 237, 1)
+                            Height: =420
+                            LayoutDirection: =LayoutDirection.Vertical
+                            LayoutMinHeight: =100
+                            LayoutMinWidth: =250
+                            LayoutMode: =LayoutMode.Auto
+                            RadiusBottomLeft: =30
+                            RadiusBottomRight: =30
+                            RadiusTopLeft: =30
+                            RadiusTopRight: =30
+                            Width: =1205
+                            X: =75
+                            Y: =146
+                            ZIndex: =1
+
+                            Container3_4 As groupContainer.horizontalAutoLayoutContainer:
+                                Fill: =RGBA(230, 230, 230, 1)
+                                FillPortions: =0
+                                Height: =70
+                                LayoutAlignItems: =LayoutAlignItems.Stretch
+                                LayoutGap: =40
+                                LayoutJustifyContent: =LayoutJustifyContent.Center
+                                LayoutMinHeight: =100
+                                LayoutMinWidth: =250
+                                LayoutMode: =LayoutMode.Auto
+                                PaddingBottom: =10
+                                PaddingTop: =10
+                                RadiusBottomLeft: =20
+                                RadiusBottomRight: =20
+                                ZIndex: =1
+
+                                Container4_12 As groupContainer.horizontalAutoLayoutContainer:
+                                    AlignInContainer: =AlignInContainer.SetByContainer
+                                    DropShadow: =DropShadow.Light
+                                    Fill: =RGBA(68, 149, 219, 1)
+                                    FillPortions: =0
+                                    LayoutAlignItems: =LayoutAlignItems.Center
+                                    LayoutJustifyContent: =LayoutJustifyContent.Center
+                                    LayoutMinHeight: =40
+                                    LayoutMinWidth: =250
+                                    LayoutMode: =LayoutMode.Auto
+                                    RadiusBottomLeft: =50
+                                    RadiusBottomRight: =50
+                                    RadiusTopLeft: =50
+                                    RadiusTopRight: =50
+                                    Width: =170
+                                    ZIndex: =1
+
+                                    Icon3_3 As icon.Airplane:
+                                        BorderColor: =App.Theme.Colors.Darker40
+                                        Color: =RGBA(255, 255, 255, 1)
+                                        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                                        DisabledColor: =RGBA(244, 244, 244, 1)
+                                        Height: =35
+                                        Icon: =Icon.Airplane
+                                        PaddingLeft: =25
+                                        Width: =50
+                                        ZIndex: =1
+
+                                    Label12_1 As label:
+                                        BorderColor: =App.Theme.Colors.Darker40
+                                        Color: =RGBA(255, 255, 255, 1)
+                                        DisabledColor: =RGBA(166, 166, 166, 1)
+                                        Font: =App.Theme.Font
+                                        Size: =13
+                                        Text: ="ITINERARY"
+                                        Width: =130
+                                        ZIndex: =2
+
+                            Container6_9 As groupContainer.verticalAutoLayoutContainer:
+                                FillPortions: =0
+                                Height: =170
+                                LayoutGap: =80
+                                LayoutMinHeight: =100
+                                LayoutMinWidth: =250
+                                LayoutMode: =LayoutMode.Auto
+                                RadiusBottomLeft: =4
+                                RadiusBottomRight: =4
+                                RadiusTopLeft: =4
+                                RadiusTopRight: =4
+                                ZIndex: =2
+
+                                Container5_4 As groupContainer.verticalAutoLayoutContainer:
+                                    AlignInContainer: =AlignInContainer.SetByContainer
+                                    LayoutAlignItems: =LayoutAlignItems.Center
+                                    LayoutDirection: =LayoutDirection.Vertical
+                                    LayoutMinHeight: =100
+                                    LayoutMinWidth: =250
+                                    LayoutMode: =LayoutMode.Auto
+                                    PaddingTop: =10
+                                    RadiusBottomLeft: =4
+                                    RadiusBottomRight: =4
+                                    RadiusTopLeft: =4
+                                    RadiusTopRight: =4
+                                    Width: =200
+                                    ZIndex: =1
+
+                                    Icon1_9 As icon.Airplane:
+                                        BorderColor: =App.Theme.Colors.Darker40
+                                        Color: =RGBA(240, 98, 15, 1)
+                                        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                                        DisabledColor: =RGBA(244, 244, 244, 1)
+                                        Height: =40
+                                        Icon: =Icon.Airplane
+                                        OnSelect: =
+                                        Width: =60
+                                        X: =120
+                                        Y: =10
+                                        ZIndex: =1
+
+                                    Label13_2 As label:
+                                        Align: =Align.Center
+                                        BorderColor: =App.Theme.Colors.Darker40
+                                        Color: =RGBA(0, 0, 0, 1)
+                                        DisabledColor: =RGBA(166, 166, 166, 1)
+                                        Font: =App.Theme.Font
+                                        Height: =30
+                                        OnSelect: =
+                                        Size: =13
+                                        Text: ="Airline Name"
+                                        X: =40
+                                        Y: =40
+                                        ZIndex: =2
+
+                                    TextCanvas14_7 As Text:
+                                        Align: ='TextCanvas.Align'.Center
+                                        AlignInContainer: =AlignInContainer.Center
+                                        AutoHeight: =true
+                                        DisplayMode: =DisplayMode.Edit
+                                        Height: =32
+                                        LayoutMinHeight: =32
+                                        LayoutMinWidth: =96
+                                        Size: =22
+                                        Text: =LookUp(Codes,'IATA Code'=ThisItem.DepartureAirline).Airline
+                                        Weight: ='TextCanvas.Weight'.Semibold
+                                        Width: =250
+                                        X: =0
+                                        Y: =0
+                                        ZIndex: =3
+
+                                Container5_8 As groupContainer.verticalAutoLayoutContainer:
+                                    LayoutAlignItems: =LayoutAlignItems.Center
+                                    LayoutDirection: =LayoutDirection.Vertical
+                                    LayoutJustifyContent: =LayoutJustifyContent.Center
+                                    LayoutMinHeight: =100
+                                    LayoutMinWidth: =250
+                                    LayoutMode: =LayoutMode.Auto
+                                    PaddingTop: =10
+                                    RadiusBottomLeft: =4
+                                    RadiusBottomRight: =4
+                                    RadiusTopLeft: =4
+                                    RadiusTopRight: =4
+                                    Width: =200
+                                    ZIndex: =2
+
+                                    Label13_5 As label:
+                                        Align: =Align.Center
+                                        BorderColor: =App.Theme.Colors.Darker40
+                                        Color: =RGBA(0, 0, 0, 1)
+                                        DisabledColor: =RGBA(166, 166, 166, 1)
+                                        Font: =App.Theme.Font
+                                        FontWeight: =FontWeight.Bold
+                                        Height: =30
+                                        OnSelect: =
+                                        Size: =20
+                                        Text: =ThisItem.Departure
+                                        X: =40
+                                        Y: =40
+                                        ZIndex: =1
+
+                                    Label2_12 As label:
+                                        Align: =Align.Center
+                                        BorderColor: =App.Theme.Colors.Darker40
+                                        Color: =RGBA(0, 0, 0, 1)
+                                        DisabledColor: =RGBA(166, 166, 166, 1)
+                                        Font: =App.Theme.Font
+                                        Height: =30
+                                        OnSelect: =
+                                        PaddingTop: =0
+                                        Size: =15
+                                        Text: =ThisItem.From
+                                        X: =75
+                                        Y: =94
+                                        ZIndex: =2
+
+                                    Label13_10 As label:
+                                        Align: =Align.Center
+                                        BorderColor: =App.Theme.Colors.Darker40
+                                        Color: =RGBA(0, 0, 0, 1)
+                                        DisabledColor: =RGBA(166, 166, 166, 1)
+                                        Font: =App.Theme.Font
+                                        Height: =30
+                                        OnSelect: =
+                                        PaddingLeft: =0
+                                        PaddingTop: =0
+                                        Text: =ThisItem.DateOfDeparture
+                                        X: =40
+                                        Y: =40
+                                        ZIndex: =3
+
+                                Icon4 As icon.ArrowRight:
+                                    AlignInContainer: =AlignInContainer.Center
+                                    BorderColor: =App.Theme.Colors.Darker40
+                                    Color: =App.Theme.Colors.Darker30
+                                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                                    DisabledColor: =RGBA(244, 244, 244, 1)
+                                    Icon: =Icon.ArrowRight
+                                    Width: =60
+                                    ZIndex: =3
+
+                                Container5_9 As groupContainer.verticalAutoLayoutContainer:
+                                    FillPortions: =0
+                                    LayoutDirection: =LayoutDirection.Vertical
+                                    LayoutJustifyContent: =LayoutJustifyContent.Center
+                                    LayoutMinHeight: =100
+                                    LayoutMinWidth: =250
+                                    LayoutMode: =LayoutMode.Auto
+                                    PaddingLeft: =175
+                                    PaddingTop: =10
+                                    RadiusBottomLeft: =4
+                                    RadiusBottomRight: =4
+                                    RadiusTopLeft: =4
+                                    RadiusTopRight: =4
+                                    Width: =Parent.Width
+                                    ZIndex: =4
+
+                                    Label13_15 As label:
+                                        Align: =Align.Center
+                                        BorderColor: =App.Theme.Colors.Darker40
+                                        Color: =RGBA(0, 0, 0, 1)
+                                        DisabledColor: =RGBA(166, 166, 166, 1)
+                                        Font: =App.Theme.Font
+                                        FontWeight: =FontWeight.Bold
+                                        Height: =30
+                                        OnSelect: =
+                                        Size: =20
+                                        Text: =ThisItem.Arrival
+                                        X: =40
+                                        Y: =40
+                                        ZIndex: =1
+
+                                    Label2_14 As label:
+                                        Align: =Align.Center
+                                        BorderColor: =App.Theme.Colors.Darker40
+                                        Color: =RGBA(0, 0, 0, 1)
+                                        DisabledColor: =RGBA(166, 166, 166, 1)
+                                        Font: =App.Theme.Font
+                                        Height: =30
+                                        OnSelect: =
+                                        PaddingTop: =0
+                                        Size: =15
+                                        Text: =ThisItem.To
+                                        X: =75
+                                        Y: =94
+                                        ZIndex: =2
+
+                                    Label13_16 As label:
+                                        Align: =Align.Center
+                                        BorderColor: =App.Theme.Colors.Darker40
+                                        Color: =RGBA(0, 0, 0, 1)
+                                        DisabledColor: =RGBA(166, 166, 166, 1)
+                                        Font: =App.Theme.Font
+                                        Height: =30
+                                        OnSelect: =
+                                        PaddingLeft: =0
+                                        PaddingTop: =0
+                                        Text: =ThisItem.DateOfArrival
+                                        X: =40
+                                        Y: =40
+                                        ZIndex: =3
+
+                            Rectangle5_2 As rectangle:
+                                BorderColor: =App.Theme.Colors.Darker40
+                                Fill: =RGBA(202, 202, 202, 1)
+                                Height: =2
+                                Width: =Parent.Width
+                                ZIndex: =3
+
+                            Container6_10 As groupContainer.verticalAutoLayoutContainer:
+                                FillPortions: =0
+                                Height: =170
+                                LayoutGap: =80
+                                LayoutMinHeight: =100
+                                LayoutMinWidth: =250
+                                LayoutMode: =LayoutMode.Auto
+                                RadiusBottomLeft: =4
+                                RadiusBottomRight: =4
+                                RadiusTopLeft: =4
+                                RadiusTopRight: =4
+                                ZIndex: =4
+
+                                Container5_5 As groupContainer.verticalAutoLayoutContainer:
+                                    AlignInContainer: =AlignInContainer.SetByContainer
+                                    LayoutAlignItems: =LayoutAlignItems.Center
+                                    LayoutDirection: =LayoutDirection.Vertical
+                                    LayoutMinHeight: =100
+                                    LayoutMinWidth: =250
+                                    LayoutMode: =LayoutMode.Auto
+                                    PaddingTop: =10
+                                    RadiusBottomLeft: =4
+                                    RadiusBottomRight: =4
+                                    RadiusTopLeft: =4
+                                    RadiusTopRight: =4
+                                    Width: =200
+                                    ZIndex: =1
+
+                                    Icon1_10 As icon.Airplane:
+                                        BorderColor: =App.Theme.Colors.Darker40
+                                        Color: =RGBA(240, 98, 15, 1)
+                                        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                                        DisabledColor: =RGBA(244, 244, 244, 1)
+                                        Height: =40
+                                        Icon: =Icon.Airplane
+                                        OnSelect: =
+                                        Width: =60
+                                        X: =120
+                                        Y: =10
+                                        ZIndex: =1
+
+                                    Label13_6 As label:
+                                        Align: =Align.Center
+                                        BorderColor: =App.Theme.Colors.Darker40
+                                        Color: =RGBA(0, 0, 0, 1)
+                                        DisabledColor: =RGBA(166, 166, 166, 1)
+                                        Font: =App.Theme.Font
+                                        Height: =30
+                                        OnSelect: =
+                                        Size: =13
+                                        Text: ="Airline Name"
+                                        X: =40
+                                        Y: =40
+                                        ZIndex: =2
+
+                                    TextCanvas14_2 As Text:
+                                        Align: ='TextCanvas.Align'.Center
+                                        AlignInContainer: =AlignInContainer.Center
+                                        AutoHeight: =true
+                                        DisplayMode: =DisplayMode.Edit
+                                        Height: =32
+                                        LayoutMinHeight: =32
+                                        LayoutMinWidth: =96
+                                        Size: =22
+                                        Text: =LookUp(Codes,'IATA Code'=ThisItem.DepartureAirline).Airline
+                                        Weight: ='TextCanvas.Weight'.Semibold
+                                        Width: =250
+                                        X: =0
+                                        Y: =0
+                                        ZIndex: =3
+
+                                Container5_10 As groupContainer.verticalAutoLayoutContainer:
+                                    LayoutAlignItems: =LayoutAlignItems.Center
+                                    LayoutDirection: =LayoutDirection.Vertical
+                                    LayoutJustifyContent: =LayoutJustifyContent.Center
+                                    LayoutMinHeight: =100
+                                    LayoutMinWidth: =250
+                                    LayoutMode: =LayoutMode.Auto
+                                    PaddingTop: =10
+                                    RadiusBottomLeft: =4
+                                    RadiusBottomRight: =4
+                                    RadiusTopLeft: =4
+                                    RadiusTopRight: =4
+                                    Width: =200
+                                    ZIndex: =2
+
+                                    Label13_9 As label:
+                                        Align: =Align.Center
+                                        BorderColor: =App.Theme.Colors.Darker40
+                                        Color: =RGBA(0, 0, 0, 1)
+                                        DisabledColor: =RGBA(166, 166, 166, 1)
+                                        Font: =App.Theme.Font
+                                        FontWeight: =FontWeight.Bold
+                                        Height: =30
+                                        OnSelect: =
+                                        Size: =20
+                                        Text: =ThisItem.ReturnDeparture
+                                        X: =40
+                                        Y: =40
+                                        ZIndex: =1
+
+                                    Label2_16 As label:
+                                        Align: =Align.Center
+                                        BorderColor: =App.Theme.Colors.Darker40
+                                        Color: =RGBA(0, 0, 0, 1)
+                                        DisabledColor: =RGBA(166, 166, 166, 1)
+                                        Font: =App.Theme.Font
+                                        Height: =30
+                                        OnSelect: =
+                                        PaddingTop: =0
+                                        Size: =15
+                                        Text: =ThisItem.To
+                                        X: =75
+                                        Y: =94
+                                        ZIndex: =2
+
+                                    Label13_12 As label:
+                                        Align: =Align.Center
+                                        BorderColor: =App.Theme.Colors.Darker40
+                                        Color: =RGBA(0, 0, 0, 1)
+                                        DisabledColor: =RGBA(166, 166, 166, 1)
+                                        Font: =App.Theme.Font
+                                        Height: =30
+                                        OnSelect: =
+                                        PaddingLeft: =0
+                                        PaddingTop: =0
+                                        Text: =ThisItem.DateOfReturnDeparture
+                                        X: =40
+                                        Y: =40
+                                        ZIndex: =3
+
+                                Icon4_1 As icon.ArrowRight:
+                                    AlignInContainer: =AlignInContainer.Center
+                                    BorderColor: =App.Theme.Colors.Darker40
+                                    Color: =App.Theme.Colors.Darker30
+                                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                                    DisabledColor: =RGBA(244, 244, 244, 1)
+                                    Icon: =Icon.ArrowRight
+                                    Width: =60
+                                    ZIndex: =3
+
+                                Container5_11 As groupContainer.verticalAutoLayoutContainer:
+                                    FillPortions: =0
+                                    LayoutDirection: =LayoutDirection.Vertical
+                                    LayoutJustifyContent: =LayoutJustifyContent.Center
+                                    LayoutMinHeight: =100
+                                    LayoutMinWidth: =250
+                                    LayoutMode: =LayoutMode.Auto
+                                    PaddingLeft: =175
+                                    PaddingTop: =10
+                                    RadiusBottomLeft: =4
+                                    RadiusBottomRight: =4
+                                    RadiusTopLeft: =4
+                                    RadiusTopRight: =4
+                                    Width: =Parent.Width
+                                    ZIndex: =4
+
+                                    Label13_20 As label:
+                                        Align: =Align.Center
+                                        BorderColor: =App.Theme.Colors.Darker40
+                                        Color: =RGBA(0, 0, 0, 1)
+                                        DisabledColor: =RGBA(166, 166, 166, 1)
+                                        Font: =App.Theme.Font
+                                        FontWeight: =FontWeight.Bold
+                                        Height: =30
+                                        OnSelect: =
+                                        Size: =20
+                                        Text: =ThisItem.ReturnArrival
+                                        X: =40
+                                        Y: =40
+                                        ZIndex: =1
+
+                                    Label2_17 As label:
+                                        Align: =Align.Center
+                                        BorderColor: =App.Theme.Colors.Darker40
+                                        Color: =RGBA(0, 0, 0, 1)
+                                        DisabledColor: =RGBA(166, 166, 166, 1)
+                                        Font: =App.Theme.Font
+                                        Height: =30
+                                        OnSelect: =
+                                        PaddingTop: =0
+                                        Size: =15
+                                        Text: =ThisItem.From
+                                        X: =75
+                                        Y: =94
+                                        ZIndex: =2
+
+                                    Label13_21 As label:
+                                        Align: =Align.Center
+                                        BorderColor: =App.Theme.Colors.Darker40
+                                        Color: =RGBA(0, 0, 0, 1)
+                                        DisabledColor: =RGBA(166, 166, 166, 1)
+                                        Font: =App.Theme.Font
+                                        Height: =30
+                                        OnSelect: =
+                                        PaddingLeft: =0
+                                        PaddingTop: =0
+                                        Text: =ThisItem.DateOfReturnArrival
+                                        X: =40
+                                        Y: =40
+                                        ZIndex: =3
+
+                        Rectangle5_1 As rectangle:
+                            BorderColor: =App.Theme.Colors.Darker40
+                            Fill: =RGBA(202, 202, 202, 1)
+                            Height: =2
+                            Width: =Parent.Width
+                            ZIndex: =2
+
+                    Icon1_8 As icon.Airplane:
+                        BorderColor: =App.Theme.Colors.Darker40
+                        Color: =RGBA(15, 84, 140, 1)
+                        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                        DisabledColor: =RGBA(244, 244, 244, 1)
+                        Height: =40
+                        Icon: =Icon.Airplane
+                        OnSelect: =Select(Parent)
+                        Width: =60
+                        X: =120
+                        Y: =32
+                        ZIndex: =11
+
+                    Button1_3 As button:
+                        BorderColor: =App.Theme.Colors.Primary
+                        Color: =RGBA(0, 0, 0, 1)
+                        DisabledBorderColor: =RGBA(244, 244, 244, 1)
+                        DisabledColor: =RGBA(166, 166, 166, 1)
+                        DisabledFill: =RGBA(244, 244, 244, 1)
+                        Fill: =RGBA(255, 255, 255, 1)
+                        Font: =App.Theme.Font
+                        FontWeight: =FontWeight.Semibold
+                        Height: =42
+                        HoverBorderColor: =App.Theme.Colors.Darker10
+                        HoverColor: =RGBA(255, 255, 255, 1)
+                        HoverFill: =App.Theme.Colors.Darker10
+                        OnSelect: |
+                            =Navigate(Screen2);
+                            Set(FlightRecord,ThisItem);
+                            Set(HotelSearchResponse,HotelSearch.Run(To));
+                            Set(hotelname,Replace(HotelSearchResponse.hotelname,1,1,""));
+                            Set(hotelname1,Replace(hotelname,Len(hotelname),1,""));
+                            
+                            Set(hotelCollection,Split(hotelname1,","));
+                            ClearCollect(newHotelCollection, 
+                                ForAll(hotelCollection, 
+                                    {
+                                        
+                                        name: Substitute(ThisRecord.Value,"""", "")
+                                    }
+                                )
+                            );
+                        PressedBorderColor: =App.Theme.Colors.Darker40
+                        PressedColor: =Self.Color
+                        PressedFill: =App.Theme.Colors.Darker40
+                        RadiusBottomLeft: =0
+                        RadiusBottomRight: =0
+                        RadiusTopLeft: =0
+                        RadiusTopRight: =0
+                        Size: =15
+                        Text: ="Select"
+                        Width: =145
+                        X: =1092
+                        Y: =50
+                        ZIndex: =12
+

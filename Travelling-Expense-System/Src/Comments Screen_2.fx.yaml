@@ -1,0 +1,1680 @@
+"'Comments Screen_2' As screen.'autoLayout_HeaderFooter_ver1.0'":
+    Fill: =Color.White
+    LoadingSpinnerColor: =App.Theme.Colors.Primary
+
+    ScreenContainer2_2 As groupContainer.verticalAutoLayoutContainer:
+        DropShadow: =DropShadow.Light
+        Fill: =RGBA(245, 245, 245, 1)
+        Height: =Parent.Height
+        LayoutAlignItems: =LayoutAlignItems.Stretch
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutGap: =16
+        LayoutMode: =LayoutMode.Auto
+        PaddingBottom: =16
+        PaddingLeft: =16
+        PaddingRight: =16
+        PaddingTop: =16
+        RadiusBottomLeft: =4
+        RadiusBottomRight: =4
+        RadiusTopLeft: =4
+        RadiusTopRight: =4
+        Width: =Parent.Width
+        ZIndex: =1
+
+        HeaderContainer2_2 As groupContainer.horizontalAutoLayoutContainer:
+            DropShadow: =DropShadow.Light
+            Fill: =RGBA(255, 255, 255, 1)
+            FillPortions: =0
+            Height: =75
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            RadiusBottomLeft: =15
+            RadiusBottomRight: =15
+            RadiusTopLeft: =15
+            RadiusTopRight: =15
+            ZIndex: =2
+
+            Container1_13 As groupContainer.horizontalAutoLayoutContainer:
+                DropShadow: =DropShadow.Light
+                Fill: =RGBA(15, 84, 140, 1)
+                Height: =Parent.Height
+                LayoutMinHeight: =50
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                RadiusBottomLeft: =4
+                RadiusBottomRight: =4
+                RadiusTopLeft: =4
+                RadiusTopRight: =4
+                Width: =Parent.Width
+                ZIndex: =1
+
+                Image11_1 As image:
+                    BorderColor: =App.Theme.Colors.Darker40
+                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                    DisabledFill: =RGBA(244, 244, 244, 1)
+                    Height: =75
+                    Image: ='icons8-left-arrow-48_2'
+                    ImagePosition: =ImagePosition.Center
+                    OnSelect: =Navigate('Scrollable pending screen')
+                    Width: =50
+                    ZIndex: =1
+
+                Image6_9 As image:
+                    BorderColor: =App.Theme.Colors.Darker40
+                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                    DisabledFill: =RGBA(244, 244, 244, 1)
+                    Height: =80
+                    Image: ='Systems-Ltd-feature-image-new-logo-2019-removebg-preview'
+                    Width: =164
+                    ZIndex: =2
+
+                Label3_13 As label:
+                    Align: =Align.Center
+                    AlignInContainer: =AlignInContainer.Stretch
+                    BorderColor: =App.Theme.Colors.Darker40
+                    Color: =RGBA(255, 255, 255, 1)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    Fill: =RGBA(15, 84, 140, 1)
+                    Font: =App.Theme.Font
+                    FontWeight: =FontWeight.Bold
+                    PaddingRight: =170
+                    Size: =18
+                    Text: ="Request Details"
+                    Width: =Parent.Width-Image11_1.Width-Image6_9.Width
+                    ZIndex: =3
+
+        MainContainer2_2 As groupContainer.verticalAutoLayoutContainer:
+            DropShadow: =DropShadow.Light
+            Fill: =RGBA(255, 255, 255, 1)
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            RadiusBottomLeft: =4
+            RadiusBottomRight: =4
+            RadiusTopLeft: =4
+            RadiusTopRight: =4
+            ZIndex: =3
+
+            Container29 As groupContainer.verticalAutoLayoutContainer:
+                AlignInContainer: =AlignInContainer.Center
+                DropShadow: =DropShadow.Light
+                FillPortions: =0
+                Height: =100
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                RadiusBottomLeft: =4
+                RadiusBottomRight: =4
+                RadiusTopLeft: =4
+                RadiusTopRight: =4
+                Width: =Parent.Width
+                ZIndex: =1
+
+                Gallery10 As gallery.galleryHorizontal:
+                    AlignInContainer: =AlignInContainer.Center
+                    BorderColor: =App.Theme.Colors.Darker40
+                    DelayItemLoading: =true
+                    FillPortions: =0
+                    Height: =100
+                    Items: |-
+                        =Table(
+                            {
+                                ID: 1,
+                                Step: "Request Submitted",
+                                Status: true
+                            },
+                            {
+                                ID: 2,
+                                Step: "HOD Approval",
+                                Status: LookUp(Gallery2_2.AllItems,'Approved By'="Department Head").'Approved By' = "Department Head"
+                            },
+                            {
+                                ID: 3,
+                                Step: "GM Approval",
+                                Status: LookUp(Gallery2_2.AllItems,'Approved By'="GM").'Approved By' = "GM"
+                            }
+                            ,
+                            {
+                                ID: 4,
+                                Step: "Finance Approval",
+                                Status:LookUp(Gallery2_2.AllItems,'Approved By'="Finance").'Approved By' = "Finance"
+                            },
+                            {
+                                ID: 4,
+                                Step: "Completed",
+                                Status:
+                                    LookUp(Gallery2_2.AllItems,'Approved By'="Department Head").'Approved By' = "Department Head" &&
+                                    LookUp(Gallery2_2.AllItems,'Approved By'="GM").'Approved By' = "GM" &&
+                                    LookUp(Gallery2_2.AllItems,'Approved By'="Finance").'Approved By' = "Finance"
+                            }
+                        )
+                    LayoutMinHeight: =287
+                    LayoutMinWidth: =320
+                    LoadingSpinner: =LoadingSpinner.Data
+                    ShowScrollbar: =false
+                    TemplateSize: =200
+                    Width: =963
+                    ZIndex: =1
+
+                    Circle6 As circle:
+                        BorderColor: =App.Theme.Colors.Darker40
+                        Fill: =Color.Gray
+                        Height: =50
+                        OnSelect: =Select(Parent)
+                        Width: =50
+                        Y: =23
+                        ZIndex: =1
+
+                    Circle7 As circle:
+                        BorderColor: =App.Theme.Colors.Darker40
+                        Fill: =App.Theme.Colors.Primary
+                        Height: =50
+                        OnSelect: =Select(Parent)
+                        Visible: =If(ThisItem.Status,true,false)
+                        Width: =50
+                        Y: =23
+                        ZIndex: =2
+
+                    Label42 As label:
+                        BorderColor: =App.Theme.Colors.Darker40
+                        Color: =RGBA(0, 0, 0, 1)
+                        DisabledColor: =RGBA(166, 166, 166, 1)
+                        Font: =App.Theme.Font
+                        Height: =30
+                        OnSelect: =Select(Parent)
+                        Size: =13
+                        Text: =
+                        Width: =37
+                        Y: =36
+                        ZIndex: =3
+
+                    Icon1 As icon.Check:
+                        BorderColor: =App.Theme.Colors.Darker40
+                        Color: =Color.White
+                        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                        DisabledColor: =RGBA(244, 244, 244, 1)
+                        Height: =44
+                        Icon: =Icon.Check
+                        OnSelect: =Select(Parent)
+                        Visible: =If(ThisItem.Status, true, false)
+                        Width: =33
+                        X: =8
+                        Y: =27
+                        ZIndex: =4
+
+                    Label43 As label:
+                        BorderColor: =App.Theme.Colors.Darker40
+                        Color: =RGBA(0, 0, 0, 1)
+                        DisabledColor: =RGBA(166, 166, 166, 1)
+                        Font: =App.Theme.Font
+                        FontWeight: =FontWeight.Semibold
+                        Height: =34
+                        OnSelect: =Select(Parent)
+                        Size: =12
+                        Text: =ThisItem.Step
+                        Width: =104
+                        X: =50
+                        Y: =32
+                        ZIndex: =5
+
+                    Rectangle13 As rectangle:
+                        BorderColor: =App.Theme.Colors.Darker40
+                        Fill: =App.Theme.Colors.Primary
+                        Height: =2
+                        OnSelect: =Select(Parent)
+                        Width: =67
+                        X: =132
+                        Y: =50
+                        ZIndex: =6
+
+            Canvas2_1 As fluidGrid.fluidGridWithBlankCard:
+                BorderThickness: =0
+                Height: =Parent.Height - Self.Y
+                LayoutMinHeight: =250
+                LayoutMinWidth: =100
+                Width: =Parent.Width
+                ZIndex: =2
+
+                DataCard4_1 As dataCard:
+                    BorderColor: =RGBA(0, 0, 0, 1)
+                    BorderStyle: =BorderStyle.Solid
+                    BorderThickness: =0
+                    DisplayMode: =DisplayMode.Edit
+                    Fill: =RGBA(0, 0, 0, 0)
+                    Height: =350
+                    Width: =Parent.Width
+                    X: =0
+                    Y: =0
+                    ZIndex: =1
+
+                    Container15_3 As groupContainer.horizontalAutoLayoutContainer:
+                        DropShadow: =DropShadow.Light
+                        Height: =Parent.Height
+                        LayoutMode: =LayoutMode.Auto
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        Width: =Parent.Width
+                        ZIndex: =1
+
+                        Form9_3 As form:
+                            BorderColor: =App.Theme.Colors.Darker40
+                            DataSource: ='New tables'
+                            DefaultMode: =FormMode.View
+                            Height: =Parent.Height
+                            Item: =LookUp('New tables',ReqID=galid)
+                            LayoutMinHeight: =250
+                            LayoutMinWidth: =400
+                            NumberOfColumns: =4
+                            Width: =Parent.Width
+                            X: =40
+                            Y: =40
+                            ZIndex: =1
+
+                            "'Project ID_DataCard3_3' As typedDataCard.textualEditCard":
+                                BorderColor: =App.Theme.Colors.Darker40
+                                BorderStyle: =BorderStyle.Solid
+                                DataField: ="cr316_projectid"
+                                Default: =ThisItem.'Project ID'
+                                DisplayMode: =Parent.DisplayMode
+                                DisplayName: =DataSourceInfo([@'New tables'],DataSourceInfo.DisplayName,'Project ID')
+                                Fill: =RGBA(0, 0, 0, 0)
+                                Height: =50
+                                MaxLength: =DataSourceInfo([@'New tables'], DataSourceInfo.MaxLength, 'Project ID')
+                                Required: =false
+                                Update: =DataCardValue34_3.Text
+                                Width: =If('Comments Screen_2'.Size=1,Parent.Width/2,Parent.Width/4)
+                                X: =2
+                                Y: =0
+                                ZIndex: =1
+
+                                DataCardKey44_3 As label:
+                                    AutoHeight: =true
+                                    Color: =RGBA(0, 0, 0, 1)
+                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                    Font: =App.Theme.Font
+                                    FontWeight: =FontWeight.Bold
+                                    Height: =34
+                                    Size: =15
+                                    Text: =Parent.DisplayName
+                                    Width: =Parent.Width - 60
+                                    Wrap: =false
+                                    X: =30
+                                    Y: =10
+                                    ZIndex: =1
+
+                                DataCardValue34_3 As text:
+                                    BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                                    BorderThickness: =2
+                                    Color: =RGBA(0, 0, 0, 1)
+                                    Default: =Parent.Default
+                                    DelayOutput: =true
+                                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                    DisabledFill: =RGBA(244, 244, 244, 1)
+                                    DisplayMode: =Parent.DisplayMode
+                                    FocusedBorderThickness: =4
+                                    Font: =App.Theme.Font
+                                    HoverBorderColor: =App.Theme.Colors.Darker40
+                                    HoverColor: =RGBA(0, 0, 0, 1)
+                                    HoverFill: =App.Theme.Colors.Lighter70
+                                    MaxLength: =Parent.MaxLength
+                                    PaddingLeft: =5
+                                    RadiusBottomLeft: =0
+                                    RadiusBottomRight: =0
+                                    RadiusTopLeft: =0
+                                    RadiusTopRight: =0
+                                    Size: =13
+                                    Tooltip: =Parent.DisplayName
+                                    Width: =Parent.Width - 60
+                                    X: =30
+                                    Y: =DataCardKey44_3.Y + DataCardKey44_3.Height + 5
+                                    ZIndex: =2
+
+                                ErrorMessage44_3 As label:
+                                    AutoHeight: =true
+                                    Color: =RGBA(168, 0, 0, 1)
+                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                    Font: =App.Theme.Font
+                                    FontWeight: =FontWeight.Semibold
+                                    Height: =10
+                                    Live: =Live.Assertive
+                                    PaddingBottom: =0
+                                    PaddingLeft: =0
+                                    PaddingRight: =0
+                                    PaddingTop: =0
+                                    Text: =Parent.Error
+                                    Visible: =Parent.DisplayMode=DisplayMode.Edit
+                                    Width: =Parent.Width - 60
+                                    X: =30
+                                    Y: =DataCardValue34_3.Y + DataCardValue34_3.Height
+                                    ZIndex: =3
+
+                                StarVisible44_3 As label:
+                                    Align: =Align.Center
+                                    Color: =App.Theme.Colors.Darker30
+                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                    Font: =App.Theme.Font
+                                    Height: =DataCardKey44_3.Height
+                                    Size: =13
+                                    Text: ="*"
+                                    Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                                    Width: =30
+                                    Wrap: =false
+                                    Y: =DataCardKey44_3.Y
+                                    ZIndex: =4
+
+                            "'Employee Passport Number_DataCard1_3' As typedDataCard.textualEditCard":
+                                BorderColor: =App.Theme.Colors.Darker40
+                                BorderStyle: =BorderStyle.Solid
+                                DataField: ="cr316_employeepassportnumber"
+                                Default: =ThisItem.'Employee Passport Number'
+                                DisplayMode: =Parent.DisplayMode
+                                DisplayName: =DataSourceInfo([@'New tables'],DataSourceInfo.DisplayName,'Employee Passport Number')
+                                Fill: =RGBA(0, 0, 0, 0)
+                                Height: =50
+                                MaxLength: =DataSourceInfo([@'New tables'], DataSourceInfo.MaxLength, 'Employee Passport Number')
+                                Required: =false
+                                Update: =DataCardValue33_3.Text
+                                Width: =If('Comments Screen_2'.Size=1,Parent.Width/2,Parent.Width/4)
+                                X: =2
+                                Y: =2
+                                ZIndex: =1
+
+                                DataCardKey43_3 As label:
+                                    AutoHeight: =true
+                                    Color: =RGBA(0, 0, 0, 1)
+                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                    Font: =App.Theme.Font
+                                    FontWeight: =FontWeight.Bold
+                                    Height: =34
+                                    Size: =15
+                                    Text: =Parent.DisplayName
+                                    Width: =Parent.Width - 60
+                                    Wrap: =false
+                                    X: =30
+                                    Y: =10
+                                    ZIndex: =1
+
+                                DataCardValue33_3 As text:
+                                    BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                                    BorderThickness: =2
+                                    Color: =RGBA(0, 0, 0, 1)
+                                    Default: =Parent.Default
+                                    DelayOutput: =true
+                                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                    DisabledFill: =RGBA(244, 244, 244, 1)
+                                    DisplayMode: =Parent.DisplayMode
+                                    FocusedBorderThickness: =4
+                                    Font: =App.Theme.Font
+                                    HoverBorderColor: =App.Theme.Colors.Darker40
+                                    HoverColor: =RGBA(0, 0, 0, 1)
+                                    HoverFill: =App.Theme.Colors.Lighter70
+                                    MaxLength: =Parent.MaxLength
+                                    PaddingLeft: =5
+                                    RadiusBottomLeft: =0
+                                    RadiusBottomRight: =0
+                                    RadiusTopLeft: =0
+                                    RadiusTopRight: =0
+                                    Size: =13
+                                    Tooltip: =Parent.DisplayName
+                                    Width: =Parent.Width - 60
+                                    X: =30
+                                    Y: =DataCardKey43_3.Y + DataCardKey43_3.Height + 5
+                                    ZIndex: =2
+
+                                ErrorMessage43_3 As label:
+                                    AutoHeight: =true
+                                    Color: =RGBA(168, 0, 0, 1)
+                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                    Font: =App.Theme.Font
+                                    FontWeight: =FontWeight.Semibold
+                                    Height: =10
+                                    Live: =Live.Assertive
+                                    PaddingBottom: =0
+                                    PaddingLeft: =0
+                                    PaddingRight: =0
+                                    PaddingTop: =0
+                                    Text: =Parent.Error
+                                    Visible: =Parent.DisplayMode=DisplayMode.Edit
+                                    Width: =Parent.Width - 60
+                                    X: =30
+                                    Y: =DataCardValue33_3.Y + DataCardValue33_3.Height
+                                    ZIndex: =3
+
+                                StarVisible43_3 As label:
+                                    Align: =Align.Center
+                                    Color: =App.Theme.Colors.Darker30
+                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                    Font: =App.Theme.Font
+                                    Height: =DataCardKey43_3.Height
+                                    Size: =13
+                                    Text: ="*"
+                                    Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                                    Width: =30
+                                    Wrap: =false
+                                    Y: =DataCardKey43_3.Y
+                                    ZIndex: =4
+
+                            "'Employee ID_DataCard1_3' As typedDataCard.textualEditCard":
+                                BorderColor: =App.Theme.Colors.Darker40
+                                BorderStyle: =BorderStyle.Solid
+                                DataField: ="cr316_employeeid"
+                                Default: =ThisItem.'Employee ID'
+                                DisplayMode: =Parent.DisplayMode
+                                DisplayName: =DataSourceInfo([@'New tables'],DataSourceInfo.DisplayName,'Employee ID')
+                                Fill: =RGBA(0, 0, 0, 0)
+                                Height: =50
+                                MaxLength: =DataSourceInfo([@'New tables'], DataSourceInfo.MaxLength, 'Employee ID')
+                                Required: =false
+                                Update: =DataCardValue27_3.Text
+                                Width: =If('Comments Screen_2'.Size=1,Parent.Width/2,Parent.Width/4)
+                                X: =0
+                                Y: =0
+                                ZIndex: =2
+
+                                DataCardKey36_3 As label:
+                                    AutoHeight: =true
+                                    Color: =RGBA(0, 0, 0, 1)
+                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                    Font: =App.Theme.Font
+                                    FontWeight: =FontWeight.Bold
+                                    Height: =34
+                                    Size: =15
+                                    Text: =Parent.DisplayName
+                                    Width: =Parent.Width - 60
+                                    Wrap: =false
+                                    X: =30
+                                    Y: =10
+                                    ZIndex: =1
+
+                                DataCardValue27_3 As text:
+                                    BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                                    BorderThickness: =2
+                                    Color: =RGBA(0, 0, 0, 1)
+                                    Default: =Parent.Default
+                                    DelayOutput: =true
+                                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                    DisabledFill: =RGBA(244, 244, 244, 1)
+                                    DisplayMode: =Parent.DisplayMode
+                                    FocusedBorderThickness: =4
+                                    Font: =App.Theme.Font
+                                    HoverBorderColor: =App.Theme.Colors.Darker40
+                                    HoverColor: =RGBA(0, 0, 0, 1)
+                                    HoverFill: =App.Theme.Colors.Lighter70
+                                    MaxLength: =Parent.MaxLength
+                                    PaddingLeft: =5
+                                    RadiusBottomLeft: =0
+                                    RadiusBottomRight: =0
+                                    RadiusTopLeft: =0
+                                    RadiusTopRight: =0
+                                    Size: =13
+                                    Tooltip: =Parent.DisplayName
+                                    Width: =Parent.Width - 60
+                                    X: =30
+                                    Y: =DataCardKey36_3.Y + DataCardKey36_3.Height + 5
+                                    ZIndex: =2
+
+                                ErrorMessage36_3 As label:
+                                    AutoHeight: =true
+                                    Color: =RGBA(168, 0, 0, 1)
+                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                    Font: =App.Theme.Font
+                                    FontWeight: =FontWeight.Semibold
+                                    Height: =10
+                                    Live: =Live.Assertive
+                                    PaddingBottom: =0
+                                    PaddingLeft: =0
+                                    PaddingRight: =0
+                                    PaddingTop: =0
+                                    Text: =Parent.Error
+                                    Visible: =Parent.DisplayMode=DisplayMode.Edit
+                                    Width: =Parent.Width - 60
+                                    X: =30
+                                    Y: =DataCardValue27_3.Y + DataCardValue27_3.Height
+                                    ZIndex: =3
+
+                                StarVisible36_3 As label:
+                                    Align: =Align.Center
+                                    Color: =App.Theme.Colors.Darker30
+                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                    Font: =App.Theme.Font
+                                    Height: =DataCardKey36_3.Height
+                                    Size: =13
+                                    Text: ="*"
+                                    Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                                    Width: =30
+                                    Wrap: =false
+                                    Y: =DataCardKey36_3.Y
+                                    ZIndex: =4
+
+                            "'Employee Name_DataCard4_3' As typedDataCard.textualEditCard":
+                                BorderColor: =App.Theme.Colors.Darker40
+                                BorderStyle: =BorderStyle.Solid
+                                DataField: ="cr316_employeename"
+                                Default: =ThisItem.'Employee Name'
+                                DisplayMode: =Parent.DisplayMode
+                                DisplayName: =DataSourceInfo([@'New tables'],DataSourceInfo.DisplayName,'Employee Name')
+                                Fill: =RGBA(0, 0, 0, 0)
+                                Height: =50
+                                MaxLength: =DataSourceInfo([@'New tables'], DataSourceInfo.MaxLength, 'Employee Name')
+                                Required: =false
+                                Update: =DataCardValue28_3.Text
+                                Width: =If('Comments Screen_2'.Size=1,Parent.Width/2,Parent.Width/4)
+                                X: =1
+                                Y: =0
+                                ZIndex: =2
+
+                                DataCardKey37_3 As label:
+                                    AutoHeight: =true
+                                    Color: =RGBA(0, 0, 0, 1)
+                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                    Font: =App.Theme.Font
+                                    FontWeight: =FontWeight.Bold
+                                    Height: =34
+                                    Size: =15
+                                    Text: =Parent.DisplayName
+                                    Width: =Parent.Width - 60
+                                    Wrap: =false
+                                    X: =30
+                                    Y: =10
+                                    ZIndex: =1
+
+                                DataCardValue28_3 As text:
+                                    BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                                    BorderThickness: =2
+                                    Color: =RGBA(0, 0, 0, 1)
+                                    Default: =Parent.Default
+                                    DelayOutput: =true
+                                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                    DisabledFill: =RGBA(244, 244, 244, 1)
+                                    DisplayMode: =Parent.DisplayMode
+                                    FocusedBorderThickness: =4
+                                    Font: =App.Theme.Font
+                                    HoverBorderColor: =App.Theme.Colors.Darker40
+                                    HoverColor: =RGBA(0, 0, 0, 1)
+                                    HoverFill: =App.Theme.Colors.Lighter70
+                                    MaxLength: =Parent.MaxLength
+                                    PaddingLeft: =5
+                                    RadiusBottomLeft: =0
+                                    RadiusBottomRight: =0
+                                    RadiusTopLeft: =0
+                                    RadiusTopRight: =0
+                                    Size: =13
+                                    Tooltip: =Parent.DisplayName
+                                    Width: =Parent.Width - 60
+                                    X: =30
+                                    Y: =DataCardKey37_3.Y + DataCardKey37_3.Height + 5
+                                    ZIndex: =2
+
+                                ErrorMessage37_3 As label:
+                                    AutoHeight: =true
+                                    Color: =RGBA(168, 0, 0, 1)
+                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                    Font: =App.Theme.Font
+                                    FontWeight: =FontWeight.Semibold
+                                    Height: =10
+                                    Live: =Live.Assertive
+                                    PaddingBottom: =0
+                                    PaddingLeft: =0
+                                    PaddingRight: =0
+                                    PaddingTop: =0
+                                    Text: =Parent.Error
+                                    Visible: =Parent.DisplayMode=DisplayMode.Edit
+                                    Width: =Parent.Width - 60
+                                    X: =30
+                                    Y: =DataCardValue28_3.Y + DataCardValue28_3.Height
+                                    ZIndex: =3
+
+                                StarVisible37_3 As label:
+                                    Align: =Align.Center
+                                    Color: =App.Theme.Colors.Darker30
+                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                    Font: =App.Theme.Font
+                                    Height: =DataCardKey37_3.Height
+                                    Size: =13
+                                    Text: ="*"
+                                    Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                                    Width: =30
+                                    Wrap: =false
+                                    Y: =DataCardKey37_3.Y
+                                    ZIndex: =4
+
+                            "'Project Name_DataCard4_3' As typedDataCard.textualEditCard":
+                                BorderColor: =App.Theme.Colors.Darker40
+                                BorderStyle: =BorderStyle.Solid
+                                DataField: ="cr316_projectname"
+                                Default: =ThisItem.'Project Name'
+                                DisplayMode: =Parent.DisplayMode
+                                DisplayName: =DataSourceInfo([@'New tables'],DataSourceInfo.DisplayName,'Project Name')
+                                Fill: =RGBA(0, 0, 0, 0)
+                                Height: =50
+                                MaxLength: =DataSourceInfo([@'New tables'], DataSourceInfo.MaxLength, 'Project Name')
+                                Required: =false
+                                Update: =DataCardValue30_3.Text
+                                Width: =If('Comments Screen_2'.Size=1,Parent.Width/2,Parent.Width/4)
+                                X: =3
+                                Y: =0
+                                ZIndex: =2
+
+                                DataCardKey39_3 As label:
+                                    AutoHeight: =true
+                                    Color: =RGBA(0, 0, 0, 1)
+                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                    Font: =App.Theme.Font
+                                    FontWeight: =FontWeight.Bold
+                                    Height: =34
+                                    Size: =15
+                                    Text: =Parent.DisplayName
+                                    Width: =Parent.Width - 60
+                                    Wrap: =false
+                                    X: =30
+                                    Y: =10
+                                    ZIndex: =1
+
+                                DataCardValue30_3 As text:
+                                    BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                                    BorderThickness: =2
+                                    Color: =RGBA(0, 0, 0, 1)
+                                    Default: =Parent.Default
+                                    DelayOutput: =true
+                                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                    DisabledFill: =RGBA(244, 244, 244, 1)
+                                    DisplayMode: =Parent.DisplayMode
+                                    FocusedBorderThickness: =4
+                                    Font: =App.Theme.Font
+                                    HoverBorderColor: =App.Theme.Colors.Darker40
+                                    HoverColor: =RGBA(0, 0, 0, 1)
+                                    HoverFill: =App.Theme.Colors.Lighter70
+                                    MaxLength: =Parent.MaxLength
+                                    PaddingLeft: =5
+                                    RadiusBottomLeft: =0
+                                    RadiusBottomRight: =0
+                                    RadiusTopLeft: =0
+                                    RadiusTopRight: =0
+                                    Size: =13
+                                    Tooltip: =Parent.DisplayName
+                                    Width: =Parent.Width - 60
+                                    X: =30
+                                    Y: =DataCardKey39_3.Y + DataCardKey39_3.Height + 5
+                                    ZIndex: =2
+
+                                ErrorMessage39_3 As label:
+                                    AutoHeight: =true
+                                    Color: =RGBA(168, 0, 0, 1)
+                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                    Font: =App.Theme.Font
+                                    FontWeight: =FontWeight.Semibold
+                                    Height: =10
+                                    Live: =Live.Assertive
+                                    PaddingBottom: =0
+                                    PaddingLeft: =0
+                                    PaddingRight: =0
+                                    PaddingTop: =0
+                                    Text: =Parent.Error
+                                    Visible: =Parent.DisplayMode=DisplayMode.Edit
+                                    Width: =Parent.Width - 60
+                                    X: =30
+                                    Y: =DataCardValue30_3.Y + DataCardValue30_3.Height
+                                    ZIndex: =3
+
+                                StarVisible39_3 As label:
+                                    Align: =Align.Center
+                                    Color: =App.Theme.Colors.Darker30
+                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                    Font: =App.Theme.Font
+                                    Height: =DataCardKey39_3.Height
+                                    Size: =13
+                                    Text: ="*"
+                                    Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                                    Width: =30
+                                    Wrap: =false
+                                    Y: =DataCardKey39_3.Y
+                                    ZIndex: =4
+
+                            From_DataCard4_3 As typedDataCard.textualEditCard:
+                                BorderColor: =App.Theme.Colors.Darker40
+                                BorderStyle: =BorderStyle.Solid
+                                DataField: ="cr316_from"
+                                Default: =ThisItem.From
+                                DisplayMode: =Parent.DisplayMode
+                                DisplayName: =DataSourceInfo([@'New tables'],DataSourceInfo.DisplayName,From)
+                                Fill: =RGBA(0, 0, 0, 0)
+                                Height: =50
+                                MaxLength: =DataSourceInfo([@'New tables'], DataSourceInfo.MaxLength, From)
+                                Required: =false
+                                Update: =DataCardValue29_3.Text
+                                Width: =If('Comments Screen_2'.Size=1,Parent.Width/2,Parent.Width/4)
+                                X: =0
+                                Y: =1
+                                ZIndex: =2
+
+                                DataCardKey38_3 As label:
+                                    AutoHeight: =true
+                                    Color: =RGBA(0, 0, 0, 1)
+                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                    Font: =App.Theme.Font
+                                    FontWeight: =FontWeight.Bold
+                                    Height: =34
+                                    Size: =15
+                                    Text: =Parent.DisplayName
+                                    Width: =Parent.Width - 60
+                                    Wrap: =false
+                                    X: =30
+                                    Y: =10
+                                    ZIndex: =1
+
+                                DataCardValue29_3 As text:
+                                    BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                                    BorderThickness: =2
+                                    Color: =RGBA(0, 0, 0, 1)
+                                    Default: =Parent.Default
+                                    DelayOutput: =true
+                                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                    DisabledFill: =RGBA(244, 244, 244, 1)
+                                    DisplayMode: =Parent.DisplayMode
+                                    FocusedBorderThickness: =4
+                                    Font: =App.Theme.Font
+                                    HoverBorderColor: =App.Theme.Colors.Darker40
+                                    HoverColor: =RGBA(0, 0, 0, 1)
+                                    HoverFill: =App.Theme.Colors.Lighter70
+                                    MaxLength: =Parent.MaxLength
+                                    PaddingLeft: =5
+                                    RadiusBottomLeft: =0
+                                    RadiusBottomRight: =0
+                                    RadiusTopLeft: =0
+                                    RadiusTopRight: =0
+                                    Size: =13
+                                    Tooltip: =Parent.DisplayName
+                                    Width: =Parent.Width - 60
+                                    X: =30
+                                    Y: =DataCardKey38_3.Y + DataCardKey38_3.Height + 5
+                                    ZIndex: =2
+
+                                ErrorMessage38_3 As label:
+                                    AutoHeight: =true
+                                    Color: =RGBA(168, 0, 0, 1)
+                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                    Font: =App.Theme.Font
+                                    FontWeight: =FontWeight.Semibold
+                                    Height: =10
+                                    Live: =Live.Assertive
+                                    PaddingBottom: =0
+                                    PaddingLeft: =0
+                                    PaddingRight: =0
+                                    PaddingTop: =0
+                                    Text: =Parent.Error
+                                    Visible: =Parent.DisplayMode=DisplayMode.Edit
+                                    Width: =Parent.Width - 60
+                                    X: =30
+                                    Y: =DataCardValue29_3.Y + DataCardValue29_3.Height
+                                    ZIndex: =3
+
+                                StarVisible38_3 As label:
+                                    Align: =Align.Center
+                                    Color: =App.Theme.Colors.Darker30
+                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                    Font: =App.Theme.Font
+                                    Height: =DataCardKey38_3.Height
+                                    Size: =13
+                                    Text: ="*"
+                                    Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                                    Width: =30
+                                    Wrap: =false
+                                    Y: =DataCardKey38_3.Y
+                                    ZIndex: =4
+
+                            To_DataCard4_3 As typedDataCard.textualEditCard:
+                                BorderColor: =App.Theme.Colors.Darker40
+                                BorderStyle: =BorderStyle.Solid
+                                DataField: ="cr316_to"
+                                Default: =ThisItem.To
+                                DisplayMode: =Parent.DisplayMode
+                                DisplayName: =DataSourceInfo([@'New tables'],DataSourceInfo.DisplayName,To)
+                                Fill: =RGBA(0, 0, 0, 0)
+                                Height: =50
+                                MaxLength: =DataSourceInfo([@'New tables'], DataSourceInfo.MaxLength, To)
+                                Required: =false
+                                Update: =DataCardValue31_3.Text
+                                Width: =If('Comments Screen_2'.Size=1,Parent.Width/2,Parent.Width/4)
+                                X: =1
+                                Y: =1
+                                ZIndex: =2
+
+                                DataCardKey41_3 As label:
+                                    AutoHeight: =true
+                                    Color: =RGBA(0, 0, 0, 1)
+                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                    Font: =App.Theme.Font
+                                    FontWeight: =FontWeight.Bold
+                                    Height: =34
+                                    Size: =15
+                                    Text: =Parent.DisplayName
+                                    Width: =Parent.Width - 60
+                                    Wrap: =false
+                                    X: =30
+                                    Y: =10
+                                    ZIndex: =1
+
+                                DataCardValue31_3 As text:
+                                    BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                                    BorderThickness: =2
+                                    Color: =RGBA(0, 0, 0, 1)
+                                    Default: =Parent.Default
+                                    DelayOutput: =true
+                                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                    DisabledFill: =RGBA(244, 244, 244, 1)
+                                    DisplayMode: =Parent.DisplayMode
+                                    FocusedBorderThickness: =4
+                                    Font: =App.Theme.Font
+                                    HoverBorderColor: =App.Theme.Colors.Darker40
+                                    HoverColor: =RGBA(0, 0, 0, 1)
+                                    HoverFill: =App.Theme.Colors.Lighter70
+                                    MaxLength: =Parent.MaxLength
+                                    PaddingLeft: =5
+                                    RadiusBottomLeft: =0
+                                    RadiusBottomRight: =0
+                                    RadiusTopLeft: =0
+                                    RadiusTopRight: =0
+                                    Size: =13
+                                    Tooltip: =Parent.DisplayName
+                                    Width: =Parent.Width - 60
+                                    X: =30
+                                    Y: =DataCardKey41_3.Y + DataCardKey41_3.Height + 5
+                                    ZIndex: =2
+
+                                ErrorMessage41_3 As label:
+                                    AutoHeight: =true
+                                    Color: =RGBA(168, 0, 0, 1)
+                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                    Font: =App.Theme.Font
+                                    FontWeight: =FontWeight.Semibold
+                                    Height: =10
+                                    Live: =Live.Assertive
+                                    PaddingBottom: =0
+                                    PaddingLeft: =0
+                                    PaddingRight: =0
+                                    PaddingTop: =0
+                                    Text: =Parent.Error
+                                    Visible: =Parent.DisplayMode=DisplayMode.Edit
+                                    Width: =Parent.Width - 60
+                                    X: =30
+                                    Y: =DataCardValue31_3.Y + DataCardValue31_3.Height
+                                    ZIndex: =3
+
+                                StarVisible41_3 As label:
+                                    Align: =Align.Center
+                                    Color: =App.Theme.Colors.Darker30
+                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                    Font: =App.Theme.Font
+                                    Height: =DataCardKey41_3.Height
+                                    Size: =13
+                                    Text: ="*"
+                                    Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                                    Width: =30
+                                    Wrap: =false
+                                    Y: =DataCardKey41_3.Y
+                                    ZIndex: =4
+
+                            Class_DataCard4_3 As typedDataCard.textualEditCard:
+                                BorderColor: =App.Theme.Colors.Darker40
+                                BorderStyle: =BorderStyle.Solid
+                                DataField: ="cr316_class"
+                                Default: =ThisItem.Class
+                                DisplayMode: =Parent.DisplayMode
+                                DisplayName: =DataSourceInfo([@'New tables'],DataSourceInfo.DisplayName,Class)
+                                Fill: =RGBA(0, 0, 0, 0)
+                                Height: =50
+                                MaxLength: =DataSourceInfo([@'New tables'], DataSourceInfo.MaxLength, Class)
+                                Required: =false
+                                Update: =DataCardValue26_3.Text
+                                Width: =If('Comments Screen_2'.Size=1,Parent.Width/2,Parent.Width/4)
+                                X: =2
+                                Y: =1
+                                ZIndex: =2
+
+                                DataCardKey34_3 As label:
+                                    AutoHeight: =true
+                                    Color: =RGBA(0, 0, 0, 1)
+                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                    Font: =App.Theme.Font
+                                    FontWeight: =FontWeight.Bold
+                                    Height: =34
+                                    Size: =15
+                                    Text: =Parent.DisplayName
+                                    Width: =Parent.Width - 60
+                                    Wrap: =false
+                                    X: =30
+                                    Y: =10
+                                    ZIndex: =1
+
+                                DataCardValue26_3 As text:
+                                    BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                                    BorderThickness: =2
+                                    Color: =RGBA(0, 0, 0, 1)
+                                    Default: =Parent.Default
+                                    DelayOutput: =true
+                                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                    DisabledFill: =RGBA(244, 244, 244, 1)
+                                    DisplayMode: =Parent.DisplayMode
+                                    FocusedBorderThickness: =4
+                                    Font: =App.Theme.Font
+                                    HoverBorderColor: =App.Theme.Colors.Darker40
+                                    HoverColor: =RGBA(0, 0, 0, 1)
+                                    HoverFill: =App.Theme.Colors.Lighter70
+                                    MaxLength: =Parent.MaxLength
+                                    PaddingLeft: =5
+                                    RadiusBottomLeft: =0
+                                    RadiusBottomRight: =0
+                                    RadiusTopLeft: =0
+                                    RadiusTopRight: =0
+                                    Size: =13
+                                    Tooltip: =Parent.DisplayName
+                                    Width: =Parent.Width - 60
+                                    X: =30
+                                    Y: =43
+                                    ZIndex: =2
+
+                                ErrorMessage34_3 As label:
+                                    AutoHeight: =true
+                                    Color: =RGBA(168, 0, 0, 1)
+                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                    Font: =App.Theme.Font
+                                    FontWeight: =FontWeight.Semibold
+                                    Height: =10
+                                    Live: =Live.Assertive
+                                    PaddingBottom: =0
+                                    PaddingLeft: =0
+                                    PaddingRight: =0
+                                    PaddingTop: =0
+                                    Text: =Parent.Error
+                                    Visible: =Parent.DisplayMode=DisplayMode.Edit
+                                    Width: =Parent.Width - 60
+                                    X: =30
+                                    Y: =DataCardValue26_3.Y + DataCardValue26_3.Height
+                                    ZIndex: =3
+
+                                StarVisible34_3 As label:
+                                    Align: =Align.Center
+                                    Color: =App.Theme.Colors.Darker30
+                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                    Font: =App.Theme.Font
+                                    Height: =DataCardKey34_3.Height
+                                    Size: =13
+                                    Text: ="*"
+                                    Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                                    Width: =30
+                                    Wrap: =false
+                                    Y: =DataCardKey34_3.Y
+                                    ZIndex: =4
+
+                            "'Travel type_DataCard4_3' As typedDataCard.textualEditCard":
+                                BorderColor: =App.Theme.Colors.Darker40
+                                BorderStyle: =BorderStyle.Solid
+                                DataField: ="cr316_traveltype"
+                                Default: =ThisItem.'Travel type'
+                                DisplayMode: =Parent.DisplayMode
+                                DisplayName: =DataSourceInfo([@'New tables'],DataSourceInfo.DisplayName,'Travel type')
+                                Fill: =RGBA(0, 0, 0, 0)
+                                Height: =50
+                                MaxLength: =DataSourceInfo([@'New tables'], DataSourceInfo.MaxLength, 'Travel type')
+                                Required: =false
+                                Update: =DataCardValue32_3.Text
+                                Width: =If('Comments Screen_2'.Size=1,Parent.Width/2,Parent.Width/4)
+                                X: =3
+                                Y: =1
+                                ZIndex: =2
+
+                                DataCardKey42_3 As label:
+                                    AutoHeight: =true
+                                    Color: =RGBA(0, 0, 0, 1)
+                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                    Font: =App.Theme.Font
+                                    FontWeight: =FontWeight.Bold
+                                    Height: =34
+                                    Size: =15
+                                    Text: =Parent.DisplayName
+                                    Width: =Parent.Width - 60
+                                    Wrap: =false
+                                    X: =30
+                                    Y: =10
+                                    ZIndex: =1
+
+                                DataCardValue32_3 As text:
+                                    BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                                    BorderThickness: =2
+                                    Color: =RGBA(0, 0, 0, 1)
+                                    Default: =Parent.Default
+                                    DelayOutput: =true
+                                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                    DisabledFill: =RGBA(244, 244, 244, 1)
+                                    DisplayMode: =Parent.DisplayMode
+                                    FocusedBorderThickness: =4
+                                    Font: =App.Theme.Font
+                                    HoverBorderColor: =App.Theme.Colors.Darker40
+                                    HoverColor: =RGBA(0, 0, 0, 1)
+                                    HoverFill: =App.Theme.Colors.Lighter70
+                                    MaxLength: =Parent.MaxLength
+                                    PaddingLeft: =5
+                                    RadiusBottomLeft: =0
+                                    RadiusBottomRight: =0
+                                    RadiusTopLeft: =0
+                                    RadiusTopRight: =0
+                                    Size: =13
+                                    Tooltip: =Parent.DisplayName
+                                    Width: =Parent.Width - 60
+                                    X: =30
+                                    Y: =DataCardKey42_3.Y + DataCardKey42_3.Height + 5
+                                    ZIndex: =2
+
+                                ErrorMessage42_3 As label:
+                                    AutoHeight: =true
+                                    Color: =RGBA(168, 0, 0, 1)
+                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                    Font: =App.Theme.Font
+                                    FontWeight: =FontWeight.Semibold
+                                    Height: =10
+                                    Live: =Live.Assertive
+                                    PaddingBottom: =0
+                                    PaddingLeft: =0
+                                    PaddingRight: =0
+                                    PaddingTop: =0
+                                    Text: =Parent.Error
+                                    Visible: =Parent.DisplayMode=DisplayMode.Edit
+                                    Width: =Parent.Width - 60
+                                    X: =30
+                                    Y: =DataCardValue32_3.Y + DataCardValue32_3.Height
+                                    ZIndex: =3
+
+                                StarVisible42_3 As label:
+                                    Align: =Align.Center
+                                    Color: =App.Theme.Colors.Darker30
+                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                    Font: =App.Theme.Font
+                                    Height: =DataCardKey42_3.Height
+                                    Size: =13
+                                    Text: ="*"
+                                    Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                                    Width: =30
+                                    Wrap: =false
+                                    Y: =DataCardKey42_3.Y
+                                    ZIndex: =4
+
+                            "'Departure Date_DataCard4_3' As typedDataCard.dateTimeEditCard":
+                                BorderColor: =App.Theme.Colors.Darker40
+                                BorderStyle: =BorderStyle.Solid
+                                DataField: ="cr316_departuredate"
+                                Default: =ThisItem.'Departure Date'
+                                DisplayMode: =Parent.DisplayMode
+                                DisplayName: =DataSourceInfo([@'New tables'],DataSourceInfo.DisplayName,'Departure Date')
+                                Fill: =RGBA(0, 0, 0, 0)
+                                Height: =50
+                                Required: =false
+                                Update: =DateValue7_3.SelectedDate
+                                Width: =If('Comments Screen_2'.Size=1,Parent.Width/2,Parent.Width/4)
+                                X: =0
+                                Y: =2
+                                ZIndex: =2
+
+                                DataCardKey35_3 As label:
+                                    AutoHeight: =true
+                                    Color: =RGBA(0, 0, 0, 1)
+                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                    Font: =App.Theme.Font
+                                    FontWeight: =FontWeight.Bold
+                                    Height: =34
+                                    Size: =15
+                                    Text: =Parent.DisplayName
+                                    Width: =Parent.Width - 60
+                                    Wrap: =false
+                                    X: =30
+                                    Y: =10
+                                    ZIndex: =1
+
+                                DateValue7_3 As datepicker:
+                                    BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                                    CalendarHeaderFill: =App.Theme.Colors.Primary
+                                    Color: =RGBA(0, 0, 0, 1)
+                                    DefaultDate: =Parent.Default
+                                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                    DisabledFill: =RGBA(244, 244, 244, 1)
+                                    DisplayMode: =Parent.DisplayMode
+                                    EndYear: =Year(Today())+100
+                                    Font: =App.Theme.Font
+                                    HoverDateFill: =App.Theme.Colors.Lighter70
+                                    IconBackground: =App.Theme.Colors.Primary
+                                    IsEditable: =true
+                                    PaddingBottom: =0
+                                    PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                                    SelectedDateFill: =App.Theme.Colors.Primary
+                                    StartYear: =1899
+                                    Tooltip: =Parent.DisplayName
+                                    Width: =(Parent.Width - 60) / 2
+                                    X: =30
+                                    Y: =DataCardKey35_3.Y + DataCardKey35_3.Height + 5
+                                    ZIndex: =2
+
+                                Separator7_3 As label:
+                                    Align: =Align.Center
+                                    BorderColor: =App.Theme.Colors.Darker40
+                                    Color: =RGBA(0, 0, 0, 1)
+                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                    Font: =App.Theme.Font
+                                    FontWeight: =FontWeight.Bold
+                                    Height: =//HourValue5.Height
+                                    PaddingBottom: =0
+                                    PaddingLeft: =0
+                                    PaddingRight: =0
+                                    PaddingTop: =0
+                                    Size: =13
+                                    Text: |-
+                                        =":"
+                                    Width: =10
+                                    Wrap: =false
+                                    X: =//HourValue5.X + HourValue5.Width
+                                    Y: =//HourValue5.Y
+                                    ZIndex: =4
+
+                                ErrorMessage35_3 As label:
+                                    AutoHeight: =true
+                                    Color: =RGBA(168, 0, 0, 1)
+                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                    Font: =App.Theme.Font
+                                    FontWeight: =FontWeight.Semibold
+                                    Height: =10
+                                    Live: =Live.Assertive
+                                    PaddingBottom: =0
+                                    PaddingLeft: =0
+                                    PaddingRight: =0
+                                    PaddingTop: =0
+                                    Text: =Parent.Error
+                                    Visible: =Parent.DisplayMode=DisplayMode.Edit
+                                    Width: =Parent.Width - 60
+                                    X: =30
+                                    Y: =//HourValue5.Y + HourValue5.Height
+                                    ZIndex: =6
+
+                                StarVisible35_3 As label:
+                                    Align: =Align.Center
+                                    Color: =App.Theme.Colors.Darker30
+                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                    Font: =App.Theme.Font
+                                    Height: =DataCardKey35_3.Height
+                                    Size: =13
+                                    Text: ="*"
+                                    Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                                    Width: =30
+                                    Wrap: =false
+                                    Y: =DataCardKey35_3.Y
+                                    ZIndex: =7
+
+                            "'Return Date_DataCard4_3' As typedDataCard.dateTimeEditCard":
+                                BorderColor: =App.Theme.Colors.Darker40
+                                BorderStyle: =BorderStyle.Solid
+                                DataField: ="cr316_returndate"
+                                Default: =ThisItem.'Return Date'
+                                DisplayMode: =Parent.DisplayMode
+                                DisplayName: =DataSourceInfo([@'New tables'],DataSourceInfo.DisplayName,'Return Date')
+                                Fill: =RGBA(0, 0, 0, 0)
+                                Height: =50
+                                Required: =false
+                                Update: =DateValue8_3.SelectedDate
+                                Width: =If('Comments Screen_2'.Size=1,Parent.Width/2,Parent.Width/4)
+                                X: =1
+                                Y: =2
+                                ZIndex: =2
+
+                                DataCardKey40_3 As label:
+                                    AutoHeight: =true
+                                    Color: =RGBA(0, 0, 0, 1)
+                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                    Font: =App.Theme.Font
+                                    FontWeight: =FontWeight.Bold
+                                    Height: =34
+                                    Size: =15
+                                    Text: =Parent.DisplayName
+                                    Width: =Parent.Width - 60
+                                    Wrap: =false
+                                    X: =30
+                                    Y: =10
+                                    ZIndex: =1
+
+                                DateValue8_3 As datepicker:
+                                    BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                                    CalendarHeaderFill: =App.Theme.Colors.Primary
+                                    Color: =RGBA(0, 0, 0, 1)
+                                    DefaultDate: =Parent.Default
+                                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                    DisabledFill: =RGBA(244, 244, 244, 1)
+                                    DisplayMode: =Parent.DisplayMode
+                                    EndYear: =Year(Today())+100
+                                    Font: =App.Theme.Font
+                                    HoverDateFill: =App.Theme.Colors.Lighter70
+                                    IconBackground: =App.Theme.Colors.Primary
+                                    IsEditable: =true
+                                    PaddingBottom: =0
+                                    PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                                    SelectedDateFill: =App.Theme.Colors.Primary
+                                    StartYear: =1899
+                                    Tooltip: =Parent.DisplayName
+                                    Width: =(Parent.Width - 60) / 2
+                                    X: =30
+                                    Y: =DataCardKey40_3.Y + DataCardKey40_3.Height + 5
+                                    ZIndex: =2
+
+                                Separator8_3 As label:
+                                    Align: =Align.Center
+                                    BorderColor: =App.Theme.Colors.Darker40
+                                    Color: =RGBA(0, 0, 0, 1)
+                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                    Font: =App.Theme.Font
+                                    FontWeight: =FontWeight.Bold
+                                    Height: =//HourValue6.Height
+                                    PaddingBottom: =0
+                                    PaddingLeft: =0
+                                    PaddingRight: =0
+                                    PaddingTop: =0
+                                    Size: =13
+                                    Text: |-
+                                        =":"
+                                    Width: =10
+                                    Wrap: =false
+                                    X: =//HourValue6.X + HourValue6.Width
+                                    Y: =////HourValue6.Y
+                                    ZIndex: =4
+
+                                MinuteValue6_3 As dropdown:
+                                    BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                                    ChevronBackground: =App.Theme.Colors.Primary
+                                    ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
+                                    ChevronDisabledFill: =RGBA(244, 244, 244, 1)
+                                    ChevronHoverBackground: =App.Theme.Colors.Darker10
+                                    ChevronHoverFill: =RGBA(255, 255, 255, 1)
+                                    Default: =Text(Minute(Parent.Default),"00")
+                                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                    DisabledFill: =RGBA(244, 244, 244, 1)
+                                    DisplayMode: =Parent.DisplayMode
+                                    Font: =App.Theme.Font
+                                    Height: =//HourValue6.Height
+                                    HoverColor: =RGBA(0, 0, 0, 1)
+                                    HoverFill: =App.Theme.Colors.Lighter70
+                                    Items: =["00","01","02","03","04","05","06","07","08","09","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36","37","38","39","40","41","42","43","44","45","46","47","48","49","50","51","52","53","54","55","56","57","58","59"]
+                                    PaddingBottom: =5
+                                    PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                                    PaddingRight: =5
+                                    PaddingTop: =5
+                                    PressedColor: =RGBA(255, 255, 255, 1)
+                                    PressedFill: =App.Theme.Colors.Darker30
+                                    SelectionFill: =App.Theme.Colors.Primary
+                                    Size: =13
+                                    Tooltip: =Parent.DisplayName
+                                    Width: =//HourValue6.Width
+                                    X: =//HourValue6.X + HourValue6.Width + Separator8.Width
+                                    Y: =//HourValue6.Y
+                                    ZIndex: =5
+
+                                ErrorMessage40_3 As label:
+                                    AutoHeight: =true
+                                    Color: =RGBA(168, 0, 0, 1)
+                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                    Font: =App.Theme.Font
+                                    FontWeight: =FontWeight.Semibold
+                                    Height: =10
+                                    Live: =Live.Assertive
+                                    PaddingBottom: =0
+                                    PaddingLeft: =0
+                                    PaddingRight: =0
+                                    PaddingTop: =0
+                                    Text: =Parent.Error
+                                    Visible: =Parent.DisplayMode=DisplayMode.Edit
+                                    Width: =Parent.Width - 60
+                                    X: =30
+                                    Y: =//HourValue6.Y + HourValue6.Height
+                                    ZIndex: =6
+
+                                StarVisible40_3 As label:
+                                    Align: =Align.Center
+                                    Color: =App.Theme.Colors.Darker30
+                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                    Font: =App.Theme.Font
+                                    Height: =DataCardKey40_3.Height
+                                    Size: =13
+                                    Text: ="*"
+                                    Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                                    Width: =30
+                                    Wrap: =false
+                                    Y: =DataCardKey40_3.Y
+                                    ZIndex: =7
+
+                            Amount_DataCard4_3 As typedDataCard.textualEditCard:
+                                BorderColor: =App.Theme.Colors.Darker40
+                                BorderStyle: =BorderStyle.Solid
+                                DataField: ="cr316_amount"
+                                Default: =ThisItem.Amount
+                                DisplayMode: =Parent.DisplayMode
+                                DisplayName: =DataSourceInfo([@'New tables'],DataSourceInfo.DisplayName,Amount)
+                                Fill: =RGBA(0, 0, 0, 0)
+                                Height: =50
+                                MaxLength: =DataSourceInfo([@'New tables'], DataSourceInfo.MaxLength, Amount)
+                                Required: =false
+                                Update: =DataCardValue25_3.Text
+                                Width: =If('Comments Screen_2'.Size=1,Parent.Width/2,Parent.Width/4)
+                                X: =3
+                                Y: =2
+                                ZIndex: =2
+
+                                DataCardKey33_3 As label:
+                                    AutoHeight: =true
+                                    Color: =RGBA(0, 0, 0, 1)
+                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                    Fill: =RGBA(255, 255, 255, 1)
+                                    Font: =App.Theme.Font
+                                    FontWeight: =FontWeight.Bold
+                                    Height: =34
+                                    Size: =15
+                                    Text: =Parent.DisplayName
+                                    Width: =Parent.Width - 60
+                                    Wrap: =false
+                                    X: =30
+                                    Y: =10
+                                    ZIndex: =1
+
+                                DataCardValue25_3 As text:
+                                    BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                                    BorderThickness: =2
+                                    Color: =RGBA(0, 0, 0, 1)
+                                    Default: =Parent.Default
+                                    DelayOutput: =true
+                                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                    DisabledFill: =RGBA(244, 244, 244, 1)
+                                    DisplayMode: =Parent.DisplayMode
+                                    FocusedBorderThickness: =4
+                                    Font: =App.Theme.Font
+                                    HoverBorderColor: =App.Theme.Colors.Darker40
+                                    HoverColor: =RGBA(0, 0, 0, 1)
+                                    HoverFill: =App.Theme.Colors.Lighter70
+                                    MaxLength: =Parent.MaxLength
+                                    PaddingLeft: =5
+                                    RadiusBottomLeft: =0
+                                    RadiusBottomRight: =0
+                                    RadiusTopLeft: =0
+                                    RadiusTopRight: =0
+                                    Size: =13
+                                    Tooltip: =Parent.DisplayName
+                                    Width: =Parent.Width - 60
+                                    X: =30
+                                    Y: =43
+                                    ZIndex: =2
+
+                                ErrorMessage33_3 As label:
+                                    AutoHeight: =true
+                                    Color: =RGBA(168, 0, 0, 1)
+                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                    Font: =App.Theme.Font
+                                    FontWeight: =FontWeight.Semibold
+                                    Height: =10
+                                    Live: =Live.Assertive
+                                    PaddingBottom: =0
+                                    PaddingLeft: =0
+                                    PaddingRight: =0
+                                    PaddingTop: =0
+                                    Text: =Parent.Error
+                                    Visible: =Parent.DisplayMode=DisplayMode.Edit
+                                    Width: =Parent.Width - 60
+                                    X: =30
+                                    Y: =DataCardValue25_3.Y + DataCardValue25_3.Height
+                                    ZIndex: =3
+
+                                StarVisible33_3 As label:
+                                    Align: =Align.Center
+                                    Color: =App.Theme.Colors.Darker30
+                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                    Font: =App.Theme.Font
+                                    Height: =DataCardKey33_3.Height
+                                    Size: =13
+                                    Text: ="*"
+                                    Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                                    Width: =30
+                                    Wrap: =false
+                                    Y: =DataCardKey33_3.Y
+                                    ZIndex: =4
+
+                DataCard5_1 As dataCard.blankCard:
+                    BorderColor: =RGBA(0, 0, 0, 1)
+                    BorderStyle: =BorderStyle.Solid
+                    DisplayMode: =DisplayMode.Edit
+                    Fill: =RGBA(0, 0, 0, 0)
+                    Height: =Parent.Height-100
+                    Width: =Parent.Width
+                    X: =0
+                    Y: =1
+                    ZIndex: =2
+
+                    Container13_1 As groupContainer.verticalAutoLayoutContainer:
+                        DropShadow: =DropShadow.Light
+                        Height: =Parent.Height
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMode: =LayoutMode.Auto
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        Width: =Parent.Width
+                        ZIndex: =1
+
+                        Container14_1 As groupContainer.horizontalAutoLayoutContainer:
+                            AlignInContainer: =AlignInContainer.SetByContainer
+                            DropShadow: =DropShadow.Light
+                            Fill: =RGBA(255, 255, 255, 1)
+                            FillPortions: =0
+                            Height: =60
+                            LayoutMinHeight: =100
+                            LayoutMinWidth: =250
+                            LayoutMode: =LayoutMode.Auto
+                            RadiusBottomLeft: =4
+                            RadiusBottomRight: =4
+                            RadiusTopLeft: =4
+                            RadiusTopRight: =4
+                            Width: =HeaderContainer2_2.Width
+                            ZIndex: =1
+
+                            Label25_1 As label:
+                                AlignInContainer: =AlignInContainer.Center
+                                BorderColor: =App.Theme.Colors.Darker40
+                                Color: =RGBA(0, 0, 0, 1)
+                                DisabledColor: =RGBA(166, 166, 166, 1)
+                                Fill: =RGBA(255, 255, 255, 1)
+                                FillPortions: =1
+                                Font: =App.Theme.Font
+                                FontWeight: =FontWeight.Bold
+                                Size: =20
+                                Text: ="Comments History"
+                                Width: =Parent.Width
+                                ZIndex: =1
+
+                        Container9_2 As groupContainer.horizontalAutoLayoutContainer:
+                            AlignInContainer: =AlignInContainer.SetByContainer
+                            DropShadow: =DropShadow.Light
+                            FillPortions: =0
+                            Height: =70
+                            LayoutMinHeight: =100
+                            LayoutMinWidth: =250
+                            LayoutMode: =LayoutMode.Auto
+                            RadiusBottomLeft: =4
+                            RadiusBottomRight: =4
+                            RadiusTopLeft: =4
+                            RadiusTopRight: =4
+                            Width: =Parent.Width
+                            ZIndex: =2
+
+                            Label14_2 As label:
+                                Align: =Align.Center
+                                AlignInContainer: =AlignInContainer.Stretch
+                                BorderColor: =App.Theme.Colors.Darker40
+                                Color: =RGBA(255, 255, 255, 1)
+                                DisabledColor: =RGBA(166, 166, 166, 1)
+                                Fill: =RGBA(15, 84, 140, 1)
+                                FillPortions: =1
+                                Font: =App.Theme.Font
+                                FontWeight: =FontWeight.Bold
+                                Size: =15
+                                Text: ="Approved By"
+                                ZIndex: =1
+
+                            Label15_2 As label:
+                                Align: =Align.Center
+                                AlignInContainer: =AlignInContainer.Stretch
+                                BorderColor: =App.Theme.Colors.Darker40
+                                Color: =RGBA(255, 255, 255, 1)
+                                DisabledColor: =RGBA(166, 166, 166, 1)
+                                Fill: =RGBA(15, 84, 140, 1)
+                                FillPortions: =1
+                                Font: =App.Theme.Font
+                                FontWeight: =FontWeight.Bold
+                                Size: =13
+                                Text: ="Commented by"
+                                ZIndex: =2
+
+                            Label16_2 As label:
+                                Align: =Align.Center
+                                AlignInContainer: =AlignInContainer.Stretch
+                                BorderColor: =App.Theme.Colors.Darker40
+                                Color: =RGBA(255, 255, 255, 1)
+                                DisabledColor: =RGBA(166, 166, 166, 1)
+                                Fill: =RGBA(15, 84, 140, 1)
+                                FillPortions: =1
+                                Font: =App.Theme.Font
+                                FontWeight: =FontWeight.Bold
+                                Size: =15
+                                Text: ="Comment"
+                                ZIndex: =3
+
+                            Label17_2 As label:
+                                Align: =Align.Center
+                                AlignInContainer: =AlignInContainer.Stretch
+                                BorderColor: =App.Theme.Colors.Darker40
+                                Color: =RGBA(255, 255, 255, 1)
+                                DisabledColor: =RGBA(166, 166, 166, 1)
+                                Fill: =RGBA(15, 84, 140, 1)
+                                FillPortions: =1
+                                Font: =App.Theme.Font
+                                FontWeight: =FontWeight.Bold
+                                Size: =15
+                                Text: ="Comment Date"
+                                ZIndex: =4
+
+                        Container10_2 As groupContainer.horizontalAutoLayoutContainer:
+                            DropShadow: =DropShadow.Light
+                            Height: =Parent.Height
+                            LayoutMinHeight: =100
+                            LayoutMinWidth: =250
+                            LayoutMode: =LayoutMode.Auto
+                            RadiusBottomLeft: =4
+                            RadiusBottomRight: =4
+                            RadiusTopLeft: =4
+                            RadiusTopRight: =4
+                            Width: =Parent.Width
+                            ZIndex: =3
+
+                            Gallery2_2 As gallery.galleryVertical:
+                                BorderColor: =App.Theme.Colors.Darker40
+                                DelayItemLoading: =true
+                                Height: =Parent.Height
+                                Items: =Filter('Comments Tables','Rea Id'=galid)
+                                Layout: =Layout.Vertical
+                                LayoutMinHeight: =287
+                                LayoutMinWidth: =320
+                                LoadingSpinner: =LoadingSpinner.Data
+                                TemplateSize: =60
+                                Width: =Parent.Width
+                                ZIndex: =1
+
+                                Label20_2 As label:
+                                    Align: =Align.Center
+                                    BorderColor: =App.Theme.Colors.Darker40
+                                    Color: =RGBA(0, 0, 0, 1)
+                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                    Font: =App.Theme.Font
+                                    Height: =Parent.TemplateHeight
+                                    OnSelect: =Select(Parent)
+                                    Size: =13
+                                    Text: |
+                                        =Text(DateValue(ThisItem.'Comment Date'), "[$-en-US]dd/mm/yyyy")
+                                    Width: =Parent.Width/4
+                                    X: =Label17_2.X
+                                    ZIndex: =2
+
+                                Label21_2 As label:
+                                    Align: =Align.Center
+                                    BorderColor: =App.Theme.Colors.Darker40
+                                    Color: =RGBA(0, 0, 0, 1)
+                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                    Font: =App.Theme.Font
+                                    Height: =Parent.TemplateHeight
+                                    OnSelect: =Select(Parent)
+                                    Size: =13
+                                    Text: =ThisItem.Comment
+                                    Width: =Parent.Width/4
+                                    X: =Label16_2.X
+                                    ZIndex: =3
+
+                                Label22_2 As label:
+                                    Align: =Align.Center
+                                    BorderColor: =App.Theme.Colors.Darker40
+                                    Color: =RGBA(0, 0, 0, 1)
+                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                    Font: =App.Theme.Font
+                                    Height: =Parent.TemplateHeight
+                                    OnSelect: =Select(Parent)
+                                    Size: =13
+                                    Text: =ThisItem.'Comment By'
+                                    Width: =Parent.Width/4
+                                    X: =Label15_2.X
+                                    ZIndex: =4
+
+                                Label23_2 As label:
+                                    Align: =Align.Center
+                                    BorderColor: =App.Theme.Colors.Darker40
+                                    Color: =RGBA(0, 0, 0, 1)
+                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                    Font: =App.Theme.Font
+                                    Height: =Parent.TemplateHeight
+                                    OnSelect: =Select(Parent)
+                                    Size: =13
+                                    Text: =ThisItem.'Approved By'
+                                    Width: =Parent.Width/4
+                                    X: =1
+                                    ZIndex: =5
+
+                                Rectangle2_2 As rectangle:
+                                    BorderColor: =App.Theme.Colors.Darker40
+                                    Fill: =RGBA(79, 90, 94, 0.05)
+                                    Height: =Parent.TemplateHeight
+                                    Width: =1
+                                    ZIndex: =6
+
+                                Rectangle3_1 As rectangle:
+                                    BorderColor: =App.Theme.Colors.Darker40
+                                    Fill: =RGBA(12, 59, 94, 1)
+                                    Height: =2
+                                    OnSelect: =Select(Parent)
+                                    Width: =1800
+                                    Y: =58
+                                    ZIndex: =7
+

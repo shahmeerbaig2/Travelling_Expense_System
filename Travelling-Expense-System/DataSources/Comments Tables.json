@@ -1,0 +1,104 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "cr316_commentstables",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "cr316_commentstable",
+    "MaxGetRowsCount": 500,
+    "Name": "Comments Tables",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "cr316_approvedby": "Approved By",
+      "cr316_approvedstatus": "Approved Status",
+      "cr316_comment": "Comment",
+      "cr316_commentby": "Comment By",
+      "cr316_commentdate": "Comment Date",
+      "cr316_commentstable_AsyncOperations": "System Jobs",
+      "cr316_commentstable_BulkDeleteFailures": "Bulk Delete Failures",
+      "cr316_commentstable_DuplicateBaseRecord": "Duplicate Records (cr316_commentstable_DuplicateBaseRecord)",
+      "cr316_commentstable_DuplicateMatchingRecord": "Duplicate Records (cr316_commentstable_DuplicateMatchingRecord)",
+      "cr316_commentstable_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "cr316_commentstable_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "cr316_commentstable_ProcessSession": "Process Sessions",
+      "cr316_commentstable_SyncErrors": "Sync Errors",
+      "cr316_commentstableid": "Comments Table",
+      "cr316_empid": "Emp ID",
+      "cr316_id": "ID",
+      "cr316_reaid": "Rea Id",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "Comments Tables",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "Comments Tables (Views)",
+    "Name": "_cr316_commentstable_views",
+    "RelatedEntityName": "Comments Tables",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "09dae38d-e8f8-4473-9ced-321a20cb0571": "Active Comments Tables",
+      "29ba4c1f-64f6-466a-9a7a-801c69387916": "Comments Table Advanced Find View",
+      "4485d041-a8a1-47a9-b7e6-052b87832720": "Comments Table Lookup View",
+      "96b4e0f6-1e0d-47c8-b075-9a9c7dea65d2": "Inactive Comments Tables",
+      "99a7cd22-4f18-4a04-8651-df084bfd84d4": "Comments Table Associated View"
+    }
+  },
+  {
+    "DisplayName": "Status (Comments Tables)",
+    "Name": "cr316_commentstable_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "Comments Tables"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "Comments Tables",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (Comments Tables)",
+    "Name": "cr316_commentstable_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "Comments Tables"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "Comments Tables",
+    "Type": "OptionSetInfo"
+  }
+]

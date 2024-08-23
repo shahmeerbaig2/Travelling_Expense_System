@@ -1,0 +1,10 @@
+[
+  {
+    "ApiId": "/providers/microsoft.powerapps/apis/shared_logicflows",
+    "FlowNameId": "506632e5-98ca-425e-8bc9-a4bc14676112",
+    "Name": "HotelSearch",
+    "ServiceKind": "ConnectedWadl",
+    "Type": "ServiceInfo",
+    "WorkflowEntityId": "09e178c0-3848-ef11-bfe3-000d3ab4b1e3"
+  }
+]

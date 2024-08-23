@@ -1,0 +1,683 @@
+"'TADA Setup' As screen.'phoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
+    Fill: =Color.White
+    LoadingSpinnerColor: =App.Theme.Colors.Primary
+
+    RectQuickActionBar3 As rectangle:
+        BorderColor: =App.Theme.Colors.Darker40
+        Fill: =Color.White
+        Height: =88
+        Width: =Parent.Width
+        ZIndex: =1
+
+    LblAppName2 As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 255, 255, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Font: =App.Theme.Font
+        Height: =88
+        Size: =18
+        Text: ="[Title]"
+        Width: =Parent.Width
+        ZIndex: =2
+
+    Canvas7 As fluidGrid.fluidGridWithBlankCard:
+        BorderThickness: =0
+        Height: =Parent.Height - Self.Y
+        Width: =Parent.Width
+        Y: =RectQuickActionBar3.Y + RectQuickActionBar3.Height
+        ZIndex: =3
+
+        DataCard31 As dataCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =0
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =Parent.Height
+            Width: =Parent.Width
+            X: =0
+            Y: =0
+            ZIndex: =1
+
+            Container7_2 As groupContainer.verticalAutoLayoutContainer:
+                DropShadow: =DropShadow.Light
+                Fill: =RGBA(255, 255, 255, 1)
+                Height: =Parent.Height
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMode: =LayoutMode.Auto
+                PaddingBottom: =15
+                PaddingLeft: =15
+                PaddingRight: =15
+                PaddingTop: =15
+                RadiusBottomLeft: =4
+                RadiusBottomRight: =4
+                RadiusTopLeft: =4
+                RadiusTopRight: =4
+                Width: =Parent.Width
+                Y: =40
+                ZIndex: =1
+
+                Container8_3 As groupContainer.verticalAutoLayoutContainer:
+                    Fill: =RGBA(255, 255, 255, 1)
+                    FillPortions: =0
+                    Height: =350
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    RadiusTopLeft: =4
+                    RadiusTopRight: =4
+                    ZIndex: =1
+
+                    Form5 As form.PowerApps_CoreControls_Form:
+                        BorderColor: =App.Theme.Colors.Darker40
+                        DataSource: =TADAS
+                        DefaultMode: =FormMode.New
+                        Height: =300
+                        Item: =SelectedRecord
+                        LayoutMinHeight: =250
+                        LayoutMinWidth: =400
+                        OnSuccess: |-
+                            =Set(viewTADA,false);
+                            ResetForm(Form5)
+                        UseFluentV9Cards: =true
+                        X: =40
+                        Y: =40
+                        ZIndex: =1
+
+                        Grade_DataCard1 As typedDataCard.fluentV9TextualEditCard:
+                            BorderColor: =App.Theme.Colors.Darker40
+                            BorderStyle: =BorderStyle.Solid
+                            DataField: ="cra95_grade"
+                            Default: =ThisItem.Grade
+                            DisplayMode: =Parent.DisplayMode
+                            DisplayName: =DataSourceInfo([@TADAS],DataSourceInfo.DisplayName,cra95_grade)
+                            Fill: =RGBA(0, 0, 0, 0)
+                            Height: =70
+                            MaxLength: =DataSourceInfo([@TADAS], DataSourceInfo.MaxLength, cra95_grade)
+                            Required: =false
+                            Update: =DataCardValue1_1.Value
+                            Width: =445
+                            WidthFit: =true
+                            X: =2
+                            Y: =0
+                            ZIndex: =1
+
+                            DataCardKey26 As Text:
+                                DisplayMode: =DisplayMode.Edit
+                                Height: =22
+                                Text: =Parent.DisplayName
+                                Weight: ='TextCanvas.Weight'.Semibold
+                                Width: =Parent.Width - 48
+                                Wrap: =false
+                                X: =24
+                                Y: =10
+                                ZIndex: =1
+
+                            ErrorMessage26 As Text:
+                                DisplayMode: =DisplayMode.Edit
+                                Height: =30
+                                Text: =Parent.Error
+                                Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
+                                Width: =Parent.Width - 48
+                                Wrap: =true
+                                X: =24
+                                Y: =DataCardValue1_1.Y + DataCardValue1_1.Height
+                                ZIndex: =3
+
+                            StarVisible26 As Text:
+                                Align: ='TextCanvas.Align'.Center
+                                DisplayMode: =DisplayMode.Edit
+                                Height: =30
+                                Text: ="*"
+                                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                                Width: =30
+                                X: =0
+                                Y: =DataCardKey26.Y
+                                ZIndex: =4
+
+                            "DataCardValue1_1 As 'Text input'":
+                                AccessibleLabel: =Parent.DisplayName
+                                Appearance: ='TextInputCanvas.Appearance'.Outline
+                                BorderColor: =Color.Navy
+                                BorderRadius: =10
+                                DisplayMode: =Parent.DisplayMode
+                                FontColor: =RGBA(53, 61, 63, 1)
+                                Height: =32
+                                Mode: ="'TextInputCanvas.Mode'.TextInputModeSingleLine"
+                                Required: =Parent.Required
+                                ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
+                                Value: |
+                                    =LookUp(TADAS, Allowance = DropdownCanvas1.Selected.Value, Amount)
+                                Width: =384
+                                X: =24
+                                Y: =45
+                                ZIndex: =5
+
+                        "'Travel Allowance_DataCard1' As typedDataCard.fluentV9TextualEditCard":
+                            BorderColor: =App.Theme.Colors.Darker40
+                            BorderStyle: =BorderStyle.None
+                            DataField: ="cra95_name"
+                            Default: =ThisItem.Allowance
+                            DisplayMode: =Parent.DisplayMode
+                            DisplayName: =DataSourceInfo([@TADAS],DataSourceInfo.DisplayName,Allowance)
+                            Fill: =RGBA(0, 0, 0, 0)
+                            Height: =110
+                            MaxLength: =DataSourceInfo([@TADAS], DataSourceInfo.MaxLength, Allowance)
+                            Required: =true
+                            Update: =DropdownCanvas1.Selected.Value
+                            Width: =445
+                            WidthFit: =true
+                            X: =0
+                            Y: =0
+                            ZIndex: =6
+
+                            DataCardKey6 As Text:
+                                DisplayMode: =DisplayMode.Edit
+                                Height: =22
+                                Text: ="Allowance Type"
+                                Weight: ='TextCanvas.Weight'.Semibold
+                                Width: =381
+                                Wrap: =false
+                                X: =40
+                                Y: =10
+                                ZIndex: =1
+
+                            ErrorMessage17 As Text:
+                                DisplayMode: =DisplayMode.Edit
+                                FontColor: =RGBA(215, 58, 60, 1)
+                                Height: =30
+                                Text: =Parent.Error
+                                Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
+                                Width: =Parent.Width - 48
+                                Wrap: =true
+                                X: =40
+                                Y: =68
+                                ZIndex: =3
+
+                            StarVisible17 As Text:
+                                Align: ='TextCanvas.Align'.Center
+                                DisplayMode: =DisplayMode.Edit
+                                Height: =30
+                                Text: ="*"
+                                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                                Width: =30
+                                X: =10
+                                Y: =DataCardKey6.Y
+                                ZIndex: =4
+
+                            DropdownCanvas1 As Dropdown.pcfdataset:
+                                Appearance: ='DropdownCanvas.Appearance'.Outline
+                                BorderColor: =Color.Navy
+                                BorderRadius: =10
+                                DefaultSelectedItems: =[If(viewTADA,SelectedRecord.Allowance)]
+                                DisplayMode: =DisplayMode.Edit
+                                Height: =32
+                                Items: |
+                                    =
+                                    //Distinct(TADAS,Allowance)
+                                    ["Travel Allowance", "Daily Allowance"]
+                                Required: =false
+                                Width: =384
+                                X: =40
+                                Y: =45
+                                ZIndex: =5
+
+                        Amount_DataCard1 As typedDataCard.fluentV9TextualEditCard:
+                            BorderColor: =App.Theme.Colors.Darker40
+                            BorderStyle: =BorderStyle.Solid
+                            DataField: ="cra95_amount"
+                            Default: =ThisItem.Amount
+                            DisplayMode: =DisplayMode.Edit
+                            DisplayName: =DataSourceInfo([@TADAS],DataSourceInfo.DisplayName,Amount)
+                            Fill: =RGBA(0, 0, 0, 0)
+                            Height: =86
+                            MaxLength: =DataSourceInfo([@TADAS], DataSourceInfo.MaxLength, Amount)
+                            Required: =true
+                            Update: =DataCardValue1.Value
+                            Width: =445
+                            WidthFit: =true
+                            X: =1
+                            Y: =0
+                            ZIndex: =6
+
+                            DataCardKey3 As Text:
+                                DisplayMode: =DisplayMode.Edit
+                                Height: =22
+                                Text: =Parent.DisplayName
+                                Weight: ='TextCanvas.Weight'.Semibold
+                                Width: =Parent.Width - 48
+                                Wrap: =false
+                                X: =24
+                                Y: =10
+                                ZIndex: =1
+
+                            "DataCardValue1 As 'Text input'":
+                                AccessibleLabel: =Parent.DisplayName
+                                Appearance: ='TextInputCanvas.Appearance'.Outline
+                                BorderColor: =Color.Navy
+                                BorderRadius: =10
+                                DisplayMode: =Parent.DisplayMode
+                                FontColor: =RGBA(53, 61, 63, 1)
+                                Height: =32
+                                Mode: ="'TextInputCanvas.Mode'.TextInputModeSingleLine"
+                                Required: =Parent.Required
+                                ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
+                                Value: |
+                                    =LookUp(TADAS, Allowance = DropdownCanvas1.Selected.Value, Amount)
+                                Width: =384
+                                X: =24
+                                Y: =45
+                                ZIndex: =2
+
+                            ErrorMessage10 As Text:
+                                DisplayMode: =DisplayMode.Edit
+                                FontColor: =RGBA(215, 58, 60, 1)
+                                Height: =30
+                                Text: =Parent.Error
+                                Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
+                                Width: =Parent.Width - 48
+                                Wrap: =true
+                                X: =24
+                                Y: =DataCardValue1.Y + DataCardValue1.Height
+                                ZIndex: =3
+
+                            StarVisible10 As Text:
+                                Align: ='TextCanvas.Align'.Center
+                                DisplayMode: =DisplayMode.Edit
+                                Height: =30
+                                Text: ="*"
+                                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                                Width: =30
+                                X: =0
+                                Y: =DataCardKey3.Y
+                                ZIndex: =4
+
+                    Container8_6 As groupContainer.verticalAutoLayoutContainer:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        Fill: =RGBA(255, 255, 255, 1)
+                        FillPortions: =0
+                        Height: =Parent.Height*0.3
+                        LayoutAlignItems: =LayoutAlignItems.End
+                        LayoutGap: =20
+                        LayoutJustifyContent: =LayoutJustifyContent.End
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        PaddingRight: =20
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        ZIndex: =2
+
+                        Button1_1 As button:
+                            AlignInContainer: =AlignInContainer.Center
+                            BorderColor: =RGBA(12, 59, 94, 1)
+                            DisabledBorderColor: =RGBA(244, 244, 244, 1)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            DisabledFill: =RGBA(244, 244, 244, 1)
+                            Fill: =RGBA(15, 84, 140, 1)
+                            Font: =App.Theme.Font
+                            Height: =45
+                            HoverBorderColor: =App.Theme.Colors.Darker10
+                            HoverColor: =RGBA(255, 255, 255, 1)
+                            HoverFill: =App.Theme.Colors.Darker10
+                            OnSelect: |
+                                =
+                                If(DropdownCanvas1.Selected.Value = Blank() || DataCardValue1.Value = Blank(), Notify("Enter the required fields.",NotificationType.Error), Notify("Form is submitted succesfully!",NotificationType.Success));
+                                
+                                SubmitForm(Form5);
+                                ResetForm(Form5)
+                            PressedBorderColor: =App.Theme.Colors.Darker40
+                            PressedColor: =Self.Color
+                            PressedFill: =App.Theme.Colors.Darker40
+                            RadiusBottomLeft: =50
+                            RadiusBottomRight: =50
+                            RadiusTopLeft: =50
+                            RadiusTopRight: =50
+                            Size: =12
+                            Text: ="Submit"
+                            ZIndex: =2
+
+                Container8_7 As groupContainer.verticalAutoLayoutContainer:
+                    Fill: =RGBA(255, 255, 255, 1)
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingLeft: =15
+                    PaddingRight: =15
+                    RadiusBottomLeft: =4
+                    RadiusBottomRight: =4
+                    ZIndex: =2
+
+                    Container1_2 As groupContainer.verticalAutoLayoutContainer:
+                        FillPortions: =0
+                        Height: =50
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutJustifyContent: =LayoutJustifyContent.Center
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        PaddingLeft: =10
+                        PaddingRight: =10
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        ZIndex: =1
+
+                        TextCanvas4_4 As Text:
+                            BorderStyle: =""
+                            DisplayMode: =DisplayMode.Edit
+                            Fill: =
+                            FontColor: =
+                            Height: =32
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =96
+                            Size: =18
+                            Text: ="All Allowances"
+                            Weight: ="Bold"
+                            Width: =400
+                            X: =0
+                            Y: =0
+                            ZIndex: =1
+
+                    Container1_19 As groupContainer.verticalAutoLayoutContainer:
+                        Fill: =RGBA(15, 84, 140, 1)
+                        FillPortions: =0
+                        Height: =50
+                        LayoutGap: =10
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        PaddingLeft: =10
+                        PaddingRight: =10
+                        RadiusTopLeft: =20
+                        RadiusTopRight: =20
+                        ZIndex: =2
+
+                        TextCanvas5_2 As Text:
+                            Align: ='TextCanvas.Align'.Start
+                            AlignInContainer: =AlignInContainer.Center
+                            BorderStyle: =""
+                            DisplayMode: =DisplayMode.Edit
+                            Fill: =
+                            FillPortions: =1
+                            FontColor: =Color.White
+                            Height: =32
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =96
+                            Size: =18
+                            Text: ="Allowance Type"
+                            Width: =Parent.Width/4
+                            X: =0
+                            Y: =0
+                            ZIndex: =1
+
+                        TextCanvas5_3 As Text:
+                            Align: ='TextCanvas.Align'.Start
+                            AlignInContainer: =AlignInContainer.Center
+                            BorderStyle: =""
+                            DisplayMode: =DisplayMode.Edit
+                            Fill: =
+                            FillPortions: =1
+                            FontColor: =Color.White
+                            Height: =32
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =96
+                            Size: =18
+                            Text: ="Amount"
+                            Width: =Parent.Width/4
+                            X: =0
+                            Y: =0
+                            ZIndex: =2
+
+                        TextCanvas5_18 As Text:
+                            Align: ='TextCanvas.Align'.Start
+                            AlignInContainer: =AlignInContainer.Center
+                            BorderStyle: =""
+                            DisplayMode: =DisplayMode.Edit
+                            Fill: =
+                            FillPortions: =1
+                            FontColor: =Color.White
+                            Height: =32
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =96
+                            Size: =18
+                            Text: ="Grade"
+                            Width: =Parent.Width/4
+                            X: =0
+                            Y: =0
+                            ZIndex: =5
+
+                    Container2_4 As groupContainer.verticalAutoLayoutContainer:
+                        DropShadow: =DropShadow.Light
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        ZIndex: =3
+
+                        "Gallery1_2 As gallery.'BrowseLayout_Vertical_OneTextVariant_ver5.0'":
+                            AlignInContainer: =AlignInContainer.Start
+                            BorderColor: =App.Theme.Colors.Darker40
+                            DelayItemLoading: =true
+                            Items: =Sort(TADAS, 'Created On', SortOrder.Descending)
+                            Layout: =Layout.Vertical
+                            LayoutMinHeight: =287
+                            LayoutMinWidth: =320
+                            LoadingSpinner: =LoadingSpinner.Data
+                            TemplatePadding: =0
+                            TemplateSize: =45
+                            Width: =Parent.Width
+                            ZIndex: =1
+
+                            Container9_3 As groupContainer.horizontalAutoLayoutContainer:
+                                DropShadow: =DropShadow.Light
+                                Height: =45
+                                LayoutAlignItems: =LayoutAlignItems.Center
+                                LayoutMode: =LayoutMode.Auto
+                                Width: =Parent.TemplateWidth
+                                ZIndex: =8
+
+                                Title2 As label:
+                                    Color: =RGBA(50, 49, 48, 1)
+                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                    Font: =App.Theme.Font
+                                    FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                                    Height: =Self.Size * 1.8
+                                    OnSelect: =
+                                    PaddingBottom: =0
+                                    PaddingLeft: =10
+                                    PaddingRight: =0
+                                    PaddingTop: =0
+                                    Size: =12
+                                    Text: =ThisItem.Allowance
+                                    VerticalAlign: =VerticalAlign.Top
+                                    Width: |
+                                        =Parent.Width/4
+                                    Y: =7
+                                    ZIndex: =1
+
+                                Label56 As label:
+                                    BorderColor: =App.Theme.Colors.Darker40
+                                    Color: =RGBA(0, 0, 0, 1)
+                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                    Font: =App.Theme.Font
+                                    Size: =13
+                                    Text: =
+                                    Width: =110
+                                    ZIndex: =2
+
+                                Title2_1 As label:
+                                    Color: =RGBA(50, 49, 48, 1)
+                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                    Font: =App.Theme.Font
+                                    FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                                    Height: =Self.Size * 1.8
+                                    OnSelect: =
+                                    PaddingBottom: =0
+                                    PaddingLeft: =0
+                                    PaddingRight: =0
+                                    PaddingTop: =0
+                                    Size: =12
+                                    Text: =ThisItem.Amount
+                                    VerticalAlign: =VerticalAlign.Top
+                                    Width: =Parent.Width/4
+                                    X: =272
+                                    Y: =7
+                                    ZIndex: =3
+
+                                Label56_1 As label:
+                                    BorderColor: =App.Theme.Colors.Darker40
+                                    Color: =RGBA(0, 0, 0, 1)
+                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                    Font: =App.Theme.Font
+                                    Size: =13
+                                    Text: =
+                                    Width: =110
+                                    ZIndex: =4
+
+                                Title2_2 As label:
+                                    Color: =RGBA(50, 49, 48, 1)
+                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                    Font: =App.Theme.Font
+                                    FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                                    Height: =Self.Size * 1.8
+                                    OnSelect: =
+                                    PaddingBottom: =0
+                                    PaddingLeft: =0
+                                    PaddingRight: =0
+                                    PaddingTop: =0
+                                    Size: |
+                                        =12
+                                    Text: =ThisItem.Grade
+                                    VerticalAlign: =VerticalAlign.Top
+                                    Width: =Parent.Width/4
+                                    X: =547
+                                    Y: =7
+                                    ZIndex: =5
+
+                                Icon2 As icon.Trash:
+                                    BorderColor: =App.Theme.Colors.Darker40
+                                    Color: =App.Theme.Colors.Darker30
+                                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                                    DisabledColor: =RGBA(244, 244, 244, 1)
+                                    DisplayMode: =
+                                    Height: =24
+                                    Icon: =Icon.Trash
+                                    OnSelect: |-
+                                        =Remove(TADAS,ThisItem);
+                                        Set(SelectedRecord,Blank())
+                                    Width: =40
+                                    X: =1200
+                                    Y: =4
+                                    ZIndex: =6
+
+                                Icon2_2 As icon.Trash:
+                                    BorderColor: =App.Theme.Colors.Darker40
+                                    Color: =App.Theme.Colors.Darker30
+                                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                                    DisabledColor: =RGBA(244, 244, 244, 1)
+                                    DisplayMode: =
+                                    Height: =24
+                                    Icon: =Icon.Edit
+                                    OnSelect: |
+                                        =Set(SelectedRecord, ThisItem);
+                                        NewForm(Form5);
+                                        Set(viewTADA, true)
+                                    Width: =40
+                                    X: =40
+                                    Y: =4
+                                    ZIndex: =7
+
+    Container40_1 As groupContainer.verticalAutoLayoutContainer:
+        Height: =105
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutMode: =LayoutMode.Auto
+        PaddingLeft: =16
+        PaddingRight: =16
+        PaddingTop: =16
+        RadiusBottomLeft: =4
+        RadiusBottomRight: =4
+        RadiusTopLeft: =4
+        RadiusTopRight: =4
+        Width: =Parent.Width
+        ZIndex: =4
+
+        HeaderContainer1_8 As groupContainer.horizontalAutoLayoutContainer:
+            DropShadow: =DropShadow.Light
+            Fill: =RGBA(15, 84, 140, 1)
+            FillPortions: =0
+            Height: =75
+            LayoutAlignItems: =LayoutAlignItems.Stretch
+            LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            RadiusBottomLeft: =15
+            RadiusBottomRight: =15
+            RadiusTopLeft: =15
+            RadiusTopRight: =15
+            Width: =Parent.Width
+            Y: =12
+            ZIndex: =1
+
+            Container1_18 As groupContainer.horizontalAutoLayoutContainer:
+                AlignInContainer: =AlignInContainer.SetByContainer
+                DropShadow: =DropShadow.Light
+                Fill: =RGBA(15, 84, 140, 1)
+                Height: =Parent.Height
+                LayoutAlignItems: =LayoutAlignItems.Center
+                LayoutJustifyContent: =LayoutJustifyContent.Center
+                LayoutMinHeight: =50
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                RadiusBottomLeft: =4
+                RadiusBottomRight: =4
+                RadiusTopLeft: =4
+                RadiusTopRight: =4
+                Width: =Parent.Width
+                ZIndex: =1
+
+                Image8_5 As image:
+                    BorderColor: =App.Theme.Colors.Darker40
+                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                    DisabledFill: =RGBA(244, 244, 244, 1)
+                    Height: =70
+                    Image: ='icons8-left-arrow-48_1'
+                    ImagePosition: =ImagePosition.Center
+                    OnSelect: =Navigate(Screen9,ScreenTransition.Fade)
+                    Width: =70
+                    ZIndex: =1
+
+                Image6_12 As image:
+                    BorderColor: =App.Theme.Colors.Darker40
+                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                    DisabledFill: =RGBA(244, 244, 244, 1)
+                    Height: =80
+                    Image: ='Systems-Ltd-feature-image-new-logo-2019-removebg-preview'
+                    Width: =164
+                    ZIndex: =2
+
+                Label3_18 As label:
+                    Align: =Align.Center
+                    BorderColor: =App.Theme.Colors.Darker40
+                    Color: =RGBA(255, 255, 255, 1)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    Fill: =RGBA(15, 84, 140, 1)
+                    Font: =App.Theme.Font
+                    FontWeight: =FontWeight.Bold
+                    PaddingLeft: =0
+                    PaddingRight: =150
+                    Size: =20
+                    Text: ="Travel & Daily Allowance Setup"
+                    Width: =Parent.Width-Image8_5.Width-Image6_12.Width
+                    ZIndex: =3
+

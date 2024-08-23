@@ -1,0 +1,99 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "cra95_tadas",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "cra95_tada",
+    "MaxGetRowsCount": 500,
+    "Name": "TADAS",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "cra95_amount": "Amount",
+      "cra95_grade": "Grade",
+      "cra95_name": "Allowance",
+      "cra95_tada_AsyncOperations": "System Jobs",
+      "cra95_tada_BulkDeleteFailures": "Bulk Delete Failures",
+      "cra95_tada_DuplicateBaseRecord": "Duplicate Records (cra95_tada_DuplicateBaseRecord)",
+      "cra95_tada_DuplicateMatchingRecord": "Duplicate Records (cra95_tada_DuplicateMatchingRecord)",
+      "cra95_tada_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "cra95_tada_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "cra95_tada_ProcessSession": "Process Sessions",
+      "cra95_tada_SyncErrors": "Sync Errors",
+      "cra95_tadaid": "TADA",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "TADAS",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "TADAS (Views)",
+    "Name": "_cra95_tada_views",
+    "RelatedEntityName": "TADAS",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "7c04499c-935d-4f87-a283-ab70c7a64857": "TADA Advanced Find View",
+      "a15679d2-e298-457a-8ee0-03d114689162": "TADA Associated View",
+      "aa003236-20bd-42d6-91ad-bd07f48ef697": "Active TADAS",
+      "dc34b997-07c6-4c7e-84b0-19b7d367565c": "TADA Lookup View",
+      "e65eee15-e9b2-488b-8f0d-08956edcc665": "Inactive TADAS"
+    }
+  },
+  {
+    "DisplayName": "Status (TADAS)",
+    "Name": "cra95_tada_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "TADAS"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "TADAS",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (TADAS)",
+    "Name": "cra95_tada_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "TADAS"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "TADAS",
+    "Type": "OptionSetInfo"
+  }
+]

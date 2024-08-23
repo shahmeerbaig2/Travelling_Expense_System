@@ -1,0 +1,692 @@
+"'Admin Main Screen' As screen.'autoLayout_HeaderFooter_ver1.0'":
+    Fill: =Color.White
+    LoadingSpinnerColor: =App.Theme.Colors.Primary
+
+    ScreenContainer1_2 As groupContainer.verticalAutoLayoutContainer:
+        DropShadow: =DropShadow.Light
+        Fill: =RGBA(245, 245, 245, 1)
+        Height: =Parent.Height
+        LayoutAlignItems: =LayoutAlignItems.Stretch
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutGap: =16
+        LayoutMode: =LayoutMode.Auto
+        PaddingBottom: =16
+        PaddingLeft: =16
+        PaddingRight: =16
+        PaddingTop: =16
+        RadiusBottomLeft: =4
+        RadiusBottomRight: =4
+        RadiusTopLeft: =4
+        RadiusTopRight: =4
+        Width: =Parent.Width
+        ZIndex: =1
+
+        HeaderContainer1_2 As groupContainer.horizontalAutoLayoutContainer:
+            DropShadow: =DropShadow.Light
+            Fill: =RGBA(255, 255, 255, 1)
+            FillPortions: =0
+            Height: =75
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            RadiusBottomLeft: =15
+            RadiusBottomRight: =15
+            RadiusTopLeft: =15
+            RadiusTopRight: =15
+            ZIndex: =2
+
+            Container1_5 As groupContainer.horizontalAutoLayoutContainer:
+                DropShadow: =DropShadow.Light
+                Fill: =RGBA(15, 84, 140, 1)
+                Height: =Parent.Height
+                LayoutMinHeight: =50
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                RadiusBottomLeft: =20
+                RadiusBottomRight: =20
+                RadiusTopLeft: =20
+                RadiusTopRight: =20
+                Width: =Parent.Width
+                ZIndex: =1
+
+                Icon5 As icon.Home:
+                    AlignInContainer: =AlignInContainer.Stretch
+                    BorderColor: =App.Theme.Colors.Darker40
+                    Color: =RGBA(255, 255, 255, 1)
+                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                    DisabledColor: =RGBA(244, 244, 244, 1)
+                    Icon: =Icon.Home
+                    OnSelect: =Navigate('Scrollable pending screen')
+                    PaddingBottom: =10
+                    PaddingLeft: =10
+                    PaddingRight: =10
+                    PaddingTop: =10
+                    ZIndex: =1
+
+                Image6_4 As image:
+                    BorderColor: =App.Theme.Colors.Darker40
+                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                    DisabledFill: =RGBA(244, 244, 244, 1)
+                    Height: =80
+                    Image: ='Systems-Ltd-feature-image-new-logo-2019-removebg-preview'
+                    Width: =164
+                    ZIndex: =2
+
+                Label3_5 As label:
+                    Align: =Align.Center
+                    AlignInContainer: =AlignInContainer.Stretch
+                    BorderColor: =App.Theme.Colors.Darker40
+                    Color: =RGBA(255, 255, 255, 1)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    Fill: =RGBA(15, 84, 140, 1)
+                    Font: =App.Theme.Font
+                    FontWeight: =FontWeight.Bold
+                    PaddingRight: =170
+                    Size: =18
+                    Text: ="Admin Screen"
+                    Width: =Parent.Width-Icon5.Width-Image6_4.Width
+                    ZIndex: =3
+
+        MainContainer1_2 As groupContainer.verticalAutoLayoutContainer:
+            DropShadow: =DropShadow.Light
+            Fill: =RGBA(255, 255, 255, 1)
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            RadiusBottomLeft: =4
+            RadiusBottomRight: =4
+            RadiusTopLeft: =4
+            RadiusTopRight: =4
+            ZIndex: =3
+
+            Container2_2 As groupContainer.verticalAutoLayoutContainer:
+                DropShadow: =DropShadow.Light
+                FillPortions: =0
+                Height: =80
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                RadiusBottomLeft: =4
+                RadiusBottomRight: =4
+                RadiusTopLeft: =4
+                RadiusTopRight: =4
+                ZIndex: =1
+
+                Container5_2 As groupContainer.horizontalAutoLayoutContainer:
+                    DropShadow: =DropShadow.Light
+                    FillPortions: =0
+                    Height: =Parent.Height
+                    LayoutAlignItems: =LayoutAlignItems.Center
+                    LayoutGap: =40
+                    LayoutJustifyContent: =LayoutJustifyContent.Center
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    RadiusBottomLeft: =4
+                    RadiusBottomRight: =4
+                    RadiusTopLeft: =4
+                    RadiusTopRight: =4
+                    Width: =Parent.Width
+                    ZIndex: =1
+
+                    TextInput1 As text:
+                        BorderColor: =RGBA(12, 59, 94, 1)
+                        BorderThickness: =2
+                        Color: =RGBA(0, 0, 0, 1)
+                        Default: =
+                        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                        DisabledColor: =RGBA(166, 166, 166, 1)
+                        DisabledFill: =RGBA(244, 244, 244, 1)
+                        FocusedBorderThickness: =4
+                        Font: =App.Theme.Font
+                        HintText: ="Search by employee Code"
+                        HoverBorderColor: =RGBA(12, 59, 94, 1)
+                        HoverColor: =RGBA(0, 0, 0, 1)
+                        HoverFill: =RGBA(180, 214, 250, 1)
+                        RadiusBottomLeft: =10
+                        RadiusBottomRight: =10
+                        RadiusTopLeft: =10
+                        RadiusTopRight: =10
+                        Size: =13
+                        ZIndex: =1
+
+                    ComboboxCanvas3 As Combobox.pcfdataset:
+                        Appearance: ='ComboboxCanvas.Appearance'.Outline
+                        BorderColor: =RGBA(12, 59, 94, 1)
+                        BorderRadius: =10
+                        BorderThickness: =2
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =40
+                        Items: =["Local", "Foreign"]
+                        LayoutMinHeight: =32
+                        LayoutMinWidth: =320
+                        Width: =328
+                        X: =0
+                        Y: =0
+                        ZIndex: =2
+
+                    "DatePickerCanvas4 As 'Date picker'":
+                        Appearance: ='DatePickerCanvas.Appearance'.Outline
+                        BorderColor: =RGBA(12, 59, 94, 1)
+                        BorderRadius: =10
+                        BorderThickness: =2
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =40
+                        LayoutMinHeight: =32
+                        LayoutMinWidth: =320
+                        Width: =328
+                        X: =0
+                        Y: =0
+                        ZIndex: =3
+
+                    Icon2_1 As icon.Reload:
+                        AlignInContainer: =AlignInContainer.Center
+                        BorderColor: =App.Theme.Colors.Darker40
+                        Color: =RGBA(12, 59, 94, 1)
+                        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                        DisabledColor: =RGBA(244, 244, 244, 1)
+                        Fill: =RGBA(255, 255, 255, 1)
+                        Icon: =Icon.Reload
+                        OnSelect: =Reset(TextInput1);Reset(ComboboxCanvas3);Reset(DatePickerCanvas4);Refresh('New tables')
+                        PaddingBottom: =10
+                        PaddingLeft: =10
+                        PaddingRight: =10
+                        PaddingTop: =10
+                        ZIndex: =4
+
+            Container3_2 As groupContainer.verticalAutoLayoutContainer:
+                DropShadow: =DropShadow.Light
+                FillPortions: =0
+                Height: =60
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                RadiusBottomLeft: =4
+                RadiusBottomRight: =4
+                RadiusTopLeft: =4
+                RadiusTopRight: =4
+                ZIndex: =2
+
+                Container6_1 As groupContainer.horizontalAutoLayoutContainer:
+                    DropShadow: =DropShadow.Light
+                    FillPortions: =0
+                    Height: =Parent.Height
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    RadiusBottomLeft: =15
+                    RadiusBottomRight: =15
+                    RadiusTopLeft: =15
+                    RadiusTopRight: =15
+                    Width: =Parent.Width
+                    ZIndex: =1
+
+                    Label4_1 As label:
+                        Align: =Align.Center
+                        AlignInContainer: =AlignInContainer.Stretch
+                        BorderColor: =App.Theme.Colors.Darker40
+                        Color: =RGBA(255, 255, 255, 1)
+                        DisabledColor: =RGBA(166, 166, 166, 1)
+                        Fill: =RGBA(15, 84, 140, 1)
+                        FillPortions: =1
+                        Font: =App.Theme.Font
+                        Size: =13
+                        Text: ="Emp Code"
+                        Width: =100
+                        ZIndex: =1
+
+                    Label5_1 As label:
+                        Align: =Align.Center
+                        AlignInContainer: =AlignInContainer.Stretch
+                        BorderColor: =App.Theme.Colors.Darker40
+                        Color: =RGBA(255, 255, 255, 1)
+                        DisabledColor: =RGBA(166, 166, 166, 1)
+                        Fill: =RGBA(15, 84, 140, 1)
+                        FillPortions: =1
+                        Font: =App.Theme.Font
+                        Size: =13
+                        Text: ="Emp Name"
+                        ZIndex: =2
+
+                    Label6_1 As label:
+                        Align: =Align.Center
+                        AlignInContainer: =AlignInContainer.Stretch
+                        BorderColor: =App.Theme.Colors.Darker40
+                        Color: =RGBA(255, 255, 255, 1)
+                        DisabledColor: =RGBA(166, 166, 166, 1)
+                        Fill: =RGBA(15, 84, 140, 1)
+                        FillPortions: =1
+                        Font: =App.Theme.Font
+                        Size: =13
+                        Text: ="Project ID"
+                        ZIndex: =3
+
+                    Label7_1 As label:
+                        Align: =Align.Center
+                        AlignInContainer: =AlignInContainer.Stretch
+                        BorderColor: =App.Theme.Colors.Darker40
+                        Color: =RGBA(255, 255, 255, 1)
+                        DisabledColor: =RGBA(166, 166, 166, 1)
+                        Fill: =RGBA(15, 84, 140, 1)
+                        FillPortions: =1
+                        Font: =App.Theme.Font
+                        Size: =13
+                        Text: ="Project Name"
+                        ZIndex: =4
+
+                    Label10_1 As label:
+                        Align: =Align.Center
+                        AlignInContainer: =AlignInContainer.Stretch
+                        BorderColor: =App.Theme.Colors.Darker40
+                        Color: =RGBA(255, 255, 255, 1)
+                        DisabledColor: =RGBA(166, 166, 166, 1)
+                        Fill: =RGBA(15, 84, 140, 1)
+                        FillPortions: =1
+                        Font: =App.Theme.Font
+                        HoverFill: =RGBA(15,84,140,1)
+                        Size: =13
+                        Text: ="Type"
+                        ZIndex: =5
+
+                    Label19 As label:
+                        Align: =Align.Center
+                        AlignInContainer: =AlignInContainer.Stretch
+                        BorderColor: =App.Theme.Colors.Darker40
+                        Color: =RGBA(255, 255, 255, 1)
+                        DisabledColor: =RGBA(166, 166, 166, 1)
+                        Fill: =RGBA(15, 84, 140, 1)
+                        Font: =App.Theme.Font
+                        Size: =13
+                        Text: ="Status"
+                        ZIndex: =6
+
+                    Label13_1 As label:
+                        Align: =Align.Center
+                        AlignInContainer: =AlignInContainer.Stretch
+                        BorderColor: =App.Theme.Colors.Darker40
+                        Color: =RGBA(255, 255, 255, 1)
+                        DisabledColor: =RGBA(166, 166, 166, 1)
+                        Fill: =RGBA(15, 84, 140, 1)
+                        FillPortions: =1
+                        Font: =App.Theme.Font
+                        Size: =13
+                        Text: ="View Request"
+                        Width: =200
+                        ZIndex: =7
+
+            Container4_2 As groupContainer.verticalAutoLayoutContainer:
+                AlignInContainer: =AlignInContainer.SetByContainer
+                DropShadow: =DropShadow.Light
+                Height: =Parent.Height
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                RadiusBottomLeft: =4
+                RadiusBottomRight: =4
+                RadiusTopLeft: =4
+                RadiusTopRight: =4
+                Width: =Parent.Width
+                ZIndex: =3
+
+                Gallery1_1 As gallery.galleryVertical:
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    BorderColor: =App.Theme.Colors.Darker40
+                    DelayItemLoading: =true
+                    Height: =Parent.Height
+                    Items: |
+                        =Filter(
+                            AdData,
+                            (
+                                IsBlank(ComboboxCanvas3.Selected.Value) || 'Travel type' = ComboboxCanvas3.Selected.Value
+                            )
+                            &&
+                            (
+                                IsBlank(DatePickerCanvas4.SelectedDate) || 'Departure Date' = DatePickerCanvas4.SelectedDate
+                            )
+                            &&
+                            (
+                                IsBlank(DatePickerCanvas4.SelectedDate) || 'Return Date' = DatePickerCanvas4.SelectedDate
+                            )
+                            &&
+                            (
+                                IsBlank(TextInput1.Text) || TextInput1.Text in 'Employee ID'
+                            )
+                        )
+                    Layout: =Layout.Vertical
+                    LayoutMinHeight: =287
+                    LayoutMinWidth: =320
+                    LoadingSpinner: =LoadingSpinner.Data
+                    TemplateSize: =70
+                    Width: =Parent.Width
+                    ZIndex: =1
+
+                    Label2_7 As label:
+                        Align: =Align.Center
+                        BorderColor: =App.Theme.Colors.Darker40
+                        Color: =RGBA(0, 0, 0, 1)
+                        DisabledColor: =RGBA(166, 166, 166, 1)
+                        Font: =App.Theme.Font
+                        Height: =Parent.TemplateHeight
+                        OnSelect: =Select(Parent)
+                        Size: =13
+                        Text: =ThisItem.'Employee ID'
+                        Width: =Label4_1.Width
+                        X: =Label4_1.X
+                        ZIndex: =1
+
+                    Label2_8 As label:
+                        Align: =Align.Center
+                        BorderColor: =App.Theme.Colors.Darker40
+                        Color: =RGBA(0, 0, 0, 1)
+                        DisabledColor: =RGBA(166, 166, 166, 1)
+                        Font: =App.Theme.Font
+                        Height: =Parent.TemplateHeight
+                        OnSelect: =Select(Parent)
+                        Size: =13
+                        Text: =ThisItem.'Employee Name'
+                        Width: =Label5_1.Width
+                        X: =Label5_1.X
+                        ZIndex: =2
+
+                    Label2_9 As label:
+                        Align: =Align.Center
+                        BorderColor: =App.Theme.Colors.Darker40
+                        Color: =RGBA(0, 0, 0, 1)
+                        DisabledColor: =RGBA(166, 166, 166, 1)
+                        Font: =App.Theme.Font
+                        Height: =Parent.TemplateHeight
+                        OnSelect: =Select(Parent)
+                        Size: =13
+                        Text: =ThisItem.'Project ID'
+                        Width: =Label6_1.Width
+                        X: =Label6_1.X
+                        ZIndex: =3
+
+                    Label2_10 As label:
+                        Align: =Align.Center
+                        BorderColor: =App.Theme.Colors.Darker40
+                        Color: =RGBA(0, 0, 0, 1)
+                        DisabledColor: =RGBA(166, 166, 166, 1)
+                        Font: =App.Theme.Font
+                        Height: =Parent.TemplateHeight
+                        OnSelect: =Select(Parent)
+                        Size: =13
+                        Text: =ThisItem.'Project Name'
+                        Width: =Label7_1.Width
+                        X: =Label7_1.X
+                        ZIndex: =4
+
+                    Label2_13 As label:
+                        Align: =Align.Center
+                        BorderColor: =App.Theme.Colors.Darker40
+                        Color: =RGBA(0, 0, 0, 1)
+                        DisabledColor: =RGBA(166, 166, 166, 1)
+                        Font: =App.Theme.Font
+                        Height: =Parent.TemplateHeight
+                        OnSelect: =Select(Parent)
+                        Size: =13
+                        Text: =ThisItem.'Travel type'
+                        Width: =Label10_1.Width
+                        X: =Label10_1.X
+                        ZIndex: =7
+
+                    Rectangle1_1 As rectangle:
+                        BorderColor: =App.Theme.Colors.Darker40
+                        Fill: =RGBA(12, 59, 94, 1)
+                        Height: =2
+                        OnSelect: =Select(Parent)
+                        Width: =Parent.Width
+                        Y: =68
+                        ZIndex: =9
+
+                    Icon3_1 As icon.View:
+                        BorderColor: =App.Theme.Colors.Darker40
+                        Color: =RGBA(12, 59, 94, 1)
+                        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                        DisabledColor: =RGBA(244, 244, 244, 1)
+                        Height: =45
+                        Icon: =Icon.View
+                        OnSelect: |-
+                            =Set(popup,true);
+                            Set(galAdID,ThisItem.ReqID);
+                            Set(thisRecord,ThisItem.'Return Date');
+                            
+                            Set(From,LookUp('City Codes',City=ThisItem.From).Code);
+                            Set(To,LookUp('City Codes',City=ThisItem.To).Code);
+                            Set(DepartureDate,Text(ThisItem.'Departure Date',"yyyy-mm-dd"));
+                            Set(returndate,Text(ThisItem.'Return Date',"yyyy-mm-dd"));
+                            
+                            
+                            
+                            
+                            
+                            Set(response,HttpFlow.Run(From,To,DepartureDate,returndate));
+                            //DepatureAirlines
+                            Set(DepartureAirlineCode,Replace(response.departureairlinecode,1,1,""));
+                            Set(DepartureAirlineCode1,Replace(DepartureAirlineCode,Len(DepartureAirlineCode),1,""));
+                            Set(ReturnDepartureAirlineCode,Replace(response.returndepartureairlinecode,1,1,""));
+                            Set(ReturnDepartureAirlineCode1,Replace(ReturnDepartureAirlineCode,Len(ReturnDepartureAirlineCode),1,""));
+                            
+                            
+                            //FirstDeparture and Arrival
+                            Set(firstarrival,Replace(response.firstarrival,1,1,""));
+                            Set(firstarrival1,Replace(firstarrival,Len(firstarrival),1,""));
+                            Set(firstdeparture,Replace(response.firstdeparture,1,1,""));
+                            Set(firstdeparture1,Replace(firstdeparture,Len(firstdeparture),1,""));
+                            Set(price,Replace(response.price,1,1,""));
+                            Set(price1,Replace(price,Len(price),1,""));
+                            
+                            Clear(FirdepartureArrayDatenTime);
+                            Clear(FirArrivalArrayDatenTime);
+                            Clear(ReturndepartureArrayDatenTime);
+                            Clear(ReturnArrivalArrayDatenTime);
+                            
+                            Set(Collection1,Split(firstdeparture1,","));
+                            Set(Collection2,Split(firstarrival1,","));
+                            Set(Collection3,Split(price1,","));
+                            Set(Collection4,Split(DepartureAirlineCode1,","));
+                            Set(Collection6,Split(ReturnDepartureAirlineCode1,","));
+                            
+                            //ReturnDeparture and Arrival
+                            Set(returnarrival,Replace(response.returnarrival,1,1,""));
+                            Set(returnarrival1,Replace(returnarrival,Len(firstarrival),1,""));
+                            Set(returndeparture,Replace(response.returndeparture,1,1,""));
+                            Set(returndeparture1,Replace(returndeparture,Len(firstdeparture),1,""));
+                            
+                            Set(returnDepartureCollection,Split(returndeparture1,","));
+                            Set(returnArrivalCollection,Split(returnarrival1,","));
+                            
+                            ClearCollect(Collection5, 
+                                ForAll(Collection4, 
+                                    {
+                                        
+                                        IATA_Code: Substitute(ThisRecord.Value,"""", "")
+                                    }
+                                )
+                            );
+                            ClearCollect(Collection8, 
+                                ForAll(Collection6, 
+                                    {
+                                        
+                                        IATA_Code: Substitute(ThisRecord.Value,"""", "")
+                                    }
+                                )
+                            );
+                            
+                            
+                            
+                            ForAll(Collection1,
+                            Collect(FirdepartureArrayDatenTime,{
+                                Date:Text(DateValue(Left(Replace(ThisRecord.Value,1,1,""), 10)), "yyyy-mm-dd"),
+                                Time:Text(TimeValue(Mid(Replace(ThisRecord.Value,1,1,""), 12, 8)), "hh:mm:ss")
+                            }));
+                            ForAll(Collection2,
+                            Collect(FirArrivalArrayDatenTime,{
+                                Date:Text(DateValue(Left(Replace(ThisRecord.Value,1,1,""), 10)), "yyyy-mm-dd"),
+                                Time:Text(TimeValue(Mid(Replace(ThisRecord.Value,1,1,""), 12, 8)), "hh:mm:ss")
+                            }));
+                            
+                            ForAll(returnDepartureCollection,
+                            Collect(ReturndepartureArrayDatenTime,{
+                                Date:Text(DateValue(Left(Replace(ThisRecord.Value,1,1,""), 10)), "yyyy-mm-dd"),
+                                Time:Text(TimeValue(Mid(Replace(ThisRecord.Value,1,1,""), 12, 8)), "hh:mm:ss")
+                            }));
+                            ForAll(returnArrivalCollection,
+                            Collect(ReturnArrivalArrayDatenTime,{
+                                Date:Text(DateValue(Left(Replace(ThisRecord.Value,1,1,""), 10)), "yyyy-mm-dd"),
+                                Time:Text(TimeValue(Mid(Replace(ThisRecord.Value,1,1,""), 12, 8)), "hh:mm:ss")
+                            }));
+                            
+                            
+                            
+                            //ClearCollect(FirstDeparture, response.firstdeparture);
+                            ClearCollect(FirstArrival, response.firstarrival);
+                            ClearCollect(ReturnDeparture, response.returndeparture);
+                            ClearCollect(ReturnArrival, response.returnarrival);
+                            
+                            
+                            
+                            ClearCollect(ColNamesIndexed2, {Value: "1", Index1: "1"});
+                            Clear(ColNamesIndexed2);
+                            Clear(ColNamesIndexed1);
+                            
+                            ForAll(
+                                FirdepartureArrayDatenTime,
+                               Collect(ColNamesIndexed2, {Value: ThisRecord.Time, Date:ThisRecord.Date, Index1: Text(CountRows(ColNamesIndexed2) + 1)})
+                            );
+                            Clear(FirstDepartureArray1);
+                            ForAll(
+                                FirArrivalArrayDatenTime,
+                               Collect(ColNamesIndexed1, {Value: ThisRecord.Time, Date:ThisRecord.Date,Index: CountRows(ColNamesIndexed1) + 1})
+                            );
+                            
+                            Clear(ColNamesIndexed3);
+                            ForAll(
+                                Collection3,
+                               Collect(ColNamesIndexed3, {Value: Value, Index1: Text(CountRows(ColNamesIndexed3) + 1)})
+                            );
+                            
+                            Clear(ColNamesIndexed4);
+                            ForAll(
+                                ReturndepartureArrayDatenTime,
+                               Collect(ColNamesIndexed4, {Value: ThisRecord.Time, Date:ThisRecord.Date, Index1: Text(CountRows(ColNamesIndexed4) + 1)})
+                            );
+                            
+                            Clear(ColNamesIndexed5);
+                            ForAll(
+                                ReturnArrivalArrayDatenTime,
+                               Collect(ColNamesIndexed5, {Value: ThisRecord.Time, Date:ThisRecord.Date, Index1: Text(CountRows(ColNamesIndexed5) + 1)})
+                            );
+                            Clear(ColNamesIndexed6);
+                            ForAll(
+                                Collection5,
+                               Collect(ColNamesIndexed6, {Value: ThisRecord.IATA_Code,  Index1: Text(CountRows(ColNamesIndexed6) + 1)})
+                            );
+                            Clear(ColNamesIndexed7);
+                            ForAll(
+                                Collection8,
+                               Collect(ColNamesIndexed7, {Value: ThisRecord.IATA_Code,  Index1: Text(CountRows(ColNamesIndexed7) + 1)})
+                            );
+                            
+                            
+                            ForAll(
+                                ColNamesIndexed2 As abc ,
+                               Collect(FirstDepartureArray1, {Departure: LookUp(ColNamesIndexed2,Index1=abc.Index1).Value, 
+                               Arrival: LookUp(ColNamesIndexed1,Text(Index)=abc.Index1).Value,
+                               Price: LookUp(ColNamesIndexed3,Index1=abc.Index1).Value,
+                               DateOfDeparture:LookUp(ColNamesIndexed2,Text(Index1)=abc.Index1).Date,
+                               DateOfArrival: LookUp(ColNamesIndexed1,Text(Index)=abc.Index1).Date,
+                               ReturnDeparture:LookUp(ColNamesIndexed4,Index1=abc.Index1).Value,
+                               ReturnArrival:LookUp(ColNamesIndexed5,Index1=abc.Index1).Value,
+                               DateOfReturnDeparture:LookUp(ColNamesIndexed4,Text(Index1)=abc.Index1).Date,
+                               DateOfReturnArrival: LookUp(ColNamesIndexed5,Index1=abc.Index1).Date,
+                               DepartureAirline:LookUp(ColNamesIndexed6,Index1=abc.Index1).Value,
+                               ReturnDepartureAirline:LookUp(ColNamesIndexed7,Index1=abc.Index1).Value,
+                               From:ThisItem.From,
+                               To:ThisItem.To
+                            
+                               })
+                                
+                            );
+                            
+                            
+                            
+                            ResetForm(Form9_2);
+                            Set(popup,false);
+                            
+                            Navigate(Screen4_1);
+                        PaddingBottom: =10
+                        PaddingLeft: =10
+                        PaddingRight: =10
+                        PaddingTop: =10
+                        Width: =55
+                        X: =Label13_1.X+100
+                        Y: =12
+                        ZIndex: =10
+
+                    Label24 As label:
+                        Align: =Align.Center
+                        BorderColor: =App.Theme.Colors.Darker40
+                        Color: =RGBA(0, 0, 0, 1)
+                        DisabledColor: =RGBA(166, 166, 166, 1)
+                        Font: =App.Theme.Font
+                        Height: =Parent.TemplateHeight
+                        OnSelect: =Select(Parent)
+                        Size: =13
+                        Text: =ThisItem.'Status (cr316_status)'
+                        X: =Label19.X
+                        ZIndex: =11
+
+    Group3 As group:
+        Height: =5
+        Width: =5
+        X: =60
+        Y: =60
+        ZIndex: =6
+
+        Rectangle5 As rectangle:
+            BorderColor: =App.Theme.Colors.Darker40
+            Fill: =RGBA(10, 10, 10, 0.42)
+            Height: =Parent.Height
+            Visible: =popup
+            Width: =Parent.Width
+            ZIndex: =2
+
+        Image3 As image:
+            BorderColor: =App.Theme.Colors.Darker40
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Image: ='Rolling@1x-1.0s-200px-200px'
+            Visible: =false
+            X: =Parent.Width/2
+            Y: =300
+            ZIndex: =3
+
+        Label37 As label:
+            BorderColor: =App.Theme.Colors.Darker40
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =App.Theme.Font
+            Height: =57
+            Size: =20
+            Text: ="Finding best results...."
+            Visible: =popup
+            Width: =340
+            X: =625
+            Y: =400
+            ZIndex: =4
+
+        Image4 As image:
+            BorderColor: =App.Theme.Colors.Darker40
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Image: ='Spinner@1x-1.0s-200px-200px'
+            Visible: =popup
+            X: =Parent.Width/2
+            Y: =300
+            ZIndex: =5
+
